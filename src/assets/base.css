@@ -33,3 +33,8 @@ body {
 .container {
   flex: 1 1 auto ;
 }
+li,
+ol,
+ul {
+    list-style: none;
+}

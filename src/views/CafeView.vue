@@ -54,9 +54,7 @@
     </div>
     <div class="cafe__gallery">
       <h2 class="gallery__title">Photo Gallery</h2>
-      <div class="gallery__holder">
       <AppGallery :gallery="cafe.photoGallery" />
-      </div>
     </div>
   </div>
 </template>

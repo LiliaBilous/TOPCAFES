@@ -16,13 +16,13 @@
         "price": "$$",
         "comments": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
         "photoGallery": [
-            "../assets/img/Franyk/rosteria/rosteria-cavy.jpg",
-            "../assets/img/Franyk/rosteria/rosteria-cavy2.jpeg",
-            "../assets/img/Franyk/rosteria/rosteria-cavy3.jpg",
-            "../assets/img/Franyk/rosteria/rosteria-cavy4.jpg",
-            "../assets/img/Franyk/rosteria/rosteria-cavy5.jpg",
-            "../assets/img/Franyk/rosteria/rosteria-cavy6.jpg",
-            "../assets/img/Franyk/rosteria/rosteria-cavy7.jpg"
+            "/Franyk/rosteria/rosteria-cavy.jpg",
+            "/Franyk/rosteria/rosteria-cavy2.jpeg",
+            "/Franyk/rosteria/rosteria-cavy3.jpg",
+            "/Franyk/rosteria/rosteria-cavy4.jpg",
+            "/Franyk/rosteria/rosteria-cavy5.jpg",
+            "/Franyk/rosteria/rosteria-cavy6.jpg",
+            "/Franyk/rosteria/rosteria-cavy7.jpg"
         ]
     },
     {
@@ -42,8 +42,8 @@
         "price": "$$",
         "comments": "Родзинка закладу - відкрита кухня і приготування страв в унікальній печі ручної роботи.",
         "photoGallery": [
-            "url('../assets/img/Franyk/fabrica/work-place-coffee4.jpg')",
-            "url('../assets/img/Franyk/fabrica/coffee-mashine3.jpg')"
+            "/Franyk/fabrica/work-place-coffee4.jpg",
+            "/Franyk/fabrica/coffee-mashine3.jpg"
         ]
     },
     {
@@ -63,11 +63,11 @@
         "price": "$$$",
         "comments": "Кількість десертів та їх різноманіття - просто збивають з пантелику... але рекомендую скуштувати Франківський торт, дуже легкий та смачний десерт, ну і де ще ж його куштувати?!)))",
         "photoGallery": [
-            "url('../assets/img/Franyk/Delikacia/delikacia2.jpg')",
-            "url('../assets/img/Franyk/Delikacia/cake.jpg')",
-            "url('../assets/img/Franyk/Delikacia/frankivsk-cake.jpg')",
-            "url('../assets/img/Franyk/Delikacia/icibana.jpg')",
-            "url('../assets/img/Franyk/Delikacia/cup-coffee7.jpg')"
+            "/Franyk/Delikacia/delikacia2.jpg",
+            "/Franyk/Delikacia/cake.jpg",
+            "/Franyk/Delikacia/frankivsk-cake.jpg",
+            "/Franyk/Delikacia/icibana.jpg",
+            "/Franyk/Delikacia/cup-coffee7.jpg"
         ]
     },
     {
@@ -87,10 +87,10 @@
         "price": "$$",
         "comments": "Найсмачніший сирник серед всіх що довелось куштувати... я б навіть сказала що це саме той вмпадок, коли кажуть, що справжнім предком чізкейку був саме український сирник.",
         "photoGallery": [
-            "url('../assets/img/Franyk/tradycia/tradycia.jpg')",
-            "url('../assets/img/Franyk/tradycia/tradycia1.jpg')",
-            "url('../assets/img/Franyk/tradycia/tradycia2.jpg')",
-            "url('../assets/img/Franyk/tradycia/cheesecake.jpg')"
+            "/Franyk/tradycia/tradycia.jpg",
+            "/Franyk/tradycia/tradycia1.jpg",
+            "/Franyk/tradycia/tradycia2.jpg",
+            "/Franyk/tradycia/cheesecake.jpg"
         ]
     },
     {
@@ -110,13 +110,13 @@
         "price": "$$",
         "comments": "Дуже рекомендую відвідати їх кавярню саме на набережній з розкішним видом на Дніпро. Окрім того, в них неймовірна кава власного обсмаження.",
         "photoGallery": [
-            "url('../assets/img/cherkasy/fabryka/fabryka.jfif')",
-            "url('../assets/img/cherkasy/fabryka/cava-dnipro.jpg')",
-            "url('../assets/img/cherkasy/fabryka/fabryka-vhid.jpg')",
-            "url('../assets/img/cherkasy/fabryka/view-coffee.jpg')",
-            "url('../assets/img/cherkasy/fabryka/fireplace.jpg')",
-            "url('../assets/img/cherkasy/fabryka/candle.jpg')",
-            "url('../assets/img/cherkasy/fabryka/kish&coffee.jpg')"
+            "/cherkasy/fabryka/fabryka.jfif",
+            "/cherkasy/fabryka/cava-dnipro.jpg",
+            "/cherkasy/fabryka/fabryka-vhid.jpg",
+            "/cherkasy/fabryka/view-coffee.jpg",
+            "/cherkasy/fabryka/fireplace.jpg",
+            "/cherkasy/fabryka/candle.jpg",
+            "/cherkasy/fabryka/kish&coffee.jpg"
         ]
     },
     {
@@ -136,11 +136,11 @@
         "price": "$$",
         "comments": "Дуже рекомендую меренговий рулет - він закохає вас в себе з першого шматочка",
         "photoGallery": [
-            "url('../assets/img/cherkasy/endorfin/endorfin-soup.jpg')",
-            "url('../assets/img/cherkasy/endorfin/cafe1.jpg')",
-            "url('../assets/img/cherkasy/endorfin/cup-coffee10.jpg')",
-            "url('../assets/img/cherkasy/endorfin/cup-coffee8.jpg')",
-            "url('../assets/img/cherkasy/endorfin/work-place-coffee.jpg')"
+            "/cherkasy/endorfin/endorfin-soup.jpg",
+            "/cherkasy/endorfin/cafe1.jpg",
+            "/cherkasy/endorfin/cup-coffee10.jpg",
+            "/cherkasy/endorfin/cup-coffee8.jpg",
+            "/cherkasy/endorfin/work-place-coffee.jpg"
         ]
     },
     {
@@ -160,9 +160,9 @@
         "price": "$$",
         "comments": "Поєднання смачної кави та шоколаду ... для мене це просто любов... Звісно, що мережа розвинута, велика і в багатьох містах України є ці майстерені, але саме ця в Черкасах найулюбленіша...",
         "photoGallery": [
-            "url('../assets/img/cherkasy/shocoladu/cafe5.jpg')",
-            "url('../assets/img/cherkasy/shocoladu/city1.jpg')",
-            "url('../assets/img/cherkasy/shocoladu/lvivska-shocoladu.jfif')"
+            "/cherkasy/shocoladu/cafe5.jpg",
+            "/cherkasy/shocoladu/city1.jpg",
+            "/cherkasy/shocoladu/lvivska-shocoladu.jfif"
         ]
     },
     {
@@ -182,7 +182,7 @@
         "price": "$$",
         "comments": "",
         "photoGallery": [
-            "url('../assets/img/Kyiv')"
+            ""
         ]
     },
     {

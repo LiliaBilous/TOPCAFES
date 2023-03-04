@@ -1,19 +1,31 @@
 <template>
-  <a :href="img">
-    <img alt="img1" :src="img" />
-  </a>
+  <li class="gallery__img-holder">
+    <div :data-src="imageSrc">
+      <img
+        alt="img1"
+        :src="imageSrc"
+        :data-src="imageSrc"
+        class="gallery__img"
+      />
+    </div>
+  </li>
 </template>
 <script>
 export default {
   props: { img: String },
+  data() {
+    return {
+      imageSrc: null,
+    };
+  },
   methods: {
     async init() {
-      const image = await import("'" + this.img + "'");
-      console.log(image);
+      const image = await import("../../assets/img" + this.img);
+      this.imageSrc = image.default;
     },
   },
-  created(){
+  created() {
     this.init();
-  }
+  },
 };
 </script>
