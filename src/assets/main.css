@@ -417,6 +417,8 @@ background-image: url('./img/Kyiv/yaroslava/beans4.jpg');
     font-size: 3.5rem;
     margin: 2rem auto;
     color: var(--color-main-brown);
+    padding-bottom: 1rem;
+    border-bottom: 2px var(--color-main-brown) solid;
 }
 .cide__wrapper {
     display: flex;
@@ -441,6 +443,7 @@ background-image: url('./img/Kyiv/yaroslava/beans4.jpg');
 .cide_contacts {
     display: flex;
     justify-content: space-between;
+    border-top: 2px var(--color-main-brown) solid;
 }
 .cafe__link:hover {
     text-decoration: underline;
@@ -455,7 +458,6 @@ background-image: url('./img/Kyiv/yaroslava/beans4.jpg');
 .central-holder__description {
     width: 60%; 
     height: auto; 
-    
 }
 .description__title,
 .comments__title {
