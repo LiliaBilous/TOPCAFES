@@ -15,7 +15,11 @@
   font-weight: normal;
   scroll-behavior: smooth;
 }
-
+li,
+ol,
+ul {
+    list-style: none;
+}
 body {
   font-family: Raleway;
   font-size: 18px;
@@ -32,9 +36,4 @@ body {
 }
 .container {
   flex: 1 1 auto ;
-}
-li,
-ol,
-ul {
-    list-style: none;
 }
