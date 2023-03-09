@@ -51,9 +51,7 @@
     align-items: flex-start;
     justify-content: space-around;
 }
-.material-icons {
-    padding-right: 1.5rem;
-}
+
 .cide__bar {
     display: flex;
     flex-direction: column;
@@ -102,6 +100,7 @@
 }
 .cafe__gallery {
     background-color: var(--color-background);
+    padding: 0 2rem 2rem;
 }
 .gallery__title {
     font-size: 2rem;

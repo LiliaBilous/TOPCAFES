@@ -11,6 +11,7 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
   position: relative;
   font-weight: normal;
   scroll-behavior: smooth;
@@ -36,4 +37,21 @@ body {
 }
 .container {
   flex: 1 1 auto ;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: var(--color-main-brown);
+  transition: 0.3s all ease-in-out;
+}
+a:hover, 
+a:active,
+a:focus {
+  color: var(--color-ligt-brown);
+  border: none;
+  outline: none;
+}
+.material-icons {
+  padding: 0.5rem;
 }
