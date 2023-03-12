@@ -1,12 +1,7 @@
 <template>
   <li class="gallery__img-holder">
-    <div :data-src="imageSrc">
-      <img
-        alt="img1"
-        :src="imageSrc"
-        :data-src="imageSrc"
-        class="gallery__img"
-      />
+    <div>
+      <img alt="img1" :src="imageSrc" class="gallery__img" />
     </div>
   </li>
 </template>

@@ -74,9 +74,5 @@ export default {
       return cafes.find((cafe) => cafe.id === +this.cafeId);
     },
   },
-  created() {
-    console.log(this.cafe);
-    console.log(this.cafeId, typeof this.cafeId);
-  },
 };
 </script>
