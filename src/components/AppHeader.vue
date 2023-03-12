@@ -4,7 +4,7 @@ import { RouterLink } from "vue-router";
 <template>
   <header>
     <div class="wrapper-header">
-      <a class="header__logo">Top cafes</a>
+      <RouterLink class="header__logo" to="/">Top cafes</RouterLink>
       <div class="header__text-wrapper">
         <RouterLink class="header__item" to="/">Головна</RouterLink>
         <a href="#" class="header__item cities">Міста</a>
