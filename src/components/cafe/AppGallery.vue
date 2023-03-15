@@ -15,7 +15,7 @@
     <span class="close cursor" @click="closeModal()">&times;</span>
     <div class="modal-content">
       <div class="mySlides" v-for="(image, index) in gallery" :key="image">
-        <div class="numbertext">{{ index }} / 4</div>
+        <div class="numbertext">{{ index + 1 }} / {{ gallery.length }}</div>
         <img :src="'/src/assets/img' + image" />
       </div>
       <a class="prev" @click="plusSlides(-1)">&#10094;</a>
