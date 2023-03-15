@@ -1,13 +1,14 @@
 <template>
-  <li class="gallery__img-holder">
-    <div>
-      <img alt="img1" :src="imageSrc" class="gallery__img" />
-    </div>
-  </li>
+  <div class="gallery__img-holder">
+    <img :src="imageSrc" class="img-holder" />
+  </div>
 </template>
 <script>
 export default {
-  props: { img: String },
+  props: {
+    img: String,
+    index: Number,
+  },
   data() {
     return {
       imageSrc: null,
