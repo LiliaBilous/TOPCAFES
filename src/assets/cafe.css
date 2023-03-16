@@ -144,7 +144,7 @@
 }
 /* LIGHTBOX STYLES */
 .modal {
-    display: none;
+    /* display: none; */
     position: fixed;
     z-index: 1;
     padding-top: 100px;
@@ -183,7 +183,7 @@
 }
 
 .mySlides {
-    display: none;
+    /* display: none; */
     width: 50rem;
     height: 34rem;
     margin: 0 auto;

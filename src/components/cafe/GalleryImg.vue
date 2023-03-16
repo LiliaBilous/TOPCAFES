@@ -1,6 +1,6 @@
 <template>
   <div class="gallery__img-holder">
-    <img :src="imageSrc" class="img-holder" />
+    <img :src="imageSrc" class="img-holder" @click="$emit('imgClick', $event)" />
   </div>
 </template>
 <script>

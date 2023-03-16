@@ -5,18 +5,15 @@
       :key="image"
       :index="index"
       :img="image"
-      @click="
-        openModal();
-        currentSlide(index + 1);
-      "
+      @imgClick="openModal($event)"
     />
   </div>
-  <div id="myModal" class="modal">
+  <div v-if="isModalVisible" class="modal">
     <span class="close cursor" @click="closeModal()">&times;</span>
     <div class="modal-content">
-      <div class="mySlides" v-for="(image, index) in gallery" :key="image">
-        <div class="numbertext">{{ index + 1 }} / {{ gallery.length }}</div>
-        <img :src="'/src/assets/img' + image" />
+      <div class="mySlides">
+        <div class="numbertext">{{}} / {{ gallery.length }}</div>
+        <img :src="currentUrl" />
       </div>
       <a class="prev" @click="plusSlides(-1)">&#10094;</a>
       <a class="next" @click="plusSlides(1)">&#10095;</a>
@@ -32,14 +29,18 @@ export default {
   data() {
     return {
       slideIndex: 1,
+      isModalVisible: false,
+      currentUrl: "",
     };
   },
   methods: {
-    openModal: function () {
-      document.getElementById("myModal").style.display = "block";
+    openModal: function (event) {
+      this.isModalVisible = true;
+      this.currentUrl = event.target.src;
     },
     closeModal: function () {
-      document.getElementById("myModal").style.display = "none";
+      this.isModalVisible = false;
+      this.currentUrl = "";
     },
     showSlides: function (n) {
       let slides = document.getElementsByClassName("mySlides");
