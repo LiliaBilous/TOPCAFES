@@ -56,6 +56,10 @@
       <h2 class="gallery__title">Photo Gallery</h2>
       <AppGallery :gallery="cafe.photoGallery" />
     </div>
+    <div class="nav-bar">
+      <a href="" class="nav-item"><i class="material-icons">&#xe314;</i></a>
+      <a href="" class="nav-item"><i class="material-icons">&#xe315;</i></a>
+    </div>
   </div>
 </template>
 <script>
