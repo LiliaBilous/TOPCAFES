@@ -6,6 +6,7 @@
         "imageUrlClass": "rosteria",
         "cafeRoute": "/rosteria",
         "city": "Franyk",
+        "name": "rosteria",
 
         "address": "вулиця Крушельницької, 2, Івано-Франківськ, Івано-Франківська область, 76000",
         "workHours": "Пн-Пт09:00 — 21:00, Сб-Нд10:00 — 21:00",
@@ -16,13 +17,13 @@
         "price": "$$",
         "comments": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
         "photoGallery": [
-            "/Franyk/rosteria/rosteria-cavy.jpg",
-            "/Franyk/rosteria/rosteria-cavy2.jpeg",
-            "/Franyk/rosteria/rosteria-cavy3.jpg",
-            "/Franyk/rosteria/rosteria-cavy4.jpg",
-            "/Franyk/rosteria/rosteria-cavy5.jpg",
-            "/Franyk/rosteria/rosteria-cavy6.jpg",
-            "/Franyk/rosteria/rosteria-cavy7.jpg"
+            "rosteria-cavy",
+            "rosteria-cavy2",
+            "rosteria-cavy3",
+            "rosteria-cavy4",
+            "rosteria-cavy5",
+            "rosteria-cavy6",
+            "rosteria-cavy7"
         ]
     },
     {

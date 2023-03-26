@@ -25,7 +25,7 @@ import GalleryImg from "../cafe/GalleryImg.vue";
 
 export default {
   components: { GalleryImg },
-  props: { gallery: Array },
+  props: { gallery: Array, cityName: String, cafeName: String },
   data() {
     return {
       slideIndex: 1,
@@ -36,11 +36,24 @@ export default {
   },
   methods: {
     async init() {
-      const arrayWithPromises = this.gallery.map(async (img) => {
-        const image = await import("../../assets/img" + img);
-        return image.default;
-      });
-      this.imagesSrcArray = await Promise.all(arrayWithPromises);
+      for (const img of this.gallery) {
+        try {
+          const image = await import(
+            `../../assets/img/${this.cityName}/${this.cafeName}/${img}.jpg`
+          );
+          this.imagesSrcArray.push(image.default);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      console.log(this.imagesSrcArray);
+      // const arrayWithPromises = this.gallery.map(async (img) => {
+      //   const image = await import(
+      //     `../../assets/img/${this.cityName}/${this.cafeName}/${img}.jpg`
+      //   );
+      //   return image.default;
+      // });
+      // this.imagesSrcArray = await Promise.all(arrayWithPromises);
     },
     openModal: function (event) {
       this.isModalVisible = true;

@@ -54,7 +54,11 @@
     </div>
     <div class="cafe__gallery">
       <h2 class="gallery__title">Photo Gallery</h2>
-      <AppGallery :gallery="cafe.photoGallery" />
+      <AppGallery
+        :gallery="cafe.photoGallery"
+        :city-name="cafe.city"
+        :cafe-name="cafe.name"
+      />
     </div>
   </div>
 </template>
