@@ -1,7 +1,7 @@
 <template>
   <div id="gallery" class="gallery__holder">
     <GalleryImg
-      v-for="(image, index) in gallery"
+      v-for="(image, index) in imagesSrcArray"
       :key="image"
       :index="index"
       :img="image"
@@ -31,9 +31,17 @@ export default {
       slideIndex: 1,
       isModalVisible: false,
       currentUrl: "",
+      imagesSrcArray: [],
     };
   },
   methods: {
+    async init() {
+      const arrayWithPromises = this.gallery.map(async (img) => {
+        const image = await import("../../assets/img" + img);
+        return image.default;
+      });
+      this.imagesSrcArray = await Promise.all(arrayWithPromises);
+    },
     openModal: function (event) {
       this.isModalVisible = true;
       this.currentUrl = event.target.src;
@@ -61,6 +69,9 @@ export default {
     currentSlide: function (n) {
       this.showSlides((this.slideIndex = n));
     },
+  },
+  created() {
+    this.init();
   },
 };
 </script>

@@ -59,7 +59,7 @@
   </div>
 </template>
 <script>
-import cafes from "../content/cafes.json";
+import cafes from "@/content/cafes.json";
 import AppGallery from "../components/cafe/AppGallery.vue";
 
 export default {
