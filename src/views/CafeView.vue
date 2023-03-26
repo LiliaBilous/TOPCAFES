@@ -54,7 +54,11 @@
     </div>
     <div class="cafe__gallery">
       <h2 class="gallery__title">Photo Gallery</h2>
-      <AppGallery :gallery="cafe.photoGallery" />
+      <AppGallery
+        :gallery="cafe.photoGallery"
+        :city-name="cafe.city"
+        :cafe-name="cafe.name"
+      />
     </div>
     <div class="nav-bar">
       <a href="" class="nav-item"><i class="material-icons">&#xe314;</i></a>
@@ -63,7 +67,7 @@
   </div>
 </template>
 <script>
-import cafes from "../content/cafes.json";
+import cafes from "@/content/cafes.json";
 import AppGallery from "../components/cafe/AppGallery.vue";
 
 export default {

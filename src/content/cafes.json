@@ -6,6 +6,7 @@
         "imageUrlClass": "rosteria",
         "cafeRoute": "/rosteria",
         "city": "Franyk",
+        "name": "rosteria",
 
         "address": "вулиця Крушельницької, 2, Івано-Франківськ, Івано-Франківська область, 76000",
         "workHours": "Пн-Пт09:00 — 21:00, Сб-Нд10:00 — 21:00",
@@ -16,13 +17,13 @@
         "price": "$$",
         "comments": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
         "photoGallery": [
-            "/Franyk/rosteria/rosteria-cavy.jpg",
-            "/Franyk/rosteria/rosteria-cavy2.jpeg",
-            "/Franyk/rosteria/rosteria-cavy3.jpg",
-            "/Franyk/rosteria/rosteria-cavy4.jpg",
-            "/Franyk/rosteria/rosteria-cavy5.jpg",
-            "/Franyk/rosteria/rosteria-cavy6.jpg",
-            "/Franyk/rosteria/rosteria-cavy7.jpg"
+            "rosteria-cavy",
+            "rosteria-cavy2",
+            "rosteria-cavy3",
+            "rosteria-cavy4",
+            "rosteria-cavy5",
+            "rosteria-cavy6",
+            "rosteria-cavy7"
         ]
     },
     {
@@ -32,7 +33,7 @@
         "imageUrlClass": "fabrica",
         "cafeRoute": "/fabrica",
         "city": "Franyk",
-
+        "name": "fabrica",
         "address": "вулиця Вірменська, 1, Івано-Франківськ, Івано-Франківська область, 76000",
         "workHours": "Пн-Нд 9:00 - 21:30",
         "telephone": "+380 95 59 69 890",
@@ -42,8 +43,8 @@
         "price": "$$",
         "comments": "Родзинка закладу - відкрита кухня і приготування страв в унікальній печі ручної роботи.",
         "photoGallery": [
-            "/Franyk/fabrica/work-place-coffee4.jpg",
-            "/Franyk/fabrica/coffee-mashine3.jpg"
+            "work-place-coffee4",
+            "coffee-mashine3"
         ]
     },
     {
@@ -53,7 +54,7 @@
         "imageUrlClass": "delikacia",
         "cafeRoute": "/delikacia",
         "city": "Franyk", 
-
+        "name": "Delikacia",
         "address": "вулиця Незалежності, 20, Івано-Франківськ, Івано-Франківська область, 76000",
         "workHours": "Пн-Нд 07:45 - 21:00",
         "telephone": " +380 68 11 76 070",
@@ -63,11 +64,11 @@
         "price": "$$$",
         "comments": "Кількість десертів та їх різноманіття - просто збивають з пантелику... але рекомендую скуштувати Франківський торт, дуже легкий та смачний десерт, ну і де ще ж його куштувати?!)))",
         "photoGallery": [
-            "/Franyk/Delikacia/delikacia2.jpg",
-            "/Franyk/Delikacia/cake.jpg",
-            "/Franyk/Delikacia/frankivsk-cake.jpg",
-            "/Franyk/Delikacia/icibana.jpg",
-            "/Franyk/Delikacia/cup-coffee7.jpg"
+            "delikacia2",
+            "cake",
+            "frankivsk-cake",
+            "icibana",
+            "cup-coffee7"
         ]
     },
     {
@@ -77,7 +78,7 @@
         "imageUrlClass": "tradycia",
         "cafeRoute": "/tradycia",
         "city": "Franyk",
-
+        "name": "tradycia",
         "address": "вулиця Михайла Грушевського, 40, Івано-Франківськ, Івано-Франківська область, 76000",
         "workHours": "Пн-Нд 10:00 - 21:00",
         "telephone": "+380 98 04 04 014",
@@ -87,10 +88,10 @@
         "price": "$$",
         "comments": "Найсмачніший сирник серед всіх що довелось куштувати... я б навіть сказала що це саме той випадок, коли кажуть, що справжнім предком чізкейку був саме український сирник.",
         "photoGallery": [
-            "/Franyk/tradycia/tradycia.jpg",
-            "/Franyk/tradycia/tradycia1.jpg",
-            "/Franyk/tradycia/tradycia2.jpg",
-            "/Franyk/tradycia/cheesecake.jpg"
+            "tradycia",
+            "tradycia1",
+            "tradycia2",
+            "cheesecake"
         ]
     },
     {
@@ -100,7 +101,7 @@
         "imageUrlClass": "fabrykaRosteria",
         "cafeRoute": "/fabrykaRosteria",
         "city": "Cherkasy",
-
+        "name": "fabryka",
         "address": "вулиця Героїв Дніпра, 50, Черкаси, Черкаська область, 18000",
         "workHours": "Пн-Нд 07:30 - 21:00",
         "telephone": "+380 93 73 00 497",
@@ -110,13 +111,13 @@
         "price": "$$",
         "comments": "Дуже рекомендую відвідати їх кавярню саме на набережній з розкішним видом на Дніпро. Окрім того, в них неймовірна кава власного обсмаження і найсмачніші круасани.",
         "photoGallery": [
-            "/cherkasy/fabryka/fabryka.jfif",
-            "/cherkasy/fabryka/cava-dnipro.jpg",
-            "/cherkasy/fabryka/fabryka-vhid.jpg",
-            "/cherkasy/fabryka/view-coffee.jpg",
-            "/cherkasy/fabryka/fireplace.jpg",
-            "/cherkasy/fabryka/candle.jpg",
-            "/cherkasy/fabryka/kish&coffee.jpg"
+            "fabryka",
+            "cava-dnipro",
+            "fabryka-vhid",
+            "view-coffee",
+            "fireplace",
+            "candle",
+            "kish&coffee"
         ]
     },
     {
@@ -126,7 +127,7 @@
         "imageUrlClass": "endorfin",
         "cafeRoute": "/endorfin",
         "city": "Cherkasy",
-
+        "name": "endorfin",
         "address": "вулиця Героїв Дніпра, 53/2, Черкаси, Черкаська область, 18000",
         "workHours": "Пн-Нд 08:00 - 20:00",
         "telephone": "+380 73 07 32 030",
@@ -136,11 +137,11 @@
         "price": "$$",
         "comments": "Дуже рекомендую меренговий рулет - він закохає вас в себе з першого шматочка",
         "photoGallery": [
-            "/cherkasy/endorfin/endorfin-soup.jpg",
-            "/cherkasy/endorfin/cafe1.jpg",
-            "/cherkasy/endorfin/cup-coffee10.jpg",
-            "/cherkasy/endorfin/cup-coffee8.jpg",
-            "/cherkasy/endorfin/work-place-coffee.jpg"
+            "endorfin-soup",
+            "cafe1",
+            "cup-coffee10",
+            "cup-coffee8",
+            "work-place-coffee"
         ]
     },
     {
@@ -150,7 +151,7 @@
         "imageUrlClass": "shocolad",
         "cafeRoute": "/shocolad",
         "city": "Cherkasy",
-
+        "name": "shocoladu",
         "address": "вулиця Байди Вишневецького, 34, Черкаси, Черкаська область, 18000",
         "workHours": "Пн-Нд 09:00 - 21:00 Сб-Нд 10:00 — 21:00",
         "telephone": "+380 67 47 36 982",
@@ -160,9 +161,9 @@
         "price": "$$",
         "comments": "Поєднання смачної кави та шоколаду ... для мене це просто любов... Звісно, що мережа розвинута, велика і в багатьох містах України є ці майстерені, але саме ця в Черкасах найулюбленіша...",
         "photoGallery": [
-            "/cherkasy/shocoladu/cafe5.jpg",
-            "/cherkasy/shocoladu/city1.jpg",
-            "/cherkasy/shocoladu/lvivska-shocoladu.jfif"
+            "cafe5",
+            "city1",
+            "lvivska-shocoladu"
         ]
     },
     {
