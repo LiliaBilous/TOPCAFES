@@ -174,7 +174,7 @@
         "imageUrlClass": "idealist",
         "cafeRoute": "/idealist",
         "city": "Kyiv",
-
+        "name": "idealist",
         "address": "вулиця Ярославів Вал, 15, Київ, 01030",
         "workHours": "Пн-Нд 08:00 - 21:00",
         "telephone": "+380 67 62 05 374",
@@ -184,7 +184,7 @@
         "price": "$$",
         "comments": "в планах відвідати їх заклад",
         "photoGallery": [
-            ""
+            "cap-coffee"
         ]
     },
     {
@@ -194,7 +194,7 @@
         "imageUrlClass": "italist",
         "cafeRoute": "/italist",
         "city": "Kyiv",
-
+        "name": "italist",
         "address": "проспект Соборності, 17, Київ, 02160",
         "workHours": "Пн-Cp 09:00 - 21:00, Чт-Нд 09:00 - 22:00",
         "telephone": "+380 68 77 72 340",
@@ -204,9 +204,9 @@
         "price": "$$",
         "comments": "Дуже смачна піца і кухня, що знаходиться поруч з домом, але дорогі напої щоб відвідувати заклад надто часто)... Взагалі атмосфера закладу дуже класна, але віддаю перевагу їх опції Take away.",
         "photoGallery": [
-            "/Kyiv/italist/cafe2.jpg",
-            "/Kyiv/italist/kt-view.jpg",
-            "/Kyiv/italist/cup-coffee.jpg"
+            "cafe2",
+            "kt-view",
+            "cup-coffee"
         ]
     },
     {
@@ -216,7 +216,7 @@
         "imageUrlClass": "osmantus",
         "cafeRoute": "/osmantus",
         "city": "Kyiv",
-
+        "name": "osmantus",
         "address": "вулиця Регенераторна, 4, корпус 5, Київ, 02000",
         "workHours": "Пн-Нд 08:00 - 22:00",
         "telephone": "+380 67 50 49 557",
@@ -226,14 +226,14 @@
         "price": "$$",
         "comments": "У кавярні є свій улюбленець - котик, кожного дня він любить приходити у цю кавярню та добряче висипатись. Також тут смачна кава, десерти і дуже симпатичний інтер'єр.",
         "photoGallery": [
-            "/Kyiv/osmantus/coffee-cup2.jpg",
-            "/Kyiv/osmantus/dessert.jpg",
-            "/Kyiv/osmantus/dessert2.jpg",
-            "/Kyiv/osmantus/kotyk.jpg",
-            "/Kyiv/osmantus/kotyk2.jpg",
-            "/Kyiv/osmantus/osmantus.jpg",
-            "/Kyiv/osmantus/osmantus2.jpg",
-            "/Kyiv/osmantus/osmantus3.jpg"
+            "coffee-cup2",
+            "dessert",
+            "dessert2",
+            "kotyk",
+            "kotyk2",
+            "osmantus",
+            "osmantus2",
+            "osmantus3"
         ]
     },
     {
@@ -243,7 +243,7 @@
         "imageUrlClass": "halva",
         "cafeRoute": "/halva",
         "city": "Kyiv",
-
+        "name": "halva",
         "address": "вулиця Юрія Липи, 6, Київ, 02160",
         "workHours": "Пн-Нд 08:00 - 22:00",
         "telephone": "+380 66 22 64 675",
@@ -253,10 +253,10 @@
         "price": "$$",
         "comments": "Улюблена кавярня біля дому із найсмачнішою кавою і широким вибором десертів.",
         "photoGallery": [
-            "/Kyiv/halva/beans3.jpg",
-            "/Kyiv/halva/cafe3.jpg",
-            "/Kyiv/halva/coffee-mashine4.jpg",
-            "/Kyiv/halva/cup-coffee2.jpg"
+            "beans3",
+            "cafe3",
+            "coffee-mashine4",
+            "cup-coffee2"
         ]
     },   
     {
@@ -266,7 +266,7 @@
         "imageUrlClass": "zavertaylo",
         "cafeRoute": "/zavertaylo",
         "city": "Kyiv",
-
+        "name": "zavertailo",
         "address": "вулиця Межигірська, 7, Київ, 02000",
         "workHours": "Пн-Нд 08:00 - 21:00",
         "telephone": "+380 98 31 08 819",
@@ -286,7 +286,7 @@
         "imageUrlClass": "foodMarket",
         "cafeRoute": "/foodMarket",
         "city": "Kyiv",
-
+        "name": "food-market",
         "address": "вулиця Московська, 8, Київ, 01029",
         "workHours": "Нд-Чт 11:00 - 21:00, Пт-Сб 11:00 - 21:30",
         "telephone": "+380 67 12 11 319",
@@ -306,7 +306,7 @@
         "imageUrlClass": "yaroslava",
         "cafeRoute": "/yaroslava",
         "city": "Kyiv",
-
+        "name": "yaroslava",
         "address": "вулиця Ярославів Вал, 13, Київ, 01034",
         "workHours": "Пн-Сб 09:00 - 22:00, Нд - вихідний",
         "telephone": "+380 44 27 24 260",
