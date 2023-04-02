@@ -121,3 +121,18 @@
     background-size: cover;
     background-position:  30% 70% ;
 }
+@media(min-width: 48rem) {
+    .city-text-block{
+        padding: 1rem;
+    }
+    introduction-block {
+        font-size: 1em;
+        line-height: 2.5rem;
+        margin: 3vw;
+    }
+    .button {
+        font-size: medium;
+        padding: 15px;
+        letter-spacing: 3px;
+    }
+}
