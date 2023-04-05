@@ -12,7 +12,11 @@ import { RouterLink } from "vue-router";
         <RouterLink to="/cities" class="header__item cities">Міста</RouterLink>
         <RouterLink to="/cafes" class="header__item cafes">Кав'ярні</RouterLink>
         <a href="#" class="header__item burger-menu">
-          <input type="checkbox" id="burger-menu__checkbox" class="burger-menu__input" />
+          <input
+            type="checkbox"
+            id="burger-menu__checkbox"
+            class="burger-menu__input"
+          />
           <label for="burger-menu__checkbox" class="burger-menu__label">
             <i class="material-icons">&#xe5d2;</i>
           </label>

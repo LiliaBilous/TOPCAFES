@@ -1,22 +1,29 @@
 <template>
   <div id="gallery" class="gallery__holder">
     <GalleryImg
-      v-for="(image, index) in imagesSrcArray"
-      :key="image"
-      :index="index"
-      :img="image"
-      @imgClick="openModal($event)"
+      v-for="(imageSrc, index) in imagesSrcArray"
+      :key="imageSrc"
+      :imgSrc="imageSrc"
+      @click="openModal(imageSrc, index)"
     />
   </div>
   <div v-if="isModalVisible" class="modal">
     <span class="close cursor" @click="closeModal()">&times;</span>
     <div class="modal-content">
       <div class="mySlides">
-        <div class="numbertext">{{}} / {{ gallery.length }}</div>
+        <div class="numbertext">{{ currentIndex + 1 }} / {{ imagesSrcArray.length }}</div>
         <img :src="currentUrl" />
       </div>
-      <a class="prev" @click="plusSlides(-1)">&#10094;</a>
-      <a class="next" @click="plusSlides(1)">&#10095;</a>
+      <button class="prev" :disabled="currentIndex === 0" @click="changeSlide(-1)">
+        &#10094;
+      </button>
+      <button
+        class="next"
+        :disabled="currentIndex === imagesSrcArray.length - 1"
+        @click="changeSlide(1)"
+      >
+        &#10095;
+      </button>
     </div>
   </div>
 </template>
@@ -32,6 +39,7 @@ export default {
       isModalVisible: false,
       currentUrl: "",
       imagesSrcArray: [],
+      currentIndex: null,
     };
   },
   methods: {
@@ -46,7 +54,6 @@ export default {
           console.error(error);
         }
       }
-      console.log(this.imagesSrcArray);
       // const arrayWithPromises = this.gallery.map(async (img) => {
       //   const image = await import(
       //     `../../assets/img/${this.cityName}/${this.cafeName}/${img}.jpg`
@@ -55,32 +62,20 @@ export default {
       // });
       // this.imagesSrcArray = await Promise.all(arrayWithPromises);
     },
-    openModal: function (event) {
+    openModal: function (url, index) {
       this.isModalVisible = true;
-      this.currentUrl = event.target.src;
+      this.currentUrl = url;
+      this.currentIndex = index;
     },
     closeModal: function () {
       this.isModalVisible = false;
       this.currentUrl = "";
     },
-    showSlides: function (n) {
-      let slides = document.getElementsByClassName("mySlides");
-      if (n > slides.length) {
-        this.slideIndex = 1;
-      }
-      if (n < 1) {
-        this.slideIndex = slides.length;
-      }
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slides[this.slideIndex - 1].style.display = "block";
-    },
-    plusSlides: function (n) {
-      this.showSlides((this.slideIndex += n));
-    },
-    currentSlide: function (n) {
-      this.showSlides((this.slideIndex = n));
+    changeSlide: function (n) {
+      if (this.currentIndex === 0 && n === -1) return;
+      if (this.currentIndex === this.imagesSrcArray.length - 1 && n === 1) return;
+      this.currentIndex = this.currentIndex + n;
+      this.currentUrl = this.imagesSrcArray[this.currentIndex];
     },
   },
   created() {
