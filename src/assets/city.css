@@ -188,3 +188,21 @@ background-image: url('./img/Kyiv/yaroslava/beans4.jpg');
 /* lviv */
 
 /* odesa */
+@media(max-width: 20rem) {
+    .city__header {
+        font-size: 2em;
+        font-weight: 700;
+        margin: 1.5vw 0;
+    }
+    .city__text-wrap {
+        max-width: 60rem;
+        margin: 2vw ;
+    }
+    .button-wrapper {
+        margin: 1.5rem;
+    }
+    .button {
+        font-size: smaller;
+        padding: 10px;
+    }
+}

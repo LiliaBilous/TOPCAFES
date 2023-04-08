@@ -12,7 +12,7 @@
     font-weight: 600;
     letter-spacing: 2px;
 }
-@media(min-width: 48rem) {
+@media(max-width: 48rem) {
     .footer {
         display: flex;
         flex-direction: column;
