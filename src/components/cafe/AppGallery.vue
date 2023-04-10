@@ -11,10 +11,16 @@
     <span class="close cursor" @click="closeModal()">&times;</span>
     <div class="modal-content">
       <div class="mySlides">
-        <div class="numbertext">{{ currentIndex + 1 }} / {{ imagesSrcArray.length }}</div>
+        <div class="numbertext">
+          {{ currentIndex + 1 }} / {{ imagesSrcArray.length }}
+        </div>
         <img :src="currentUrl" />
       </div>
-      <button class="prev" :disabled="currentIndex === 0" @click="changeSlide(-1)">
+      <button
+        class="prev"
+        :disabled="currentIndex === 0"
+        @click="changeSlide(-1)"
+      >
         &#10094;
       </button>
       <button
@@ -54,13 +60,6 @@ export default {
           console.error(error);
         }
       }
-      // const arrayWithPromises = this.gallery.map(async (img) => {
-      //   const image = await import(
-      //     `../../assets/img/${this.cityName}/${this.cafeName}/${img}.jpg`
-      //   );
-      //   return image.default;
-      // });
-      // this.imagesSrcArray = await Promise.all(arrayWithPromises);
     },
     openModal: function (url, index) {
       this.isModalVisible = true;
@@ -73,7 +72,8 @@ export default {
     },
     changeSlide: function (n) {
       if (this.currentIndex === 0 && n === -1) return;
-      if (this.currentIndex === this.imagesSrcArray.length - 1 && n === 1) return;
+      if (this.currentIndex === this.imagesSrcArray.length - 1 && n === 1)
+        return;
       this.currentIndex = this.currentIndex + n;
       this.currentUrl = this.imagesSrcArray[this.currentIndex];
     },
