@@ -61,8 +61,7 @@
       />
     </div>
     <div class="nav-bar">
-      <a href="" class="nav-item"><i class="material-icons">&#xe314;</i></a>
-      <a href="" class="nav-item"><i class="material-icons">&#xe315;</i></a>
+      <button class="nav-item">Наступна кавярн'я</button>
     </div>
   </div>
 </template>

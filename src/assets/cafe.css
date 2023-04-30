@@ -112,7 +112,9 @@
     color: var(--color-background);
     background: linear-gradient(255deg, var(--color-ligt-brown) 0%, var(--color-main-brown) 100%);
 }
-
+.central-holder__comments p {
+    padding-bottom: 1rem;
+}
 .cafe__gallery {
     background-color: var(--color-background);
     padding: 0 2rem 2rem;
@@ -123,7 +125,7 @@
     color: var(--color-main-brown);
     text-transform: uppercase;
     font-weight: bold;
-    padding: 2rem;
+    padding: 2rem 0;
 }
 .gallery__holder {
     display: grid;
