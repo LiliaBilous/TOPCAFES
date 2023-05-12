@@ -46,18 +46,20 @@
 .introduction-text-wrap {
     text-align: center;
 }
-.city_wrapper {
-    color: var(--color-white);
-    background-color: #77442E;
-    background: linear-gradient(180deg, #805743 0%,  #4B2F21 100%);
+.wrapper {
     height: 37.5rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-.city-text-block,
-.cafes-text-block {
+.city__wrapper {
+    color: var(--color-white);
+    background-color: #77442E;
+    background: linear-gradient(180deg, #805743 0%,  #4B2F21 100%);    
+}
+.city__text-block,
+.cafes__text-block {
     width: 50%;
     padding: 3.125rem;
 }
@@ -67,13 +69,23 @@
 }
 .photo-img-block {
     width: 50%;
-    height: 100%;
 }
 .coffee-img{
     background-image: url('./img/HomePage/cities-link.jpg') ;
     height: 100%;
     background-size: cover;
     background-position: center;
+}
+.cafes__wrapper {
+    background-color: var(--color-background);
+    background: linear-gradient(255deg,#efd6be 0%, white 100%);
+    color: var(--color-main-brown);
+}
+.cafes-img {
+    background-image: url('./img/HomePage/cafes-link.jpg') ;
+    background-size: cover;
+    background-position:  30% 70% ;
+    height: 100%;
 }
 .button-wrapper {
     margin: 1.5rem 2rem;
@@ -104,28 +116,26 @@
     background-color: rgba(75, 38, 14, 0.35);
     border: 1px solid var(--color-main-brown);
 }
-
-.cafes_wrapper {
-    background-color: var(--color-background);
-    background: linear-gradient(255deg,#efd6be 0%, white 100%);
-    color: var(--color-main-brown);
-    height: 37.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.cafes-img {
-    background-image: url('./img/HomePage/cafes-link.jpg') ;
-    height: 100%;
-    background-size: cover;
-    background-position:  30% 70% ;
-}
-@media(min-width: 48rem) {
-    .city-text-block{
-        padding: 1rem;
+@media(max-width: 48rem) {
+    .city__wrapper,
+    .cafes__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
     }
-    introduction-block {
+    .city__text-block,
+    .cafes__text-block {
+        width: 100%;
+        padding: 2rem;
+    }
+    .city-description {
+        text-align: justify;
+        margin: 2vw 0;
+    }
+    .photo-img-block {
+        width: 100%;
+        height: 50vh;
+    }
+    .introduction-block {
         font-size: 1em;
         line-height: 2.5rem;
         margin: 3vw;
