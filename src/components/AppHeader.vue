@@ -5,18 +5,13 @@ import { RouterLink } from "vue-router";
   <header>
     <div class="wrapper-header">
       <div class="header__logo">
-        <a class="nav-menu">Top cafes</a>
+        <RouterLink class="nav-menu" to="/">Top cafes</RouterLink>
       </div>
       <div class="header__text-wrapper">
-        <RouterLink class="header__item" to="/">Головна</RouterLink>
-        <RouterLink to="/cities" class="header__item cities">Міста</RouterLink>
         <RouterLink to="/cafes" class="header__item cafes">Кав'ярні</RouterLink>
+        <RouterLink to="/cities" class="header__item cities">Міста</RouterLink>
         <a href="#" class="header__item burger-menu">
-          <input
-            type="checkbox"
-            id="burger-menu__checkbox"
-            class="burger-menu__input"
-          />
+          <input type="checkbox" id="burger-menu__checkbox" class="burger-menu__input" />
           <label for="burger-menu__checkbox" class="burger-menu__label">
             <i class="material-icons">&#xe5d2;</i>
           </label>
