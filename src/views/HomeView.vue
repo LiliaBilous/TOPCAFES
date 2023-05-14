@@ -21,7 +21,7 @@
       </p>
       <p>Lets get started!</p>
     </div>
-    <div class="city__wrapper wrapper">
+    <div class="city__wrapper wrapper wrapper-reverse">
       <div class="city__text-block">
         <p class="city-description">
           Так склалось, що я люблю і подорожувати в тому числі нашою рідною Україною. Тож

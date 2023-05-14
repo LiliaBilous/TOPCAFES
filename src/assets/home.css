@@ -53,6 +53,10 @@
     justify-content: center;
     align-items: center;
 }
+.wrapper-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
 .city__wrapper {
     color: var(--color-white);
     background-color: #77442E;
@@ -72,10 +76,11 @@
     height: 100%;
 }
 .coffee-img{
-    background-image: url('./img/HomePage/cities-link.jpg') ;
+    background-image: url('./img/HomePage/cafes-link.jpg') ;
     height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: 30% 70%;
+    
 }
 .cafes__wrapper {
     background-color: var(--color-background);
@@ -83,7 +88,7 @@
     color: var(--color-main-brown);
 }
 .cafes-img {
-    background-image: url('./img/HomePage/cafes-link.jpg') ;
+    background-image: url( './img/HomePage/work-place-coffee5.jpg') ;
     background-size: cover;
     background-position:  30% 70% ;
     height: 100%;
