@@ -5,10 +5,11 @@
 .cafe-photo-wrap {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .cafe__img-holder {
     height: 45rem;
-    width: 80%;
+    width: 65%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -30,17 +31,20 @@
     font-style: italic;
 }
 .cafe__cide-description {
+    width: 35%;
+    height: 45rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin: 0 3rem;
+    justify-content: space-evenly;
+    margin: 0 2.5rem;
     color: var(--color-main-brown);
-    line-height: 3rem;
+    line-height: 2rem;
 }
 .cide__title {
     text-transform: uppercase;
-    font-size: 3.5rem;
-    margin: 2rem auto;
+    font-size: 3rem;
+    line-height: 2.5rem;
+    margin: 0 auto 2rem;
     color: var(--color-main-brown);
     padding-bottom: 1rem;
     border-bottom: 2px var(--color-main-brown) solid;
@@ -67,9 +71,14 @@
     justify-content: space-between;
     border-top: 2px var(--color-main-brown) solid;
 }
+.cafe__link {
+    outline: none;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+}
 .cafe__link:hover {
-    text-decoration: underline;
-    color: black;
+    border-bottom: 1px solid var(--color-text);
+    color: var(--color-main-brown);
 }
 .cafe__central-holder {
     margin: 3rem 0;
