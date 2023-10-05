@@ -4,7 +4,7 @@
       <h2 class="city__header">{{ city.bannerTitle }}</h2>
       <p class="city__text-wrap" v-html="city.bannerText" />
       <div class="button-wrapper">
-        <a href="#" class="button">Перейти до огляду</a>
+        <a href="#" class="button">{{ city.buttonText }}</a>
       </div>
     </div>
   </div>
