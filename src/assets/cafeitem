@@ -82,14 +82,20 @@
 .rosteria {
     background-image: url('../assets/img/Franyk/rosteria/main-rosteria-cavy.jpg');
 }
-.fabrica {
-    background-image: url('../assets/img/Franyk/fabrica/fabryka.jpg');
+.urban {
+    background-image: url('../assets/img/Franyk/urban/urbanMain.jpeg');
 }
 .delikacia {
     background-image: url('../assets/img/Franyk/Delikacia/main-delikacia.jpg');
 }
-.tradycia {
-    background-image: url('../assets/img/Franyk/tradycia/main-tradycia.jpg');
+.kurzeme {
+    background-image: url('../assets/img/Franyk/kurzeme/kurzemeMain.jpg');
+}
+.milkPink {
+    background-image: url('../assets/img/Franyk/Milk&Pink/milkPinkMain.png');
+}
+.manufactura {
+    background-image: url('../assets/img/Franyk/manufactura/manufacturaMain.jpg');
 }
 /* cherkasy */
 .fabrykaRosteria {
