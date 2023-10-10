@@ -1,4 +1,6 @@
 .article-block-cafes {
+    padding: 5rem 3rem 2rem;
+    background-color: var(--color-background);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -13,19 +15,19 @@
 }
 .article-wrapper:nth-child(4n-3) {
     background: #F4EDE6;
-    background: linear-gradient(100deg, white 0%, #ddd1c5  100%);
+    background: linear-gradient(130deg, #f1dcc7 0%, #a26c50  100%);
 }
 .article-wrapper:nth-child(4n-2) {
     background: #77442E;
-    background: linear-gradient(225deg, #805743 0%, #4B2F21 100%);
+    background: linear-gradient(225deg, #a26c50 0%, #4B2F21 100%);
 }
 .article-wrapper:nth-child(4n-1) {
     background: #77442E;
-    background: linear-gradient(180deg, #4B2F21 0%, #805743 100%);
+    background: linear-gradient(180deg, #4B2F21 0%, #a26c50 100%);
 }
 .article-wrapper:nth-child(4n) {
     background: #F4EDE6;
-    background: linear-gradient(180deg,#ddd1c5 0%, white 100%);
+    background: linear-gradient(130deg,#a26c50 0%, #f1dcc7 100%);
 }
 .article__link-holder {
     width: 100%;
@@ -56,8 +58,8 @@
 }
 .article-description {
     margin: 2rem 0;
-    text-align: center;
-    color: var(--color-white);
+    text-align: justify;
+    color: var(--color-background);
 }
 .article-wrapper:nth-child(4n) .article-description,
 .article-wrapper:nth-child(4n-3) .article-description {
@@ -97,6 +99,8 @@
 .manufactura {
     background-image: url('../assets/img/Franyk/manufactura/manufacturaMain.jpg');
 }
+
+
 /* cherkasy */
 .fabrykaRosteria {
     background-image: url('../assets/img/cherkasy/fabryka/main-fabrykaRosteria.jpg');
@@ -107,6 +111,14 @@
 .shocolad {
     background-image: url('./img/cherkasy/shocoladu/lvivska-shocoladu.jpg');
 }
+.agroelf {
+    background-image: url('./img/cherkasy/argoelf/argoelfMain.jpg');
+}
+.morrisSpace {
+    background-image: url('./img/cherkasy/morris/morrisMain.jpg');
+}
+
+
 /* kyiv */
 .zavertaylo {
     background-image: url('./img/Kyiv/zavertailo/cup-coffee4.jpg');
