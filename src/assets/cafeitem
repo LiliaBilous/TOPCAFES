@@ -111,7 +111,7 @@
 .shocolad {
     background-image: url('./img/cherkasy/shocoladu/lvivska-shocoladu.jpg');
 }
-.agroelf {
+.argoelf {
     background-image: url('./img/cherkasy/argoelf/argoelfMain.jpg');
 }
 .morrisSpace {
