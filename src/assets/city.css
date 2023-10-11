@@ -3,20 +3,29 @@
     position: relative;
     height: 40rem;
     width: 100%;   
+    
+}
+.franyk {
+    background-image: url('./img/Franyk/ivano-frankivsk.jpg'); 
     background-position: 70% 30%;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.franyk {
-    background-image: url('./img/Franyk/ivano-frankivsk.jpg'); 
-}
 .kyiv {
     background-image: url('./img/Kyiv/kyiv-main-photo.jpg');
+    background-position: 70% 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .lviv {
+    background-position: 70% 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image: url('./img/lviv/lviv-main-photo.jpg');
 }
 .cherkasy {
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image: url('./img/cherkasy/blue-palace.jpg');
     background-position: 85% 15%;
 }
