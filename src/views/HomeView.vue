@@ -3,7 +3,7 @@
     <div class="main-photo-wrap">
       <div class="main-box-img">
         <h1 class="main-heading">Top cafes Ukraine</h1>
-        <p class="sub">За суб'єктивною думкою автора станом на 2023 рік</p>
+        <p class="main-sub">За суб'єктивною думкою автора станом на 2023 рік</p>
       </div>
     </div>
     <div class="introduction-block">
