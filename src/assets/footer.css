@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     font-size: 1.2rem;
-    color: #40281c;
+    color: var(--color-main-brown);
     margin: 1.25rem;
 }
 .footer-anchor {

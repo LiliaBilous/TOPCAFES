@@ -1,11 +1,33 @@
 /* semantic color variables for this project */
 :root {
   --color-white: white;
-  --color-background: #f1dcc7;
-  --color-ligt-brown:#a26c50;
-  --color-main-brown: #3c251a;
-  --color-text: black;
+  --color-background: #f0dcd2;
+  --color-light-brown:#A0522D;
+  --color-main-brown: #401d14;
+  --color-text: #1f100b;
+
+  --dark-gradient: linear-gradient(215deg, #77442E 0%, var(--color-main-brown) 100%);
+  --light-gradient: linear-gradient(255deg,var(--color-background) 10%, var(--color-white) 100%);
+  --shadow-photo: rgba(0, 0, 0, 0.35);
+  --hover-shadow-dark: rgba(64, 29, 20, 0.35);
+  --hover-shadow-light: rgba(255, 255, 255, 0.35);
 }
+::-webkit-scrollbar-track {
+	background-color: var(--color-background);
+}
+::-webkit-scrollbar {
+	width: 1.5vw;
+	background-color: var(--color-text);
+}
+
+::-webkit-scrollbar-thumb
+{
+  height: 3rem;
+	background-color: var(--color-main-brown);
+}
+
+
+/* Reset styles */
 *,
 *::before,
 *::after {
@@ -48,7 +70,7 @@ a {
 a:hover, 
 a:active,
 a:focus {
-  color: var(--color-ligt-brown);
+  color: var(--color-light-brown);
   border: none;
   outline: none;
 }

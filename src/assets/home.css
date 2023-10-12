@@ -1,4 +1,5 @@
 /* home page */
+/* Main photo block */
 .main-photo-wrap {
     top: 0;
     height: 45rem;
@@ -10,7 +11,7 @@
     color: var(--color-background);
 }
 .main-box-img {
-    background-color: rgba(14, 13, 12, 0.364);
+    background-color: var(--shadow-photo);
     height: 45rem;
     width: 100%;
     display: flex;
@@ -26,10 +27,11 @@
     font-weight: 600;
     line-height: 3rem;
 }
-.sub {
+.main-sub {
     color: var(--color-background);
     font-style: italic;
 }
+/* Introduction text */
 .introduction-block {
     background-color: var(--color-white);
     color: var(--color-text);
@@ -57,10 +59,11 @@
     display: flex;
     flex-direction: row-reverse;
 }
+/* City&Cafe Blocks with photos */
 .city__wrapper {
-    color: var(--color-white);
-    background-color: #77442E;
-    background: linear-gradient(180deg, #805743 0%,  #4B2F21 100%);    
+    color: var(--color-background);
+    background-color: var(--color-main-brown);
+    background: var(--dark-gradient);  
 }
 .city__text-block,
 .cafes__text-block {
@@ -84,7 +87,7 @@
 }
 .cafes__wrapper {
     background-color: var(--color-background);
-    background: linear-gradient(255deg,#efd6be 0%, white 100%);
+    background: var(--light-gradient);
     color: var(--color-main-brown);
 }
 .cafes-img {
@@ -104,14 +107,14 @@
     text-transform: uppercase;
     padding: 15px 30px;
     letter-spacing: 5px;
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease-in-out;
     color: var(--color-background);
     border: 1px solid var(--color-background);
 }
 .button:hover {
-    background-color: rgba(255,255,255,0.3);
+    background-color: var(--hover-shadow-light);
     border: 1px solid var(--color-background);
-    color: var(--color-main-brown);
+    color: var(--color-text);
 }
 .dark-button {
     color: var(--color-main-brown);
@@ -119,9 +122,13 @@
 }
 
 .dark-button:hover {
-    background-color: rgba(75, 38, 14, 0.35);
+    background-color: var(--hover-shadow-dark);
+    color: var(--color-white);
     border: 1px solid var(--color-main-brown);
 }
+
+
+
 @media(max-width: 48rem) {
     .city__wrapper,
     .cafes__wrapper {

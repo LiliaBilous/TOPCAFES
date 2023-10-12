@@ -15,7 +15,7 @@
     background-position: center center;
 }
 .cafe__main-img {
-    background-color: rgba(2, 1, 0, 0.4);
+    background-color: var(--shadow-photo);
     height: 45rem;
     width: 100%;
     display: flex;
@@ -106,7 +106,7 @@
     margin-right: 3rem;
     padding: 0 1rem;
     color: var(--color-background);
-    background: linear-gradient(255deg, var(--color-ligt-brown) 0%, var(--color-main-brown) 100%);
+    background: var(--dark-gradient);
 }
 .central-holder__comments p {
     padding-bottom: 1rem;
@@ -144,8 +144,8 @@
 .modal {
     /* display: none; */
     position: fixed;
-    z-index: 1;
-    padding-top: 100px;
+    z-index: 55;
+    padding-top: 10px;
     left: 0;
     top: 0;
     width: 100%;
@@ -166,11 +166,11 @@
 .close {
     color: var(--color-background);
     position: absolute;
-    top: 90px;
+    top: 10px;
     right: 25px;
     font-size: 35px;
     font-weight: bold;
-    z-index: 15;
+    z-index: 55;
 }
 
 .close:hover,
@@ -208,7 +208,7 @@
     margin-top: -50px;
     color: var(--color-background);
     border: 1px solid var(--color-background);
-    background-color: rgba(var(--color-main-brown), 0.3);
+    background-color: var(--hover-shadow-dark);
     font-weight: bold;
     font-size: 20px;
     transition: 0.2s ease;
@@ -224,9 +224,9 @@
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-    background-color: rgba(255,255,255,0.3);
-    border: 1px solid var(--color-background);
-    color: var(--color-main-brown);
+    background-color: var(--hover-shadow-light);
+    /* border: 1px solid var(--color-light-brown); */
+    color: var(--color-text);
 }
 
 /* Number text (1/3 etc) */
@@ -240,6 +240,11 @@
 }
 
 .nav-bar {
+    margin-top: 1rem;
+    background: var(--color-background);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+.nav-item {
+    margin: 1rem ;
 }

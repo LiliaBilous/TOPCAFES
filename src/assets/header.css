@@ -2,6 +2,8 @@
 .wrapper-header {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -9,7 +11,8 @@
     height: 4rem;
     width: 100%;
     z-index: 50;
-    background-color: rgba(60, 37, 26, 0.85) ;
+    background-color: var(--color-main-brown);
+    opacity: 0.85;
     text-transform: uppercase;
 }
 .header__logo {
@@ -22,7 +25,7 @@
     font-weight: bold;
 }
 .header__nav-menu {
-    background: linear-gradient(180deg, white 0%, #ddd1c5  100%);
+    background: var(--light-gradient);
     min-width: 20rem;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 15;
@@ -38,7 +41,7 @@
     color: var(--color-background);
     font-weight: bold;
 }
-.burger-menu__input {
+/* .burger-menu__input {
     position: absolute;
     width: 0;
     height: 0;
@@ -75,7 +78,7 @@
     width: 100%;
     text-align: center;
     transition: 0.3s all ease-in-out;
-}
+} */
 .nav-menu-item:hover {
     background-color: var(--color-background);   
 }
