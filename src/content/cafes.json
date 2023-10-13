@@ -106,12 +106,16 @@
         "photoGallery": [
             "urban",
             "urban1",
-            "urbanPlantTolic2",
-            "urbanPTea3",
-            "urbanSoup4",
-            "urbanSandwich5",
-            "work-place-coffee4",
-            "coffee-mashine3"
+            "urban2",
+            "urban3",
+            "urban4",
+            "urban5",
+            "urban6",
+            "urban7",
+            "urban8",
+            "urban9",
+            "urban10",
+            "urban11"
         ]
     },
     {
@@ -279,7 +283,9 @@
         "price": "$",
         "comments": "в планах відвідати їх заклад",
         "photoGallery": [
-            "mini-cava"
+            "mini-cava",
+            "cup-coffee11",
+            "beans4"
         ]
     },
 
