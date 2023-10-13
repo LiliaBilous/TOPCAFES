@@ -49,11 +49,11 @@
         "price": "$$$",
         "comments": "Попередження: кількість десертів та їх різноманіття - просто збивають з пантелику!...Але я раджу спробувати Франківський торт - це надзвичайно ніжний та смачний десерт, і де ж ще його куштувати, як не тут?!)))",
         "photoGallery": [
+            "delikacia",
+            "delikacia1",
             "delikacia2",
-            "cake",
-            "frankivsk-cake",
-            "icibana",
-            "cup-coffee7"
+            "delikacia3",
+            "delikacia4"
         ]
     },
     {
@@ -190,7 +190,11 @@
         "price": "$$",
         "comments": "в планах відвідати їх заклад",
         "photoGallery": [
-            "cap-coffee"
+            "idealist",
+            "idealist1",
+            "idealist2",
+            "idealist3",
+            "idealist4"
         ]
     },
     {
@@ -210,12 +214,12 @@
         "price": "$$",
         "comments": "У кавярні є свій улюбленець - котик, кожного дня він любить приходити у цю кавярню та добряче висипатись. Також тут смачна кава, десерти і дуже симпатичний інтер'єр.",
         "photoGallery": [
-            "kt",
             "osmantus",
             "osmantus2",
             "osmantus3",
-            "dessert",
-            "kotyk2"
+            "osmantus4",
+            "osmantus5",
+            "osmantus6"
         ]
     },
     {
@@ -262,8 +266,11 @@
         "price": "$$",
         "comments": "в планах відвідати їх заклад",
         "photoGallery": [
-            "kontractova",
-            "podil"
+            "zavertaylo1",
+            "zavertaylo2",
+            "zavertaylo3",
+            "zavertaylo4",
+            "zavertaylo5"
         ]
     },
     {
@@ -283,9 +290,8 @@
         "price": "$",
         "comments": "в планах відвідати їх заклад",
         "photoGallery": [
-            "mini-cava",
-            "cup-coffee11",
-            "beans4"
+            "yaroslava1",
+            "yaroslava2"
         ]
     },
 
@@ -308,17 +314,16 @@
         "price": "$$",
         "comments": "Моя улюблена кавярня з цієї мережі саме на набережній з розкішним видом на Дніпро, а від недавна для гостей відкрили зал на другому поверсі з панорамним видом - дуже рекомендую. Окрім того, тут неймовірна кава власного обсмаження і найсмачніші круасани.",
         "photoGallery": [
-            "zyvchyk",
-            "cava-dnipro",
-            "kish&coffee",
-            "coffee",
-            "mark",
-            "2nd_floor",
-            "sofa",
-            "view-place",
-            "view-place-2ndfloor",
-            "candle",
-            "fabryka-vhid"
+            "fabryka",
+            "fabryka1",
+            "fabryka2",
+            "fabryka3",
+            "fabryka4",
+            "fabryka5",
+            "fabryka6",
+            "fabryka7",
+            "fabryka8",
+            "fabryka9"
         ]
     },
     {
@@ -338,11 +343,11 @@
         "price": "$$",
         "comments": "Дуже рекомендую меренговий рулет - він закохає вас в себе з першого шматочка",
         "photoGallery": [
-            "endorfin-soup",
-            "cafe1",
-            "cup-coffee10",
-            "cup-coffee8",
-            "work-place-coffee"
+            "endorfin",
+            "endorfin1",
+            "endorfin2",
+            "endorfin3",
+            "endorfin4"
         ]
     },
     {
@@ -362,10 +367,10 @@
         "price": "$$",
         "comments": "Поєднання смачної кави та шоколаду ... для мене це просто любов... Звісно, що мережа розвинута, велика і в багатьох містах України є ці майстерені, але саме ця в Черкасах найулюбленіша...",
         "photoGallery": [
-            "cafe5",
-            "city1",
-            "lvivska-shocoladu",
-            "shocolad-kyiv"
+            "shocolad",
+            "shocolad1",
+            "shocolad2",
+            "shocolad3"
         ]
     },
     {
@@ -387,7 +392,8 @@
         "photoGallery": [
             "argoelf",
             "argoelf1",
-            "argoelf2"
+            "argoelf2",
+            "argoelf3"
         ]
     },
     {

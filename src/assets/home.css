@@ -4,7 +4,7 @@
     top: 0;
     height: 45rem;
     width: 100%;
-    background-image: url('./img/HomePage/cup-coffee14.jpg');    
+    background-image: url('./img/HomePage/main-photo.jpg');    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 65% 35%;
@@ -79,7 +79,7 @@
     height: 100%;
 }
 .coffee-img{
-    background-image: url('./img/HomePage/cafes-link.jpg') ;
+    background-image: url('./img/HomePage/cafe-link.jpg') ;
     height: 100%;
     background-size: cover;
     background-position: 30% 70%;
@@ -91,7 +91,7 @@
     color: var(--color-main-brown);
 }
 .cafes-img {
-    background-image: url( './img/HomePage/work-place-coffee5.jpg') ;
+    background-image: url( './img/HomePage/city-link.jpg') ;
     background-size: cover;
     background-position:  30% 70% ;
     height: 100%;
