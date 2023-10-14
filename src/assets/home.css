@@ -79,7 +79,7 @@
     height: 100%;
 }
 .coffee-img{
-    background-image: url('./img/HomePage/cafe-link.jpg') ;
+    background-image: url('./img/HomePage/beans2.jpg') ;
     height: 100%;
     background-size: cover;
     background-position: 30% 70%;
@@ -91,9 +91,9 @@
     color: var(--color-main-brown);
 }
 .cafes-img {
-    background-image: url( './img/HomePage/city-link.jpg') ;
+    background-image: url( './img/HomePage/city-link.jpg');
     background-size: cover;
-    background-position:  30% 70% ;
+    background-position: 40% 60% ;
     height: 100%;
 }
 .button-wrapper {
