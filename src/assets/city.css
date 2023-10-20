@@ -2,27 +2,31 @@
 .photo-city-wrap {
     position: relative;
     height: 40rem;
-    width: 100%;   
-    
+    width: 100%;
+
 }
+
 .franyk {
-    background-image: url('./img/Franyk/ivano-frankivsk.jpg'); 
+    background-image: url('./img/Franyk/ivano-frankivsk.jpg');
     background-position: 70% 30%;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .kyiv {
     background-image: url('./img/Kyiv/kyiv-main-photo.jpg');
     background-position: 70% 30%;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .lviv {
     background-position: 70% 30%;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url('./img/lviv/lviv-main-photo.jpg');
 }
+
 .cherkasy {
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,30 +45,51 @@
     align-items: center;
     color: var(--color-background);
 }
+
 .city__header {
     font-size: 3em;
     font-weight: 700;
     margin: 3vw 0;
     text-align: center;
 }
+
 .city__text-wrap {
     max-width: 60rem;
-    margin: 3vw ;
+    margin: 3vw;
     text-align: center;
 }
+
 .desctiption-text-wrap {
     text-align: center;
     margin: 2rem;
 }
+
 @media(max-width: 20rem) {
     .city__header {
         font-size: 2em;
         font-weight: 700;
         margin: 1.5vw 0;
     }
+
     .city__text-wrap {
         max-width: 60rem;
-        margin: 2vw ;
+        margin: 2vw;
     }
-   
+
+}
+
+@media(max-width: 40rem) {
+    .city__img-holder {
+        height: 35rem;
+
+    }
+
+    .city__header {
+        font-size: 2em;
+        margin: 2vw 0;
+    }
+
+    .city__text-wrap {
+        margin: 2rem;
+    }
 }

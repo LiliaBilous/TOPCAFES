@@ -12,14 +12,20 @@
     font-weight: 600;
     letter-spacing: 2px;
 }
+.box_copyright {
+    text-align: center;
+}
 @media(max-width: 48rem) {
     .footer {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin: 1rem;
         display: flex;
         flex-direction: column;
-        font-size: 1rem;
         align-items: center;
     }
     .footer-anchor {
         font-size: 1rem;
     }
+
 }

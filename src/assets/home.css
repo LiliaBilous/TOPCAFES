@@ -4,12 +4,13 @@
     top: 0;
     height: 45rem;
     width: 100%;
-    background-image: url('./img/HomePage/main-photo.jpg');    
+    background-image: url('./img/HomePage/main-photo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 65% 35%;
     color: var(--color-background);
 }
+
 .main-box-img {
     background-color: var(--shadow-photo);
     height: 45rem;
@@ -19,6 +20,7 @@
     align-items: center;
     justify-content: center
 }
+
 .main-heading {
     margin-bottom: 2.5vw;
     text-transform: uppercase;
@@ -27,10 +29,12 @@
     font-weight: 600;
     line-height: 3rem;
 }
+
 .main-sub {
     color: var(--color-background);
     font-style: italic;
 }
+
 /* Introduction text */
 .introduction-block {
     background-color: var(--color-white);
@@ -40,14 +44,17 @@
     text-align: center;
     margin: 5vw;
 }
+
 .introduction-header {
     margin: 5vw 0;
     font-weight: 700;
     text-align: center;
 }
+
 .introduction-text-wrap {
     text-align: center;
 }
+
 .wrapper {
     height: 37.5rem;
     display: flex;
@@ -55,51 +62,61 @@
     justify-content: center;
     align-items: center;
 }
+
 .wrapper-reverse {
     display: flex;
     flex-direction: row-reverse;
 }
+
 /* City&Cafe Blocks with photos */
 .city__wrapper {
     color: var(--color-background);
     background-color: var(--color-main-brown);
-    background: var(--dark-gradient);  
+    background: var(--dark-gradient);
 }
+
 .city__text-block,
 .cafes__text-block {
     width: 50%;
     padding: 3.125rem;
 }
+
 .city-description {
     text-align: justify;
     margin: 2vw 0;
 }
+
 .photo-img-block {
     width: 50%;
     height: 100%;
 }
-.coffee-img{
-    background-image: url('./img/HomePage/beans2.jpg') ;
+
+.coffee-img {
+    background-image: url('./img/HomePage/beans2.jpg');
     height: 100%;
     background-size: cover;
     background-position: 30% 70%;
-    
+
 }
+
 .cafes__wrapper {
     background-color: var(--color-background);
     background: var(--light-gradient);
     color: var(--color-main-brown);
 }
+
 .cafes-img {
-    background-image: url( './img/HomePage/city-link.jpg');
+    background-image: url('./img/HomePage/city-link.jpg');
     background-size: cover;
-    background-position: 40% 60% ;
+    background-position: 40% 60%;
     height: 100%;
 }
+
 .button-wrapper {
     margin: 1.5rem 2rem;
     text-align: center;
 }
+
 .button {
     display: flex;
     justify-content: center;
@@ -111,11 +128,13 @@
     color: var(--color-background);
     border: 1px solid var(--color-background);
 }
+
 .button:hover {
     background-color: var(--hover-shadow-light);
     border: 1px solid var(--color-background);
     color: var(--color-text);
 }
+
 .dark-button {
     color: var(--color-main-brown);
     border: 1px solid var(--color-main-brown);
@@ -130,32 +149,63 @@
 
 
 @media(max-width: 48rem) {
+    .main-box-img {
+        padding: 0 2rem;
+        text-align: center;
+        line-height: 2rem;
+    }
+
     .city__wrapper,
     .cafes__wrapper {
         display: flex;
         flex-direction: column-reverse;
     }
+
     .city__text-block,
     .cafes__text-block {
         width: 100%;
         padding: 2rem;
     }
+
     .city-description {
         text-align: justify;
         margin: 2vw 0;
     }
+
     .photo-img-block {
         width: 100%;
-        height: 50vh;
+        height: 50%;
     }
+
     .introduction-block {
         font-size: 1em;
         line-height: 2.5rem;
-        margin: 3vw;
+        margin: 2rem;
     }
+
     .button {
-        font-size: medium;
-        padding: 15px;
+        font-size: 1em;
+        padding: 1rem;
         letter-spacing: 3px;
     }
+}
+
+@media(max-width: 28rem) {
+
+    .main-photo-wrap,
+    .main-box-img {
+        height: 30rem;
+    }
+
+    .main-heading {
+        margin-bottom: 2.5vw;
+        letter-spacing: 3px;
+        font-size: 2em;
+    }
+
+    .introduction-block {
+        margin: 2rem;
+        line-height: 2rem
+    }
+
 }
