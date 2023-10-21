@@ -33,7 +33,12 @@
     background-image: url('./img/cherkasy/blue-palace.jpg');
     background-position: 85% 15%;
 }
-
+.odesa {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('./img/Odesa/Odesa3.jpg');
+    background-position: 90% 10%;
+}
 
 .city__img-holder {
     background-color: var(--shadow-photo);
