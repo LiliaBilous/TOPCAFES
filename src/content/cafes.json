@@ -420,6 +420,126 @@
             "morris2",
             "morris3"
         ]
-    }
+    },
     
+    {
+        "id": 31,
+        "title": "Теплий п'єц",
+        "text": "",
+        "imageUrlClass": "pyets",
+        "cafeRoute": "/pyets",
+        "city": "Lviv",
+        "name": "pyets",
+        "address": "вулиця Староєврейська, 50, Львів, Львівська область, 79000",
+        "workHours": "Пн-Нд 10:00 - 22:00 ",
+        "telephone": "+380987321414",
+        "linkToCafe": "",
+        "socialLink": "",
+        "rating": "4.6",
+        "price": "$$",
+        "comments": "У кавярні зібрано колерцію ",
+        "photoGallery": [
+            
+        ]
+    },
+    {
+        "id": 32,
+        "title": "Єрусалим",
+        "text": "",
+        "imageUrlClass": "yerusalym",
+        "cafeRoute": "/yerusalym",
+        "city": "Lviv",
+        "name": "yerusalym",
+        "address": "вулиця Мечникова, 39, Львів, Львівська область, 79017",
+        "workHours": "Пн-Нд 11:00 - 20:00 ",
+        "telephone": "+380984214076",
+        "linkToCafe": "https://www.kafejerusalem.com/",
+        "socialLink": "https://www.instagram.com/kafejerusalem/",
+        "rating": "4.6",
+        "price": "$$",
+        "comments": "",
+        "photoGallery": [
+            
+        ]
+    },
+    {
+        "id": 33,
+        "title": "Фацетка",
+        "text": "",
+        "imageUrlClass": "fazetka",
+        "cafeRoute": "/fazetka",
+        "city": "Lviv",
+        "name": "fazetka",
+        "address": "вулиця Вірменська, 25, Львів, Львівська область, 79000",
+        "workHours": "Пн-Нд 12:00 - 23:00 ",
+        "telephone": "+380322546136",
+        "linkToCafe": "",
+        "socialLink": "https://instagram.com/fazetka",
+        "rating": "4.9",
+        "price": "$$",
+        "comments": "",
+        "photoGallery": [
+            
+        ]
+    },
+    {
+        "id": 34,
+        "title": "CODE",
+        "text": "",
+        "imageUrlClass": "code",
+        "cafeRoute": "/code",
+        "city": "Lviv",
+        "name": "code",
+        "address": "вулиця Князя Романа, 16, Львів, Львівська область, 79000",
+        "workHours": "Пн-Нд 09:00 - 21:00 ",
+        "telephone": "+380630648424",
+        "linkToCafe": "https://code.choiceqr.com/",
+        "socialLink": "https://www.instagram.com/codecoffee.lviv/",
+        "rating": "4.8",
+        "price": "$$",
+        "comments": "",
+        "photoGallery": [
+            
+        ]
+    },
+    {
+        "id": 35,
+        "title": "Cheese Bakery",
+        "text": "",
+        "imageUrlClass": "cheeseBakery",
+        "cafeRoute": "/cheeseBakery",
+        "city": "Lviv",
+        "name": "cheeseBakery",
+        "address": "вулиця Галицька, 1, Львів, Львівська область, 79008",
+        "workHours": "Пн-Нд 08:30 - 21:00 ",
+        "telephone": "+380639387005",
+        "linkToCafe": "https://cheesebakery.com.ua/",
+        "socialLink": "https://www.instagram.com/the_cheese_bakery/",
+        "rating": "4.7",
+        "price": "$$$",
+        "comments": "",
+        "photoGallery": [
+            
+        ]
+    },
+    {
+        "id": 36,
+        "title": "Black Honey",
+        "text": "",
+        "imageUrlClass": "blackHoney",
+        "cafeRoute": "/blackHoney",
+        "city": "Lviv",
+        "name": "blackHoney",
+        "address": "провулок, проїзд Крива Липа, 3, Львів, Львівська область, 79000",
+        "workHours": "Пн-Нд 08:30 - 21:00 ",
+        "telephone": "+380973042064",
+        "linkToCafe": "",
+        "socialLink": "https://www.instagram.com/blackhoney.lviv/",
+        "rating": "4.7",
+        "price": "",
+        "comments": "",
+        "photoGallery": [
+            
+        ]
+    }
 ]
