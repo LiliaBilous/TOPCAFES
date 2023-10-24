@@ -162,7 +162,29 @@
 }
 
 /* lviv */
-
+.pyets {
+    background-image: url('../assets/img/Lviv/pyets/pyets.jpg');
+    background-position: 30% 70%;
+}
+.yerusalym {
+    background-image: url('../assets/img/Lviv/yerusalym/yerusalym.jpg');
+   
+}
+.fazetka {
+    background-image: url('../assets/img/Lviv/fazetka//fazetka.jpg');
+}
+.code {
+    background-image: url('../assets/img/Lviv/code/code.jpg');
+    background-position: 40% 60%;
+}
+.cheeseBakery {
+    background-image: url('../assets/img/Lviv/cheeseBakery/cheeseBakery.jpg');
+    background-position: 50% 50%;
+}
+.blackHoney {
+    background-image: url('../assets/img/Lviv/blackHoney/blackHoney.jpg');
+    background-position: 50% 50%;
+}
 /* odesa */
 
 @media(max-width: 48rem) {
