@@ -8,7 +8,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 0;
     height: 4rem;
     width: 100%;
     z-index: 50;
@@ -19,7 +19,6 @@
 
 .header__logo {
     margin-left: 2rem;
-
 }
 
 .header__home {
@@ -31,7 +30,7 @@
 .header__text-wrapper {
     display: flex;
     align-items: center;
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 .header__item {
