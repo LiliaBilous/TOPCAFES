@@ -187,6 +187,9 @@
 }
 /* odesa */
 
+
+
+/* addaptive styles */
 @media(max-width: 48rem) {
     .article-block-cafes {
         display: flex;
