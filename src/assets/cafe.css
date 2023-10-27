@@ -2,12 +2,14 @@
 .cafe__wrapper {
     margin: 2rem;
 }
+
 .cafe-photo-wrap {
     margin-top: 5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
 .cafe__img-holder {
     height: 45rem;
     width: 65%;
@@ -15,6 +17,7 @@
     background-size: cover;
     background-position: center center;
 }
+
 .cafe__main-img {
     background-color: var(--shadow-photo);
     height: 45rem;
@@ -23,6 +26,7 @@
     justify-content: space-between;
     align-items: flex-end;
 }
+
 .cide__rating,
 .cide__price {
     color: var(--color-background);
@@ -31,6 +35,7 @@
     align-items: center;
     font-style: italic;
 }
+
 .cafe__cide-description {
     width: 35%;
     height: 45rem;
@@ -42,6 +47,7 @@
     color: var(--color-main-brown);
     line-height: 2rem;
 }
+
 .cide__title {
     text-transform: uppercase;
     font-size: 3rem;
@@ -51,43 +57,51 @@
     padding-bottom: 1rem;
     border-bottom: 2px var(--color-main-brown) solid;
 }
+
 .cide__wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
 }
+
 .cide__bar {
     display: flex;
     flex-direction: column;
     margin-bottom: 2.5rem;
 }
+
 .icon-holder {
     font-weight: bold;
     font-size: 1.5rem;
     display: flex;
     align-items: center;
 }
+
 .cide_contacts {
     display: flex;
     justify-content: space-between;
     border-top: 2px var(--color-main-brown) solid;
 }
+
 .cafe__link {
     outline: none;
     padding-bottom: 5px;
     border-bottom: 1px solid transparent;
 }
+
 .cafe__link:hover {
     border-bottom: 1px solid var(--color-text);
     color: var(--color-main-brown);
 }
+
 .cafe__central-holder {
     margin: 3rem 0;
     display: flex;
     flex-direction: row;
     color: var(--color-main-brown);
 }
+
 .central-holder__description {
     width: 60%;
     height: auto;
@@ -104,6 +118,7 @@
 .description__subtitle {
     text-align: justify;
 }
+
 .central-holder__comments {
     width: 35%;
     height: auto;
@@ -124,12 +139,14 @@
     font-weight: bold;
     padding: 2rem 1rem 1rem;
 }
+
 .gallery__holder {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
     padding: 1rem;
 }
+
 /* .gallery__img-holder {
     
 } */
@@ -139,9 +156,11 @@
     object-fit: cover;
     transition: 0.3s;
 }
+
 .img-holder:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 /* LIGHTBOX STYLES */
 .modal {
     position: fixed;
@@ -188,11 +207,13 @@
     display: flex;
     flex-direction: column;
 }
+
 .mySlides img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
+
 .cursor {
     cursor: pointer;
 }
@@ -245,8 +266,9 @@
     display: flex;
     justify-content: space-evenly;
 }
+
 .nav-item {
-    margin: 1rem ;
+    margin: 1rem;
 }
 
 
@@ -254,22 +276,105 @@
     .cafe-photo-wrap {
         flex-direction: column;
     }
+
     .cafe__img-holder {
         width: 100%;
     }
+
     .cafe__cide-description {
         width: 100%;
         height: auto;
         padding-top: 2rem;
     }
+
     .cafe__central-holder {
         flex-direction: column;
         margin: 2rem 0;
     }
+
     .central-holder__comments {
         width: 100%;
     }
+
     .central-holder__description {
         width: 100%;
-      }
+    }
+}
+
+@media(max-width: 40rem) {
+    .nav-item {
+        margin: 0.5rem;
+        font-size: 0.65em;
+    }
+
+    .button {
+        padding: 0.5rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media(max-width: 20rem) {
+    .cafe__wrapper {
+        margin: 1rem;
+    }
+    .cafe__cide-description {
+        padding: 0;
+        margin: 0 2rem;
+    }
+
+    .cafe__img-holder {
+        height: 25rem;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+    }
+    .cafe__main-img {
+        height: 25rem;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .cide__wrapper {
+        align-items: center;
+    }
+    .cide__rating,
+    .cide__price {
+        margin: 0rem;
+        font-size: small;
+    }
+
+    .cide__title {
+        font-size: 2rem;
+        line-height: 1rem;
+        margin: 2rem auto;
+    }
+
+    .cide__bar {
+        font-size: medium;
+        margin-bottom: 1rem;
+        align-items: center;
+    }
+    .icon-holder {
+        font-size: 1rem;
+    }
+    .central-holder__comments {
+        margin-right: 0;
+        padding: 1rem;
+        font-size: medium;
+    }
+    .description__title, 
+    .comments__title {
+        margin: 1rem 0;
+    }
+    .description__subtitle {
+        font-size: medium;
+    }
+
+    .gallery__title {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
 }
