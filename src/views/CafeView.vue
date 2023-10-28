@@ -61,9 +61,9 @@
       />
     </div>
     <div class="nav-bar">
-      <button class="dark-button button nav-item">Попередня кав'ярня</button>
-      <button class="dark-button button nav-item">Повернутись на сторінку міста</button>
-      <button class="dark-button button nav-item">Наступна кавярн'я</button>
+      <button class="button nav-item">Попередня кав'ярня</button>
+      <button class="button nav-item">Повернутись на сторінку міста</button>
+      <button class="button nav-item">Наступна кавярн'я</button>
     </div>
   </div>
 </template>
