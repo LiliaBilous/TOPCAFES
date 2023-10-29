@@ -35,7 +35,7 @@
     font-style: italic;
 }
 
-/* Introduction text */
+/* Introduction block */
 .introduction-block {
     background-color: var(--color-white);
     color: var(--color-text);
@@ -56,7 +56,7 @@
 }
 
 .wrapper {
-    height: 37.5rem;
+    height: 38rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -71,18 +71,17 @@
 /* City&Cafe Blocks with photos */
 .city__wrapper {
     color: var(--color-background);
-    background-color: var(--color-main-brown);
     background: var(--dark-gradient);
 }
 
 .city__text-block,
 .cafes__text-block {
     width: 50%;
-    padding: 3.125rem;
+    padding: 3.5rem;
+    text-align: justify;
 }
 
 .city-description {
-    text-align: justify;
     margin: 2vw 0;
 }
 
@@ -96,13 +95,11 @@
     height: 100%;
     background-size: cover;
     background-position: 30% 70%;
-
 }
 
 .cafes__wrapper {
-    background-color: var(--color-background);
-    background: var(--light-gradient);
     color: var(--color-main-brown);
+    background: var(--light-gradient);
 }
 
 .cafes-img {
@@ -112,6 +109,7 @@
     height: 100%;
 }
 
+/* common button styles */
 .button-wrapper {
     margin: 1.5rem 2rem;
     text-align: center;
@@ -146,9 +144,14 @@
     border: 1px solid var(--color-main-brown);
 }
 
-
+/* addaptive styles for home page */
 
 @media(max-width: 48rem) {
+    .main-photo-wrap,
+    .main-box-img {
+        height: 30rem;
+    }
+
     .main-box-img {
         padding: 0 2rem;
         text-align: center;
@@ -159,6 +162,7 @@
     .cafes__wrapper {
         display: flex;
         flex-direction: column-reverse;
+        height: 100%;
     }
 
     .city__text-block,
@@ -167,8 +171,8 @@
         padding: 2rem;
     }
 
-    .city-description {
-        text-align: justify;
+    .city-description,
+    .cafes-description {
         margin: 2vw 0;
     }
 
@@ -187,9 +191,18 @@
         padding: 1rem;
         letter-spacing: 3px;
     }
+
+    .coffee-img,
+    .cafes-img {
+        height: 25rem;
+    }
 }
 
 @media(max-width: 28rem) {
+    .coffee-img,
+    .cafes-img {
+        height: 18rem;
+    }
 
     .main-photo-wrap,
     .main-box-img {
@@ -207,4 +220,32 @@
         line-height: 2rem
     }
 
+    .introduction-text-wrap,
+    .city-description,
+    .cafes-description {
+        font-size: medium;
+        line-height: 1.8rem;
+    }
+
+}
+
+@media(max-width: 20rem) {
+    .main-photo-wrap {
+        background-position: 30% 70%;
+    }
+
+    .main-heading {
+        margin-bottom: 2.5vw;
+        letter-spacing: 2px;
+        font-size: 2em;
+    }
+
+    .main-sub {
+        font-size: medium;
+        line-height: 1rem;
+    }
+
+    .button {
+        font-size: 0.8em;
+    }
 }
