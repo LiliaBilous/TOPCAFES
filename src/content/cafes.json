@@ -420,7 +420,9 @@
             "morris3"
         ]
     },
+
     
+
     {
         "id": 31,
         "title": "Теплий п'єц",
@@ -539,6 +541,129 @@
         "comments": "",
         "photoGallery": [
             "blackHoney1"
+        ]
+    },
+
+
+
+    {
+        "id": 41,
+        "title": "Мінімаліст",
+        "text": "",
+        "imageUrlClass": "minimalist",
+        "cafeRoute": "/minimalist",
+        "city": "Odesa",
+        "name": "minimalist",
+        "address": "вулиця Пушкінська, 31, Одеса, Одеська область, 65000",
+        "workHours": "Пн-Нд 08:00 - 20:00 ",
+        "telephone": "+380997397959",
+        "linkToCafe": "http://mnmlst.cafe/",
+        "socialLink": "",
+        "rating": "4.5",
+        "price": "$$",
+        "comments": "",
+        "photoGallery": [
+            ""
+        ]
+    },
+    {
+        "id": 42,
+        "title": "Foundation Coffee Place",
+        "text": "",
+        "imageUrlClass": "foundation",
+        "cafeRoute": "/foundation",
+        "city": "Odesa",
+        "name": "foundation",
+        "address": "вулиця Жуковського, 19, Одеса, Одеська область, 65026",
+        "workHours": "Пн-Нд 08:00 - 21:00 ",
+        "telephone": "+380736000991",
+        "linkToCafe": "https://foundation.ua/",
+        "socialLink": "",
+        "rating": "4.7",
+        "price": "$$",
+        "comments": "",
+        "photoGallery": [
+            ""
+        ]
+    },
+    {
+        "id": 43,
+        "title": "Atelier. Design & Coffee",
+        "text": "",
+        "imageUrlClass": "atelier",
+        "cafeRoute": "/atelier",
+        "city": "Odesa",
+        "name": "atelier",
+        "address": "вулиця Преображенська, 9А, Одеса, Одеська область, 65000",
+        "workHours": "Пн-Нд 10:00 - 21:00 ",
+        "telephone": "+380949222238",
+        "linkToCafe": "https://atelier-design.choiceqr.com/",
+        "socialLink": "",
+        "rating": "4.7",
+        "price": "$$",
+        "comments": "",
+        "photoGallery": [
+            ""
+        ]
+    },
+    {
+        "id": 44,
+        "title": "CoffeeOcean",
+        "text": "",
+        "imageUrlClass": "coffeeocean",
+        "cafeRoute": "/coffeeocean",
+        "city": "Odesa",
+        "name": "coffeeocean",
+        "address": "вулиця Катерининська, 25, Одеса, Одеська область, 65000",
+        "workHours": "Пн-Нд 07:45 - 21:00 ",
+        "telephone": "+380662333220",
+        "linkToCafe": "https://coffeeocean.od.ua/",
+        "socialLink": "",
+        "rating": "4.6",
+        "price": "$$",
+        "comments": "",
+        "photoGallery": [
+            ""
+        ]
+    },
+    {
+        "id": 45,
+        "title": "Zheto",
+        "text": "",
+        "imageUrlClass": "zheto",
+        "cafeRoute": "/zheto",
+        "city": "Odesa",
+        "name": "zheto",
+        "address": "Гаванна вулиця, 2, Одеса, Одеська область, 65000",
+        "workHours": "Пн-Нд 08:30 - 22:00 ",
+        "telephone": "+380964177111",
+        "linkToCafe": "",
+        "socialLink": "",
+        "rating": "4.7",
+        "price": "$$",
+        "comments": "",
+        "photoGallery": [
+            ""
+        ]
+    },
+    {
+        "id": 46,
+        "title": "Make my cake",
+        "text": "",
+        "imageUrlClass": "makemycake",
+        "cafeRoute": "/makemycake",
+        "city": "Odesa",
+        "name": "makemycake",
+        "address": "Єврейська вулиця, 29, Одеса, Одеська область, 65125",
+        "workHours": "Пн-Нд 09:00 - 20:00 ",
+        "telephone": "+380930565710",
+        "linkToCafe": "http://makemycake.com.ua/",
+        "socialLink": "",
+        "rating": "4.5",
+        "price": "$$",
+        "comments": "",
+        "photoGallery": [
+            ""
         ]
     }
 ]
