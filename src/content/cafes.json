@@ -400,7 +400,7 @@
     {
         "id": 25,
         "title": "Morris Space",
-        "text": "",
+        "text": "Morris Space - арт-кав'ярня, що приваблює гостей не лише своєю чудовою кавою, але й надзвичайною, теплою та затишною атмосферою. Завдяки арт-декору та різнобарвним малюнкам на стінах, кожний візит сюди є справжнім мистецьким досвідом. Місце ідеально підходить для тих, хто любить арт і бажає поєднати смачну їжу з культурними враженнями. Morris Space регулярно проводить арт-виставки, літературні читання, майстер-класи та інші культурні заходи. Якщо ви шукаєте не лише смачну каву, але й витончену атмосферу та культурні враження, Morris Space - це місце, яке ви повинні відвідати в Черкасах. Тут ви зможете насолодитися смачними стравами, мистецтвом та гармонійною атмосферою, яка залишить вас незабутніми враженнями.",
         "imageUrlClass": "morrisSpace",
         "cafeRoute": "/morris",
         "city": "Cherkasy",
@@ -410,14 +410,14 @@
         "telephone": "+380952700222",
         "linkToCafe": "",
         "socialLink": "https://www.instagram.com/morris_space/",
-        "rating": "4.3",
-        "price": "$$",
+        "rating": "4.4",
+        "price": "$$$",
         "comments": "",
         "photoGallery": [
             "morris",
+            "morris3",
             "morris1",
-            "morris2",
-            "morris3"
+            "morrisMain"           
         ]
     },
 
@@ -440,7 +440,9 @@
         "price": "$$",
         "comments": "У кавярні зібрано колерцію ",
         "photoGallery": [
-            "pyets1"
+            "pyets",
+            "pyets1",
+            "pyets2"
         ]
     },
     {
@@ -460,7 +462,9 @@
         "price": "$$",
         "comments": "",
         "photoGallery": [
-            "yerusalym1"
+            "yerusalym",
+            "yerusalym1",
+            "yerusalym2"
         ]
     },
     {
@@ -480,7 +484,9 @@
         "price": "$$",
         "comments": "",
         "photoGallery": [
-            "fazetka1"
+            "fazetka",
+            "fazetka1",
+            "fazetka2"
         ]
     },
     {
@@ -500,7 +506,9 @@
         "price": "$$",
         "comments": "",
         "photoGallery": [
-            "code1"
+            "code1",
+            "code2",
+            "code"
         ]
     },
     {
@@ -520,7 +528,9 @@
         "price": "$$$",
         "comments": "",
         "photoGallery": [
-            "cheeseBakery1"
+            "cheeseBakery1",
+            "cheeseBakery2",
+            "cheeseBakery"
         ]
     },
     {
@@ -540,7 +550,9 @@
         "price": "",
         "comments": "",
         "photoGallery": [
-            "blackHoney1"
+            "blackHoney1",
+            "blackHoney",
+            "blackHoney2"
         ]
     },
 
@@ -563,7 +575,8 @@
         "price": "$$",
         "comments": "",
         "photoGallery": [
-            ""
+            "minimalist2",
+            "minimalist1"
         ]
     },
     {
@@ -583,7 +596,8 @@
         "price": "$$",
         "comments": "",
         "photoGallery": [
-            ""
+            "foundation1",
+            "foundation2"
         ]
     },
     {
@@ -603,7 +617,8 @@
         "price": "$$",
         "comments": "",
         "photoGallery": [
-            ""
+            "atelier",
+            "atelier1"
         ]
     },
     {
@@ -623,7 +638,8 @@
         "price": "$$",
         "comments": "",
         "photoGallery": [
-            ""
+            "coffeeocean",
+            "coffeeocean1"
         ]
     },
     {
@@ -643,7 +659,8 @@
         "price": "$$",
         "comments": "",
         "photoGallery": [
-            ""
+            "zheto",
+            "zheto1"
         ]
     },
     {
@@ -663,7 +680,9 @@
         "price": "$$",
         "comments": "",
         "photoGallery": [
-            ""
+            "makemycake",
+            "makemycake1",
+            "makemycake2"
         ]
     }
 ]

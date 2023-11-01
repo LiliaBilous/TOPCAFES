@@ -133,7 +133,7 @@
 }
 
 .morrisSpace {
-    background-image: url('./img/cherkasy/morris/morrisMain.jpg');
+    background-image: url('./img/cherkasy/morris/morris2.jpg');
     background-position: center center;
 }
 
@@ -163,30 +163,51 @@
 
 /* lviv */
 .pyets {
-    background-image: url('../assets/img/Lviv/pyets/pyets.jpg');
-    background-position: 30% 70%;
+    background-image: url('../assets/img/Lviv/pyets/pyets2.jpg');
 }
 .yerusalym {
     background-image: url('../assets/img/Lviv/yerusalym/yerusalym.jpg');
    
 }
 .fazetka {
-    background-image: url('../assets/img/Lviv/fazetka//fazetka.jpg');
+    background-image: url('../assets/img/Lviv/fazetka/fazetka.jpg');
 }
 .code {
     background-image: url('../assets/img/Lviv/code/code.jpg');
     background-position: 40% 60%;
 }
 .cheeseBakery {
-    background-image: url('../assets/img/Lviv/cheeseBakery/cheeseBakery.jpg');
+    background-image: url('../assets/img/Lviv/cheeseBakery/cheeseBakery2.jpg');
     background-position: 50% 50%;
 }
 .blackHoney {
-    background-image: url('../assets/img/Lviv/blackHoney/blackHoney.jpg');
+    background-image: url('../assets/img/Lviv/blackHoney/blackHoney1.jpg');
     background-position: 50% 50%;
 }
 /* odesa */
-
+.minimalist{
+    background-image: url('../assets/img/Odesa/minimalist/minimalist.jpg');
+    background-position: 50% 50%;
+}
+.foundation{
+    background-image: url('../assets/img/Odesa/foundation/foundation.jpg');
+    background-position: 50% 50%;
+}
+.atelier {
+    background-image: url('../assets/img/Odesa/atelier/atelier1.jpg');
+    background-position: 50% 50%;
+}
+.coffeeocean{
+    background-image: url('../assets/img/Odesa/coffeeocean/coffeeocean.jpg');
+}
+.zheto{
+    background-image: url('../assets/img/Odesa/zheto/zheto.jpg');
+    background-position: 50% 50%;
+}
+.makemycake {
+    background-image: url('../assets/img/Odesa/makemycake/makemycake.jpg');
+    background-position: 25% 75%;
+}
 
 
 /* addaptive styles */
