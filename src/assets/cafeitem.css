@@ -1,18 +1,18 @@
 .article-block-cafes {
     padding: 4.5rem 2rem 2rem;
-    background-color: var(--color-background);
+    /* background-color: var(--color-background); */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
 .article-wrapper {
+    height: 50rem;
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 3.75rem 2.25rem;
+    padding: 2rem;
 }
 
 .article-wrapper:nth-child(4n-3) {
@@ -62,9 +62,16 @@
 }
 
 .article-description {
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     text-align: justify;
     color: var(--color-background);
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    white-space: normal;
 }
 
 .article-wrapper:nth-child(4n) .article-description,

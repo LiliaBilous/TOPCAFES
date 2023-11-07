@@ -7,11 +7,11 @@
     margin-top: 5rem;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .cafe__img-holder {
-    height: 45rem;
+    height: 40rem;
     width: 65%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,7 +20,7 @@
 
 .cafe__main-img {
     background-color: var(--shadow-photo);
-    height: 45rem;
+    height: 40rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -38,12 +38,10 @@
 
 .cafe__cide-description {
     width: 35%;
-    height: 45rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 1rem;
-    margin: 0 2.5rem;
+    margin-left: 2.5rem;
     color: var(--color-main-brown);
     line-height: 2rem;
 }
