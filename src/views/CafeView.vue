@@ -38,7 +38,9 @@
           <a href="{{ cafe.socialLink }}" class="cafe__link" target="_blank"
             >Social Media</a
           >
-          <a href="{{ cafe.linkToCafe }}" class="cafe__link" target="_blank">Web-cite</a>
+          <a href="{{ cafe.linkToCafe }}" class="cafe__link" target="_blank"
+            >Web-cite</a
+          >
         </div>
       </div>
     </div>

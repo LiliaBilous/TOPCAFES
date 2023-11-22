@@ -30,8 +30,12 @@ const isBurgerMenuVisible = ref(false);
         </a>
         <Transition>
           <nav v-if="isBurgerMenuVisible" class="header__nav-menu">
-            <RouterLink to="/franyk" class="nav-menu-item">Івано-Франківськ</RouterLink>
-            <RouterLink to="/сherkasy" class="nav-menu-item">Черкаси</RouterLink>
+            <RouterLink to="/franyk" class="nav-menu-item"
+              >Івано-Франківськ</RouterLink
+            >
+            <RouterLink to="/сherkasy" class="nav-menu-item"
+              >Черкаси</RouterLink
+            >
             <RouterLink to="/kyiv" class="nav-menu-item">Київ</RouterLink>
             <RouterLink to="/lviv" class="nav-menu-item">Львів</RouterLink>
             <RouterLink to="/odesa" class="nav-menu-item">Одеса</RouterLink>
