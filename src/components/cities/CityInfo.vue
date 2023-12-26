@@ -28,8 +28,8 @@ export default {
     },
   },
   created() {
-    console.log(this.cities);
-    console.log(this.city);
+    // console.log(this.cities);
+    // console.log(this.city);
   },
 };
 </script>

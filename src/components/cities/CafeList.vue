@@ -1,4 +1,5 @@
 <template>
+  <!-- створити фільтр по містам, ціннику, рейтингу -->
   <div class="article-block-cafes" id="articles-cafes">
     <CafeItem v-for="cafe in cityCafes" :key="cafe.id" :cafe="cafe" />
   </div>
