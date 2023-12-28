@@ -5,7 +5,9 @@ import AppFooter from "./components/AppFooter.vue";
 </script>
 
 <template>
-  <AppHeader />
-  <RouterView />
-  <AppFooter />
+  <div class="container-mode" :class="mode === 'dark' ? 'dark' : 'light'">
+    <AppHeader />
+    <RouterView />
+    <AppFooter />
+  </div>
 </template>

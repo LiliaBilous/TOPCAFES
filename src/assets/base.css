@@ -27,7 +27,12 @@
   background-color: var(--color-main-brown);
 }
 
-
+.container {
+  flex: 1 1 auto;
+}
+.dark{
+  background-color: var(--color-main-brown);
+}
 /* Reset styles */
 *,
 *::before,
@@ -61,9 +66,7 @@ body {
   flex-direction: column;
 }
 
-.container {
-  flex: 1 1 auto;
-}
+
 
 a {
   cursor: pointer;
