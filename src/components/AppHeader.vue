@@ -1,10 +1,7 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import { ref } from "vue";
-// const burgerMenu = document.querySelector(".header__burger");
-// const navMenu = document.querySelector(".header__nav-menu");
-// burgerMenu.addEventListener("click", () => {
-//   navMenu.classList.toggle("active");
+import DarkMode from "./DarkMode.vue";
 const isBurgerMenuVisible = ref(false);
 </script>
 <template>
@@ -17,9 +14,7 @@ const isBurgerMenuVisible = ref(false);
         <RouterLink to="/cafes" class="header__item cafes">Кав'ярні</RouterLink>
         <RouterLink to="/cities" class="header__item cities">Міста</RouterLink>
         <a href="#" class="header__item language">EN</a>
-        <a href="#" class="header__item dark-theme">
-          <i class="material-icons">&#xe430;</i>
-        </a>
+        <DarkMode></DarkMode>
         <a
           @click="isBurgerMenuVisible = !isBurgerMenuVisible"
           class="header__item header__burger"
