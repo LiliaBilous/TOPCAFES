@@ -13,7 +13,7 @@
     width: 100%;
     z-index: 50;
     background-color: var(--color-main-brown);
-    opacity: 0.85;
+    /* opacity: 0.85; */
     text-transform: uppercase;
 }
 
@@ -37,6 +37,40 @@
     padding: 1rem;
     color: var(--color-background);
     font-weight: bold;
+}
+
+/* ------toggle-button------- */
+.toggle-button-checkbox {
+    display: none;
+}
+
+.toggle-button-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border: 1px solid var(--color-background);
+    border-radius: 5rem;
+    padding: 0.5rem;
+    height: 2rem;
+    width: 5rem;
+    cursor: pointer;
+}
+
+.toggle-button-label .toggle-button-ball {
+    position: absolute;
+    background-color: var(--color-background);
+    border-radius: 50%;
+    top: 0.25rem;
+    left: 0.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+.toggle-button-checkbox:checked +.toggle-button-label .toggle-button-ball {
+    transform: translateX(2.5rem);
 }
 
 /*------- burger -------*/
