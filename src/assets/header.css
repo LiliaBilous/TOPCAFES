@@ -108,12 +108,11 @@
 
 @media(max-width: 40rem) {
     .wrapper-header {
-        padding: 0;
         font-size: 1rem;
         line-height: 1.5rem;
     }
     .header__item {
-        padding: 0.5rem;
+        display: none;
     }
     .header__burger {
         display: block;
