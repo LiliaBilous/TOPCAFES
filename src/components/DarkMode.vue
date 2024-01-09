@@ -1,5 +1,5 @@
 <template>
-  <div class="header__item toggle-button">
+  <div class="toggle-button">
     <input type="checkbox" class="toggle-button-checkbox" id="chk" />
     <label class="toggle-button-label" for="chk">
       <span class="material-symbols-outlined">light_mode</span>
@@ -26,4 +26,38 @@
 // };
 //
 </script>
-<style></style>
+<style>
+/* ------toggle-button------- */
+.toggle-button-checkbox {
+  display: none;
+}
+
+.toggle-button-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border: 1px solid var(--color-main-brown);
+  /* border-radius: 5rem; */
+  padding: 0.5rem;
+  height: 2rem;
+  width: 5rem;
+  cursor: pointer;
+}
+
+.toggle-button-label .toggle-button-ball {
+  position: absolute;
+  background-color: var(--color-main-brown);
+  border-radius: 50%;
+  top: 0.25rem;
+  left: 0.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.toggle-button-checkbox:checked + .toggle-button-label .toggle-button-ball {
+  transform: translateX(2.5rem);
+}
+</style>

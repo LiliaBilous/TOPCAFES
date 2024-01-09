@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import DarkMode from "./DarkMode.vue";
+</script>
 <template>
   <footer>
     <div class="footer">
@@ -14,6 +16,7 @@
           >Lilia Bilous</a
         >
       </div>
+      <DarkMode></DarkMode>
     </div>
   </footer>
 </template>
