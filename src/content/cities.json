@@ -1,7 +1,7 @@
 [
     {
         "id": 100,
-        "name": "Franyk",
+        "name": "franyk",
         "path": "/franyk",
         "bannerTitle": "Івано-Франківськ",
         "bannerText": "Франківськ, Станіславів, або ж просто Франик<br /><b>столиця Прикарпаття</b>",
@@ -14,7 +14,7 @@
     },
     {
         "id": 200,
-        "name": "Kyiv",
+        "name": "kyiv",
         "path": "/kyiv",
         "bannerTitle": "Київ",
         "bannerText": "<q>Як тебе не любити, Києве мій</q>",
@@ -27,8 +27,8 @@
     },
     {
         "id": 300,
-        "name": "Cherkasy",
-        "path": "/сherkasy",
+        "name": "cherkasy",
+        "path": "/cherkasy",
         "bannerTitle": "Черкаси",
         "bannerText": "колиска Кобзаря та центр козацтва",
         "bannerImgClass": "cherkasy",
@@ -40,7 +40,7 @@
     },
     {
         "id": 400,
-        "name": "Lviv",
+        "name": "lviv",
         "path": "/lviv",
         "bannerTitle": "Львів",
         "bannerText": "столиця галицької кави",
@@ -53,7 +53,7 @@
     },
     {
         "id": 500,
-        "name": "Odesa",
+        "name": "odesa",
         "path": "/odesa",
         "bannerTitle": "Одеса",
         "bannerText": "Одеса-мама, Перлина Чорного моря, Південна Пальміра, Південна столиця, Столиця гумору",
