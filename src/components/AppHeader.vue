@@ -13,7 +13,6 @@ const isBurgerMenuVisible = ref(false);
       <div class="header__text-wrapper">
         <RouterLink to="/cafes" class="header__item cafes">Кав'ярні</RouterLink>
         <RouterLink to="/cities" class="header__item cities">Міста</RouterLink>
-        <a href="#" class="header__item language">EN</a>
       </div>
       <div class="header__burger">
         <div class="burger" @click="isBurgerMenuVisible = !isBurgerMenuVisible">
@@ -23,7 +22,6 @@ const isBurgerMenuVisible = ref(false);
         </div>
         <Transition>
           <nav v-if="isBurgerMenuVisible" class="header__nav-menu">
-            <a href="#" class="nav-menu-item language">EN</a>
             <RouterLink to="/" class="nav-menu-item">Top cafes</RouterLink>
             <RouterLink to="/cafes" class="nav-menu-item">Кав'ярні</RouterLink>
             <RouterLink to="/cities" class="nav-menu-item">Міста</RouterLink>

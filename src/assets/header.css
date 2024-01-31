@@ -99,12 +99,6 @@
     color: var(--color-light-brown);
 }
 
-/*
-.header__nav-list{} 
-.cities {}
-.cafes {}
-.dark-theme {}
-.language {} */
 
 @media(max-width: 40rem) {
     .wrapper-header {
