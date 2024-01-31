@@ -10,8 +10,13 @@
   </div>
   <div class="desctiption-city-block">
     <p class="desctiption-text-wrap" v-html="city.descrText" />
-    <!-- <h2 class="desctiption-header">Локації Івано-Франківська</h2> -->
   </div>
+  <div class="city-info-wrap">
+    <div class="city-info-item">Рік заснування - {{ city.yearOfFoundation }} року</div>
+    <div class="city-info-item" :class="city.cityLogoClass"></div>
+    <div class="city-info-item">Населення - {{ city.population }} осіб</div>
+  </div>
+  <div class="city-map-wrap"></div>
 </template>
 <script>
 import cities from "../../content/cities.json";
@@ -23,13 +28,9 @@ export default {
   },
   computed: {
     city() {
-      //return cities[0];
       return this.cities.find((city) => city.name === this.$route.name);
     },
   },
-  created() {
-    // console.log(this.cities);
-    // console.log(this.city);
-  },
 };
 </script>
+<style></style>
