@@ -37,8 +37,6 @@
 
 /* Introduction block */
 .introduction-block {
-    background-color: var(--color-white);
-    color: var(--color-text);
     font-size: 1.4em;
     line-height: 3rem;
     text-align: center;

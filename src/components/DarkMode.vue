@@ -1,65 +1,122 @@
 <template>
-  <div class="toggle-button">
-    <input type="checkbox" class="toggle-button-checkbox" id="chk" />
-    <label class="toggle-button-label" for="chk">
-      <span class="material-symbols-outlined">light_mode</span>
-      <span class="material-symbols-outlined">dark_mode</span>
-      <div class="toggle-button-ball"></div>
-    </label>
+  <div class="mode-toggle" @click="modeToggle" :class="darkDark">
+    <div class="toggle">
+      <div id="dark-mode" type="checkbox"></div>
+    </div>
   </div>
 </template>
 
-//
 <script>
-// export default {
-//   data() {
-//     return {
-//       isDarkMode: false,
-//       chkId: "chk",
-//     };
-//   },
-//   methods: {
-//     toggleDarkMode() {
-//       this.isDarkMode = !this.isDarkMode;
-//     }
-//   }
-// };
-//
+export default {
+  data() {
+    return {
+      darkMode: false,
+    };
+  },
+
+  methods: {
+    dark() {
+      document.querySelector("body").classList.add("dark-mode");
+      this.darkMode = true;
+      this.$emit("dark");
+    },
+
+    light() {
+      document.querySelector("body").classList.remove("dark-mode");
+      this.darkMode = false;
+      this.$emit("light");
+    },
+
+    modeToggle() {
+      if (
+        this.darkMode ||
+        document.querySelector("body").classList.contains("dark-mode")
+      ) {
+        this.light();
+      } else {
+        this.dark();
+      }
+    },
+  },
+
+  computed: {
+    darkDark() {
+      return this.darkMode && "darkmode-toggled";
+    },
+  },
+};
 </script>
 <style>
 /* ------toggle-button------- */
-.toggle-button-checkbox {
-  display: none;
+body.dark-mode {
+  background: var(--color-main-brown);
+  color: var(--color-background);
 }
-
-.toggle-button-label {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.introduction-block.dark-mode,
+.footer.dark-mode {
+  color: var(--color-background);
+}
+.mode-toggle {
   position: relative;
-  /* background: rgba(108, 44, 4, 0.733);
-  box-shadow: 0px 0px 50px 20px #401d14; */
-  padding: 0.5rem;
-  height: 2rem;
-  width: 5rem;
+  padding: 0;
+  width: 44px;
+  height: 24px;
+  min-width: 36px;
+  min-height: 20px;
+  background-color: var(--color-main-brown);
+  border: 0;
+  outline: 0;
+  overflow: hidden;
   cursor: pointer;
+  z-index: 2;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  appearance: none;
+  transition: background-color 0.5s ease;
 }
-
-.toggle-button-label .toggle-button-ball {
+.mode-toggle .toggle {
   position: absolute;
-  background-color: var(--color-background);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  top: 0.25rem;
-  left: 0.5rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  transform: translateX(0);
-  transition: transform 0.3s ease;
+  border: 3px solid transparent;
+  box-shadow: inset 0 0 0 2px #a5abba;
+  overflow: hidden;
+  transition: transform 0.5s ease;
 }
-.material-symbols-outlined {
-  color: var(--color-main-brown);
+.mode-toggle #dark-mode {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
 }
-.toggle-button-checkbox:checked + .toggle-button-label .toggle-button-ball {
-  transform: translateX(2.5rem);
+.mode-toggle &:before {
+  content: "";
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  float: left;
+  background: var(--color-light-brown);
+  transition: border-radius 0.5s ease, width 0.5s ease, height 0.5s ease, left 0.5s ease,
+    transform 0.5s ease;
+}
+body.dark-mode .mode-toggle {
+  background-color: var(--color-background);
+}
+body.dark-mode .toggle {
+  transform: translateX(19px);
+}
+body.dark-mode #dark-mode &:before {
+  border-radius: 50%;
+  width: 150%;
+  height: 85%;
+  left: 40%;
+  transform: translate(-10%, -40%), rotate(-35deg);
 }
 </style>
