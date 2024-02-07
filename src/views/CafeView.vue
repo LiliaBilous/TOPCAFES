@@ -17,7 +17,7 @@
         <div class="cide__wrapper">
           <div class="cide__bar">
             <div class="icon-holder">
-              <i class="material-icons">location_on</i>Адреса:
+              <span class="material-icons">location_on</span> Адреса:
             </div>
             <p class="addres-holder">{{ cafe.address }}</p>
           </div>

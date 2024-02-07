@@ -1,4 +1,5 @@
 /* semantic color variables for this project */
+
 :root {
   --color-white: white;
   --color-background: #f0dcd2;
@@ -46,6 +47,12 @@ body {
   transition: color 0.5s, background-color 0.5s;
   color: var(--color-text);
 }
+body.dark {
+  background: var(--color-text);
+  color: var(--color-background);
+  transition: all 0.5s ease;
+}
+
 
 a {
   cursor: pointer;
