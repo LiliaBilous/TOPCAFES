@@ -3,13 +3,11 @@ body.dark .cafe__gallery {
   color: var(--color-background);
 }
 body.dark .cafe__cide-description,
-body.dark .cide__title {
-    color: var(--color-background);
-    border-bottom: 2px var(--color-white) solid;
-}
+body.dark .cide__title,
 body.dark .cafe__central-holder {
     color: var(--color-background);
 }
+
 /* cafes styles */
 .cafe__wrapper {
     margin: 2rem;
@@ -136,7 +134,7 @@ body.dark .cafe__central-holder {
     color: var(--color-background);
     background: var(--dark-gradient);
 }
-
+/* -----Gallery styles----- */
 .cafe__gallery {
     background-color: var(--color-background);
 }
@@ -155,9 +153,6 @@ body.dark .cafe__central-holder {
     padding: 1rem;
 }
 
-/* .gallery__img-holder {
-    
-} */
 .img-holder {
     width: 100%;
     height: 15rem;
@@ -189,7 +184,26 @@ body.dark .cafe__central-holder {
     width: 90%;
     max-width: 1200px;
 }
+.mySlides {
+    width: 70%;
+    height: 40rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
 
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.cursor {
+    cursor: pointer;
+}
 /* The Close Button */
 .close {
     color: var(--color-background);
@@ -205,24 +219,6 @@ body.dark .cafe__central-holder {
 .close:focus {
     color: var(--color-main-brown);
     text-decoration: none;
-    cursor: pointer;
-}
-
-.mySlides {
-    width: 70%;
-    height: 40rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.mySlides img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.cursor {
     cursor: pointer;
 }
 
@@ -254,17 +250,18 @@ body.dark .cafe__central-holder {
 .prev:hover,
 .next:hover {
     background-color: var(--hover-shadow-light);
-    /* border: 1px solid var(--color-light-brown); */
     color: var(--color-text);
 }
 
 /* Number text (1/3 etc) */
 .numbertext {
+    background: var(--color-text);
     color: var(--color-background);
     font-size: 12px;
     padding: 8px 12px;
-    /* position: absolute; */
-    top: 0;
+    position: absolute;
+    top: 10px;
+    left: 10%;
     z-index: 15;
 }
 
@@ -280,7 +277,7 @@ body.dark .cafe__central-holder {
     background: transparent;
 }
 
-
+/* ------Adaptive styles----- */
 @media(max-width: 48rem) {
     .cafe-photo-wrap {
         flex-direction: column;
