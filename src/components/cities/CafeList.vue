@@ -1,12 +1,10 @@
 <template>
-  <!-- створити фільтр по містам, ціннику, рейтингу -->
-  <div class="article-block-filter"></div>
   <div class="article-block-cafes" id="articles-cafes">
     <CafeItem v-for="cafe in cityCafes" :key="cafe.id" :cafe="cafe" />
   </div>
 </template>
 <script>
-import CafeItem from "CafeItem.vue";
+import CafeItem from "./CafeItem.vue";
 import cafes from "../../content/cafes.json";
 export default {
   components: {
