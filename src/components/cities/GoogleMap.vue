@@ -5,8 +5,6 @@
 import cities from "../../content/cities.json";
 import cafes from "../../content/cafes.json";
 
-// const GOOGLE_MAPS_API_KEY = "AIzaSyBmMeJI2nhe3jL63KM-GeLN0jw9WHjc7GE";
-
 export default {
   data() {
     return {
@@ -33,6 +31,15 @@ export default {
       this.map = new Map(document.getElementById("map"), {
         center: { lat: Number(this.city.lat), lng: Number(this.city.lng) }, // Використовуємо координати міста
         zoom: 13,
+      });
+
+      // Додавання маркерів кав'ярень
+      this.cityCafes.forEach((cafe) => {
+        new window.google.maps.Marker({
+          position: { lat: Number(cafe.lat), lng: Number(cafe.lng) },
+          map: this.map,
+          title: cafe.name,
+        });
       });
     },
   },
