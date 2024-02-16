@@ -4,8 +4,9 @@
   </div>
 </template>
 <script>
-import CafeItem from "./CafeItem.vue";
+import CafeItem from "../cafe/CafeItem.vue";
 import cafes from "../../content/cafes.json";
+
 export default {
   components: {
     CafeItem,

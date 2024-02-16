@@ -6,7 +6,7 @@
   </main>
 </template>
 <script>
-import CityInfo from "../components/cities/CityInfo.vue";
+import CityInfo from "../components/cities/cityinfo.vue";
 import GoogleMap from "../components/cities/GoogleMap.vue";
 import CafeList from "../components/cities/CafeList.vue";
 

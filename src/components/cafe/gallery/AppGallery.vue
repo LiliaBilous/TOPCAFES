@@ -11,16 +11,10 @@
     <span class="close cursor" @click="closeModal()">&times;</span>
     <div class="modal-content">
       <div class="mySlides">
-        <div class="numbertext">
-          {{ currentIndex + 1 }} / {{ imagesSrcArray.length }}
-        </div>
+        <div class="numbertext">{{ currentIndex + 1 }} / {{ imagesSrcArray.length }}</div>
         <img :src="currentUrl" />
       </div>
-      <button
-        class="prev"
-        :disabled="currentIndex === 0"
-        @click="changeSlide(-1)"
-      >
+      <button class="prev" :disabled="currentIndex === 0" @click="changeSlide(-1)">
         &#10094;
       </button>
       <button
@@ -34,7 +28,7 @@
   </div>
 </template>
 <script>
-import GalleryImg from "../cafe/GalleryImg.vue";
+import GalleryImg from "/src/components/cafe/gallery/GalleryImg.vue";
 
 export default {
   components: { GalleryImg },
@@ -53,7 +47,7 @@ export default {
       for (const img of this.gallery) {
         try {
           const image = await import(
-            `../../assets/img/${this.cityName}/${this.cafeName}/${img}.jpg`
+            `../../../assets/img/${this.cityName}/${this.cafeName}/${img}.jpg`
           );
           this.imagesSrcArray.push(image.default);
         } catch (error) {
@@ -72,8 +66,7 @@ export default {
     },
     changeSlide: function (n) {
       if (this.currentIndex === 0 && n === -1) return;
-      if (this.currentIndex === this.imagesSrcArray.length - 1 && n === 1)
-        return;
+      if (this.currentIndex === this.imagesSrcArray.length - 1 && n === 1) return;
       this.currentIndex = this.currentIndex + n;
       this.currentUrl = this.imagesSrcArray[this.currentIndex];
     },

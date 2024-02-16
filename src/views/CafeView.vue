@@ -71,7 +71,7 @@
 </template>
 <script>
 import cafes from "@/content/cafes.json";
-import AppGallery from "../components/cafe/AppGallery.vue";
+import AppGallery from "../components/cafe/gallery/AppGallery.vue";
 
 export default {
   components: { AppGallery },
