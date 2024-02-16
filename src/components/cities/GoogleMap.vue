@@ -1,21 +1,18 @@
 <template>
-  <div class="city-map-wrap" :id="city.name" :ref="city.name + 'Map'"></div>
-  <div class="lat-coordinate">{{ city.lat }}</div>
-  <div class="lng-coordinate">{{ city.lng }}</div>
+  <div class="city-map-wrap" id="map"></div>
 </template>
 <script>
-import { Loader } from "@googlemaps/js-api-loader";
 import cities from "../../content/cities.json";
 import cafes from "../../content/cafes.json";
-import { ref, onMounted } from "vue";
 
-const GOOGLE_MAPS_API_KEY = "AIzaSyBmMeJI2nhe3jL63KM-GeLN0jw9WHjc7GE";
+// const GOOGLE_MAPS_API_KEY = "AIzaSyBmMeJI2nhe3jL63KM-GeLN0jw9WHjc7GE";
 
 export default {
   data() {
     return {
       cities,
       cafes,
+      map: null,
     };
   },
   computed: {
@@ -27,20 +24,17 @@ export default {
     },
   },
   mounted() {
-    const loader = new Loader({ apiKey: GOOGLE_MAPS_API_KEY });
-    const mapDiv = ref(null);
+    this.initMap();
+  },
+  methods: {
+    async initMap() {
+      const { Map } = await window.google.maps.importLibrary("maps");
 
-    onMounted(async () => {
-      if (!this.city) return; // Перевірка наявності даних про місто
-
-      await loader.load();
-      new window.google.maps.Map(mapDiv.value, {
-        center: { lat: Number(this.city.lat), lng: Number(this.city.lng)},
-        zoom: 12,
+      this.map = new Map(document.getElementById("map"), {
+        center: { lat: Number(this.city.lat), lng: Number(this.city.lng) }, // Використовуємо координати міста
+        zoom: 13,
       });
-    });
-
-    return { mapDiv };
+    },
   },
 };
 </script>
@@ -50,6 +44,5 @@ export default {
   height: 400px;
   margin: 2rem auto;
   background: var(--color-main-brown);
-  
 }
 </style>
