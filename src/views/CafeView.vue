@@ -35,12 +35,8 @@
           </div>
         </div>
         <div class="cide_contacts">
-          <a href="{{ cafe.socialLink }}" class="cafe__link" target="_blank"
-            >Social Media</a
-          >
-          <a href="{{ cafe.linkToCafe }}" class="cafe__link" target="_blank"
-            >Web-cite</a
-          >
+          <a :href="cafe.socialLink" class="cafe__link" target="_blank">Social Media</a>
+          <a :href="cafe.linkToCafe" class="cafe__link" target="_blank">Web-cite</a>
         </div>
       </div>
     </div>
@@ -63,13 +59,18 @@
       />
     </div>
     <div class="nav-bar">
-      <button class="button nav-item">Попередня кав'ярня</button>
-      <button class="button nav-item">Повернутись на сторінку міста</button>
-      <button class="button nav-item">Наступна кавярн'я</button>
+      <button @click="goToPreviousCafe" class="button nav-item">
+        Попередня кав'ярня
+      </button>
+      <router-link :to="{ cityName }" class="button nav-item"
+        >Повернутись на сторінку міста</router-link
+      >
+      <button @click="goToNextCafe" class="button nav-item">Наступна кавярн'я</button>
     </div>
   </div>
 </template>
 <script>
+import cities from "../content/cities.json";
 import cafes from "@/content/cafes.json";
 import AppGallery from "../components/cafe/gallery/AppGallery.vue";
 
@@ -77,13 +78,22 @@ export default {
   components: { AppGallery },
   data() {
     return {
+      cities,
+      cityName: this.$route.name,
       cafeId: this.$route.params.id,
     };
   },
   computed: {
+    city() {
+      return this.cities.find((city) => city.name === this.$route.name);
+    },
     cafe() {
       return cafes.find((cafe) => cafe.id === +this.cafeId);
     },
+  },
+  methods: {
+    goToPreviousCafe() {},
+    goToNextCafe() {},
   },
 };
 </script>
