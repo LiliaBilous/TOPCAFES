@@ -58,42 +58,26 @@
         :cafe-name="cafe.name"
       />
     </div>
-    <div class="nav-bar">
-      <button @click="goToPreviousCafe" class="button nav-item">
-        Попередня кав'ярня
-      </button>
-      <router-link :to="{ cityName }" class="button nav-item"
-        >Повернутись на сторінку міста</router-link
-      >
-      <button @click="goToNextCafe" class="button nav-item">Наступна кавярн'я</button>
-    </div>
+    <CafeNavButtons></CafeNavButtons>
   </div>
 </template>
 <script>
-import cities from "../content/cities.json";
 import cafes from "@/content/cafes.json";
+
 import AppGallery from "../components/cafe/gallery/AppGallery.vue";
+import CafeNavButtons from "../components/cafe/CafeNavButtons.vue";
 
 export default {
-  components: { AppGallery },
+  components: { AppGallery, CafeNavButtons },
   data() {
     return {
-      cities,
-      cityName: this.$route.name,
       cafeId: this.$route.params.id,
     };
   },
   computed: {
-    city() {
-      return this.cities.find((city) => city.name === this.$route.name);
-    },
     cafe() {
       return cafes.find((cafe) => cafe.id === +this.cafeId);
     },
-  },
-  methods: {
-    goToPreviousCafe() {},
-    goToNextCafe() {},
   },
 };
 </script>
