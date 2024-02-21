@@ -1,7 +1,7 @@
 <template>
   <div class="nav-bar">
     <button @click="goToPreviousCafe" class="button nav-item">Попередня кав'ярня</button>
-    <button :to="{ cityName }" class="button nav-item">
+    <button class="button nav-item">
       Повернутись на сторінку міста
     </button>
     <button @click="goToNextCafe" class="button nav-item">Наступна кавярн'я</button>
