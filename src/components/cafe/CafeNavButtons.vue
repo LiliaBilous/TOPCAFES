@@ -1,10 +1,12 @@
 <template>
   <div class="nav-bar">
-    <button @click="goToPreviousCafe" class="button nav-item">Попередня кав'ярня</button>
-    <button class="button nav-item">
-      Повернутись на сторінку міста
+    <button :disabled="cafe.id === 0" @click="goToPreviousCafe()" class="button nav-item">
+      Попередня кав'ярня
     </button>
-    <button @click="goToNextCafe" class="button nav-item">Наступна кавярн'я</button>
+    <button class="button nav-item">Повернутись на сторінку міста</button>
+    <button :disabled="cafe.id === 50" @click="goToNextCafe()" class="button nav-item">
+      Наступна кавярн'я
+    </button>
   </div>
 </template>
 <script>
@@ -12,6 +14,7 @@ import cities from "../../content/cities.json";
 import cafes from "../../content/cafes.json";
 
 export default {
+  props: {},
   data() {
     return {
       cities,
@@ -28,18 +31,7 @@ export default {
     },
   },
   methods: {
-    goToPreviousCafe() {
-      const currentIndex = cafes.findIndex(
-        (cafe) => cafe.id === +this.cafeId && cafe.city === this.cityName
-      );
-      const previousCafe = cafes[currentIndex - 1];
-      if (previousCafe) {
-        this.$router.push({
-          name: this.cityName,
-          params: { id: previousCafe.id.toString() },
-        });
-      }
-    },
+    goToPreviousCafe() {},
     goToNextCafe() {},
   },
 };
