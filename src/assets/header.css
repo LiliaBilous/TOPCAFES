@@ -13,7 +13,7 @@
     width: 100%;
     z-index: 50;
     background-color: var(--color-main-brown);
-    /* opacity: 0.85; */
+    opacity: 0.85;
     text-transform: uppercase;
 }
 
