@@ -3,7 +3,7 @@
     <div v-if="isLoading" class="loader">Loading</div>
     <div v-else-if="errorMessage" class="error">{{ errorMessage }}</div>
     <template v-else-if="cafe">
-      <div class="cafe-photo-wrap">
+      <div class="cafe-photo-wrap" :key="cafeId" :cafeId="cafeId">
         <div class="cafe__img-holder" :class="cafe.imageUrlClass">
           <div class="cafe__main-img">
             <div class="cide__rating">
@@ -43,7 +43,7 @@
           </div>
         </div>
       </div>
-      <div class="cafe__central-holder">
+      <div class="cafe__central-holder" :key="cafeId" :cafeId="cafeId">
         <div class="central-holder__comments">
           <h2 class="comments__title">Особисті рекомендації</h2>
           <p>{{ cafe.comments }}</p>
@@ -53,7 +53,7 @@
           <p class="description__subtitle">{{ cafe.text }}</p>
         </div>
       </div>
-      <div class="cafe__gallery">
+      <div class="cafe__gallery" :key="cafeId" :cafeId="cafeId">
         <h2 class="gallery__title">Photo Gallery</h2>
         <AppGallery
           :gallery="cafe.photoGallery"
@@ -79,6 +79,11 @@ export default {
       isLoading: true,
       errorMessage: "",
     };
+  },
+  watch: {
+    "$route.params.id"(newCafeId) {
+      this.cafeId = newCafeId;
+    },
   },
   computed: {
     cafes() {
