@@ -1,25 +1,30 @@
 <template>
   <div class="nav-bar">
-    <button :disabled="cafe.id === 0" @click="goToPreviousCafe()" class="button nav-item">
+    <button
+      @click="goToPreviousCafe"
+      :disabled="!cafe || cafe.id === 0"
+      class="button nav-item"
+    >
       Попередня кав'ярня
     </button>
     <button @click="goToCity" class="button nav-item">
       Повернутись на сторінку міста
     </button>
-    <button :disabled="cafe.id === 50" @click="goToNextCafe()" class="button nav-item">
+    <button
+      @click="goToNextCafe"
+      :disabled="!cafe || cafe.id >= 50"
+      class="button nav-item"
+    >
       Наступна кавярн'я
     </button>
   </div>
 </template>
 <script>
-import cities from "../../content/cities.json";
 import cafes from "../../content/cafes.json";
 
 export default {
-  props: {},
   data() {
     return {
-      cities,
       cafeId: this.$route.params.id,
     };
   },
@@ -32,8 +37,19 @@ export default {
     goToCity() {
       this.$router.push(`/${this.cafe.city}`);
     },
-    goToPreviousCafe() {},
-    goToNextCafe() {},
+    goToPreviousCafe() {
+      const previousCafeId = +this.cafeId - 1;
+      this.$router.push(`/cafes/${previousCafeId}`);
+      this.cafeId = previousCafeId;
+      console.log(previousCafeId);
+    },
+
+    goToNextCafe() {
+      const nextCafeId = +this.cafeId + 1;
+      this.$router.push(`/cafes/${nextCafeId}`);
+      this.cafeId = nextCafeId;
+      console.log(nextCafeId);
+    },
   },
 };
 </script>
