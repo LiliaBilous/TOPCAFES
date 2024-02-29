@@ -1,5 +1,5 @@
 <template>
-  <div class="cafe__wrapper">
+  <main class="cafe__wrapper">
     <div v-if="isLoading" class="loader">Loading</div>
     <div v-else-if="errorMessage" class="error">{{ errorMessage }}</div>
     <template v-else-if="cafe">
@@ -63,7 +63,7 @@
       </div>
       <CafeNavButtons></CafeNavButtons>
     </template>
-  </div>
+  </main>
 </template>
 <script>
 import { useCafeStore } from "../stores/cafes";
@@ -114,3 +114,15 @@ export default {
   },
 };
 </script>
+<style>
+.container .error {
+  min-height: calc(100vh - (4rem + 4rem));
+}
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: brown;
+}
+</style>
