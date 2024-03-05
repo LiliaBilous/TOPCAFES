@@ -9,7 +9,7 @@
 
   --dark-gradient: radial-gradient(circle, rgba(160,82,45,1) 0%, rgba(64,29,20,0.9612219887955182) 98%);
   --light-gradient: radial-gradient(circle, rgba(240,220,210,1) 0%, rgba(232,181,156,1) 100%);;
-  --shadow-photo: rgba(0, 0, 0, 0.35);
+  --shadow-photo: rgba(0, 0, 0, 0.5);
   --hover-shadow-dark: rgba(64, 29, 20, 0.35);
   --hover-shadow-light: rgba(255, 255, 255, 0.35);
 }

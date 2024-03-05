@@ -33,12 +33,18 @@ export default {
         zoom: 13,
       });
 
-      // Додавання маркерів кав'ярень
+      // added custom cafes markers
+      const coffeeFlagImg = {
+        url: "../../../public/coffee-bean-filled-roast-brew-svgrepo-com.svg",
+        scaledSize: new window.google.maps.Size(25, 25),
+      };
+
       this.cityCafes.forEach((cafe) => {
         new window.google.maps.Marker({
           position: { lat: Number(cafe.lat), lng: Number(cafe.lng) },
           map: this.map,
           title: cafe.name,
+          icon: coffeeFlagImg,
         });
       });
     },
