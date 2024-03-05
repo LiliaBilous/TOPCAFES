@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap');
-/* style */
+/* styles */
 @import './base.css';
 @import './header.css';
 @import './footer.css';
 @import './home.css';
 @import './city.css';
 @import './cafe.css';
-@import './cafeitem.css';
-
+@import './cafesList.css';
+@import './cafesMainPhoto.css';
+@import './gallery.css';
