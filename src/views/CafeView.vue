@@ -1,48 +1,61 @@
 <template>
   <main class="cafe__wrapper">
-    <div v-if="isLoading" class="loader">Loading</div>
+    <div v-if="isLoading || !cafe" class="loader">
+      <div class="cup">
+        <span class="steam"></span>
+        <span class="steam"></span>
+        <span class="steam"></span>
+        <div class="cup-handle"></div>
+      </div>
+    </div>
     <div v-else-if="errorMessage" class="error">{{ errorMessage }}</div>
     <template v-else-if="cafe">
-      <div class="cafe-photo-wrap" :key="cafeId" :cafeId="cafeId">
-        <div class="cafe__img-holder" :class="cafe.imageUrlClass">
-          <div class="cafe__main-img">
-            <div class="cide__rating">
-              <i class="material-icons">star_rate</i>Рейтинг GoogleMaps:
-              {{ cafe.rating }}
-            </div>
-            <div class="cide__price">
-              <i class="material-icons">&#xe227;</i>Цінник: {{ cafe.price }}
-            </div>
-          </div>
+      <div class="cafe__container">
+        <div
+          class="cafe__photo-wrap"
+          :key="cafeId"
+          :cafeId="cafeId"
+          :class="cafe.imageUrlClass"
+        >
+          <div class="cafe__img-shadow"></div>
         </div>
-        <div class="cafe__cide-description">
-          <h1 class="cide__title">{{ cafe.title }}</h1>
-          <div class="cide__wrapper">
-            <div class="cide__bar">
-              <div class="icon-holder">
-                <span class="material-icons">location_on</span> Адреса:
-              </div>
-              <p class="addres-holder">{{ cafe.address }}</p>
+        <div class="cafe__cide-holder">
+          <h1 class="cafe__title">{{ cafe.title }}</h1>
+          <div class="cafe_google-info">
+            <div class="cafe_rating">
+              <i class="material-icons">star_rate</i>Рейтинг GoogleMaps:
+              <p class="text-holder">{{ cafe.rating }}</p>
             </div>
-            <div class="cide__bar">
-              <div class="icon-holder">
-                <i class="material-icons">call</i>Контактний телефон:
-              </div>
-              <p class="addres-holder">{{ cafe.telephone }}</p>
-            </div>
-            <div class="cide__bar">
-              <div class="icon-holder">
-                <i class="material-icons">access_time</i>Робочі години:
-              </div>
-              <p class="addres-holder">{{ cafe.workHours }}</p>
+            <div class="cafe_price">
+              <i class="material-icons">&#xe227;</i>Середній цінник:
+              <p class="text-holder">{{ cafe.price }}</p>
             </div>
           </div>
-          <div class="cide_contacts">
-            <a :href="cafe.socialLink" class="cafe__link" target="_blank">Social Media</a>
-            <a :href="cafe.linkToCafe" class="cafe__link" target="_blank">Web-cite</a>
+          <div class="cafe_contacts">
+            <div class="cafe_contact-telefone">
+              <i class="material-icons">call</i>Контактний телефон:
+              <p class="text-holder">{{ cafe.telephone }}</p>
+            </div>
+            <div class="cafe_contact-address">
+              <span class="material-icons">location_on</span> Адреса:
+              <p class="text-holder">{{ cafe.address }}</p>
+            </div>
+            <div class="cafe__contact-work-hour">
+              <i class="material-icons">access_time</i>Робочі години:
+              <p class="text-holder">{{ cafe.workHours }}</p>
+            </div>
+          </div>
+          <div class="cafe_social">
+            <a :href="cafe.socialLink" class="cafe__social-link" target="_blank" :class="{ 'inactive-link': !cafe.socialLink }"
+              >Instagram</a
+            >
+            <a :href="cafe.linkToCafe" class="cafe__social-link" target="_blank" :class="{ 'inactive-link': !cafe.socialLink }"
+              >Web-cite</a
+            >
           </div>
         </div>
       </div>
+
       <div class="cafe__central-holder" :key="cafeId" :cafeId="cafeId">
         <div class="central-holder__comments">
           <h2 class="comments__title">Особисті рекомендації</h2>
@@ -118,11 +131,88 @@ export default {
 .container .error {
   min-height: calc(100vh - (4rem + 4rem));
 }
+.container .loader {
+  min-height: calc(100vh - (4rem + 4rem));
+}
+
 .error {
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 600;
   color: brown;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cup {
+  z-index: 50;
+  position: relative;
+  width: 6rem;
+  height: 4rem;
+  border: 3px solid var(--color-main-brown);
+  border-radius: 6px 6px 20px 20px;
+  background: url(../assets/img/coffee.png);
+  background-position: 0 130px;
+  background-repeat: repeat-x;
+  animation: filling 3s infinite;
+}
+.cup .cup-handle {
+  position: absolute;
+  top: 2px;
+  right: -25px;
+  width: 1.5rem;
+  height: 2rem;
+  border: 3px solid var(--color-main-brown);
+  border-radius: 10px 5px 20px 10px;
+}
+@keyframes filling {
+  0%,
+  100% {
+    background-position: 0 130px;
+  }
+  50% {
+    background-position: 600px -70px;
+  }
+}
+.cup .steam {
+  position: absolute;
+  border-radius: 10px 2px;
+  width: 6px;
+  animation: steaming 2s infinite;
+}
+.cup .steam:nth-child(1) {
+  top: -50px;
+  left: 20px;
+  height: 20px;
+  background: var(--color-background);
+  animation-delay: 0.2s;
+}
+.cup .steam:nth-child(2) {
+  top: -90px;
+  left: 45px;
+  height: 40px;
+  background: var(--color-background);
+  animation-delay: 0.6s;
+}
+.cup .steam:nth-child(3) {
+  top: -60px;
+  left: 70px;
+  height: 30px;
+  background: var(--color-background);
+  animation-delay: 1s;
+}
+@keyframes steaming {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    filter: blur(0.05rem);
+    transform: translateY(-10px);
+  }
 }
 </style>
