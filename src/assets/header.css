@@ -30,7 +30,6 @@
 .header__text-wrapper {
     display: flex;
     align-items: center;
-    /* margin-right: 1rem; */
 }
 
 .header__item {
@@ -75,9 +74,8 @@
     overflow: auto;
     z-index: 15;
     top: 4.5rem;
-    right: 0;
+    right: 1.5rem;
     width: 20rem;
-    /* box-shadow: 0 7px 15px -10px #4f4f4f; */
     background-color: var(--color-main-brown);
     transition: 0.3s all ease-in-out;
     display: flex;
@@ -87,7 +85,6 @@
 
 .nav-menu-item {
     color: var(--color-background);
-    /* border: 1px solid var(--color-background); */
     font-weight: bold;
     padding: 1rem;
     width: 100%;
@@ -110,6 +107,7 @@
     }
     .header__burger {
         display: block;
+        padding: 0.5rem;
     }
     
 }

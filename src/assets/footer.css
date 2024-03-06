@@ -5,7 +5,6 @@
     justify-content: space-evenly;
     align-items: center;
     font-size: 1.2rem;
-    margin: 1rem;
     height: 4rem;
 }
 
@@ -46,15 +45,12 @@ body.dark .mode-toggle {
 @media(max-width: 48rem) {
     .footer {
         font-size: 1rem;
-        line-height: 1.5rem;
-        margin: 1rem;
-        display: flex;
-        flex-direction: column;
+        line-height: 1rem;
+        
         align-items: center;
     }
 
     .footer-anchor {
         font-size: 1rem;
     }
-
 }
