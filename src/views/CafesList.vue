@@ -5,51 +5,51 @@
       <div class="dropdown">
         <button
           class="button price-filter dropdown-btn"
-          :class="{ active: isActive }"
-          @click="activeBtn"
+          :class="{ active: priceActive }"
+          @click="openPriceDropdown"
         >
           Ціна<span class="material-symbols-outlined"> expand_more </span>
         </button>
-        <div class="dropdown-content price">
-          <button class="dropdown-item" @click="filterByPrice($$$)">$$$</button>
-          <button class="dropdown-item" @click="filterByPrice($$)">$$</button>
-          <button class="dropdown-item" @click="filterByPrice($)">$</button>
+        <div class="dropdown-content price" v-show="priceActive">
+          <button class="dropdown-item" @click="filterByPrice('$$$')">$$$</button>
+          <button class="dropdown-item" @click="filterByPrice('$$')">$$</button>
+          <button class="dropdown-item" @click="filterByPrice('$')">$</button>
         </div>
       </div>
       <div class="dropdown">
         <button
           class="button city-filter dropdown-btn"
-          :class="{ active: isActive }"
-          @click="activeBtn"
+          :class="{ active: cityActive }"
+          @click="openCityDropdown"
         >
           Місто<span class="material-symbols-outlined"> expand_more </span>
         </button>
-        <div class="dropdown-content city">
-          <button class="dropdown-item" @click="filterByCity(franyk)">
+        <div class="dropdown-content city" v-show="cityActive">
+          <button class="dropdown-item" @click="filterByCity('franyk')">
             Івано-Франківськ
           </button>
-          <button class="dropdown-item" @click="filterByCity(kyiv)">Київ</button>
-          <button class="dropdown-item" @click="filterByCity(cherkasy)">Черкаси</button>
-          <button class="dropdown-item" @click="filterByCity(lviv)">Львів</button>
-          <button class="dropdown-item" @click="filterByCity(odesa)">Одеса</button>
+          <button class="dropdown-item" @click="filterByCity('kyiv')">Київ</button>
+          <button class="dropdown-item" @click="filterByCity('cherkasy')">Черкаси</button>
+          <button class="dropdown-item" @click="filterByCity('lviv')">Львів</button>
+          <button class="dropdown-item" @click="filterByCity('odesa')">Одеса</button>
         </div>
       </div>
       <div class="dropdown">
         <button
           class="button rating-filter dropdown-btn"
-          :class="{ active: isActive }"
-          @click="activeBtn"
+          :class="{ active: ratingActive }"
+          @click="openRatingDropdown"
         >
           Рейтинг<span class="material-symbols-outlined"> expand_more </span>
         </button>
-        <div class="dropdown-content rating">
-          <button class="dropdown-item" @click="filterByRating()">
+        <div class="dropdown-content rating" v-show="ratingActive">
+          <button class="dropdown-item" @click="filterByRating(5.0, 4.6)">
             Рейтинг 5.0 - 4.6
           </button>
-          <button class="dropdown-item" @click="filterByRating()">
+          <button class="dropdown-item" @click="filterByRating(4.5, 4.0)">
             Рейтинг 4.5 - 4.0
           </button>
-          <button class="dropdown-item" @click="filterByRating()">
+          <button class="dropdown-item" @click="filterByRating(4.0, 1)">
             Рейтинг нижче 4.0
           </button>
         </div>
@@ -81,24 +81,35 @@ export default {
     return {
       cafes,
       isActive: false,
+      priceActive: false,
+      cityActive: false,
+      ratingActive: false,
     };
   },
   methods: {
-    activeBtn(event) {
-      document.querySelectorAll(".dropdown-btn").forEach(function (el) {
-        if (el !== event.target) el.classList.remove("active");
-      });
-      if (event.target.matches(".dropdown-btn")) {
-        event.target
-          .closest(".dropdown")
-          .querySelector(".dropdown-btn")
-          .classList.toggle("active");
-      }
+    openPriceDropdown() {
+      this.priceActive = !this.priceActive;
+    },
+    openCityDropdown() {
+      this.cityActive = !this.cityActive;
+    },
+    openRatingDropdown() {
+      this.ratingActive = !this.ratingActive;
+    },
+    filterByPrice(price) {
+      this.cafes = cafes.filter((cafe) => cafe.price === price);
+      this.ratingActive = false;
     },
     filterByCity(city) {
-      // Фільтруємо кав'ярні за містом
       this.cafes = cafes.filter((cafe) => cafe.city === city);
-      this.showDropdown = false;
+      this.cityActive = false;
+    },
+    filterByRating(maxRating, minRating) {
+      this.cafes = cafes.filter((cafe) => {
+        const cafeRating = parseFloat(cafe.rating);
+        return cafeRating >= minRating && cafeRating <= maxRating;
+      });
+      this.ratingActive = false;
     },
   },
 };
@@ -120,7 +131,6 @@ export default {
 }
 
 .dropdown-content {
-  display: none;
   position: absolute;
   width: -webkit-fill-available;
   width: -moz-available;
@@ -131,7 +141,6 @@ export default {
 .price {
 }
 .dropdown-item {
-  display: block;
   padding: 1rem;
   text-align: center;
   width: 100%;
@@ -140,9 +149,5 @@ export default {
 
 .dropdown-content button:hover {
   color: var(--color-light-brown);
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 </style>
