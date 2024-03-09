@@ -24,4 +24,3 @@ export default {
   components: { RouterLink },
 };
 </script>
-<style></style>

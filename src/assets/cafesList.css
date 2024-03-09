@@ -6,7 +6,41 @@
   justify-content: space-evenly;
   align-items: center;
 }
+.active {
+  background-color: var(--hover-shadow-light);
+  border: 1px solid var(--color-background);
+  color: var(--color-main-brown);
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
+.filter {
+}
+.dropdown-btn {
+}
+
+.dropdown-content {
+  position: absolute;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  background-color: var(--color-main-brown);
+  opacity: 0.85;
+  transition: 0.3s all ease-in-out;
+}
+.price {
+}
+.dropdown-item {
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  color: var(--color-background);
+}
+
+.dropdown-content button:hover {
+  color: var(--color-light-brown);
+}
 .article-block-cafes {
   padding: 2rem;
   display: flex;
