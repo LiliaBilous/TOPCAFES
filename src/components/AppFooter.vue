@@ -4,17 +4,16 @@ import DarkMode from "./DarkMode.vue";
 <template>
   <footer>
     <div class="footer">
-      <div class="box_copyright">
-        Copyright © 2023 Сreated for educational purposes from open resources
-      </div>
-      <div class="box_made-dy">
-        Made by
-        <a
-          href="https://github.com/LiliaBilous"
-          class="footer-anchor"
-          target="_blank"
-          >Lilia Bilous</a
-        >
+      <div class="footer_box">
+        <div class="footer_copyright">
+          Сreated for educational purposes from open resources
+        </div>
+        <div class="footer_made-by">
+          Made in 2023 by
+          <a href="https://github.com/LiliaBilous" class="footer-anchor" target="_blank"
+            >Lilia Bilous</a
+          >
+        </div>
       </div>
       <DarkMode></DarkMode>
     </div>

@@ -1,23 +1,33 @@
 /* footer style */
 .footer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
-    height: 4rem;
+    height: 6rem;
+    margin: 1rem 2rem;
+}
+.footer_copyright {
+    text-align: justify;
+    margin-right: 2rem;
+}
+.footer_box {
+    display: flex;
+    flex-direction: column;
+}
+.footer_made-by {
+    text-align: justify;
+    margin-right: 2rem;
 }
 
 .footer-anchor {
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 2px;
+    margin: 0 0.5rem;
 }
 
-.box_copyright {
-    text-align: center;
-}
-
+/* swich theme button */
 .mode-toggle {
     width: 2.5rem;
     height: 2.5rem;
@@ -46,11 +56,12 @@ body.dark .mode-toggle {
     .footer {
         font-size: 1rem;
         line-height: 1rem;
-        
         align-items: center;
     }
-
     .footer-anchor {
         font-size: 1rem;
+    }
+    .footer_made-by {
+        margin-top: 0.5rem;
     }
 }

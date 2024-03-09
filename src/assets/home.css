@@ -44,7 +44,7 @@
 }
 
 .introduction-header {
-    margin: 5vw 0;
+    margin-bottom: 1rem;
     font-weight: 700;
     text-align: center;
 }
@@ -235,7 +235,7 @@
     .main-heading {
         margin-bottom: 2.5vw;
         letter-spacing: 2px;
-        font-size: 2em;
+        font-size: 2rem;
     }
 
     .main-sub {
