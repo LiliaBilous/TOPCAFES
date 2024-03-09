@@ -3,6 +3,11 @@ import { RouterLink } from "vue-router";
 import { ref } from "vue";
 
 const isBurgerMenuVisible = ref(false);
+const visible = ref(false);
+function toggleBurgerMenu() {
+  isBurgerMenuVisible.value = !isBurgerMenuVisible.value;
+  visible.value = !visible.value;
+}
 </script>
 <template>
   <header>
@@ -15,7 +20,7 @@ const isBurgerMenuVisible = ref(false);
         <RouterLink to="/cities" class="header__item cities">Міста</RouterLink>
       </div>
       <div class="header__burger">
-        <div class="burger" @click="isBurgerMenuVisible = !isBurgerMenuVisible">
+        <div class="burger" :class="{ visible: visible }" @click="toggleBurgerMenu">
           <span class="humburger__line"></span>
           <span class="humburger__line"></span>
           <span class="humburger__line"></span>

@@ -14,8 +14,11 @@ export const useCafeStore = defineStore({
     // simulate a server error
     async fetchCafes() {
       if (Math.random() > 0.9) {
-        throw new Error("Simulated Server Error: Sorry, the server is not responding right now. Please try refreshing the page or come back later");
+        throw new Error(
+          "Simulated Server Error: Sorry, the server is not responding right now. Please try refreshing the page or come back later"
+        );
       } else {
+        //simulate loading
         setTimeout(async () => {
           const response = await import("../content/cafes.json");
           this.cafes = response.default;
