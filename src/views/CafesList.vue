@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main class="main-content">
     <div class="article-block-filter">
       <button class="button filter" :class="{ active: !isActive }">Усі кав'ярні</button>
       <div class="dropdown">
@@ -72,7 +72,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 <script>
 import cafes from "../content/cafes.json";

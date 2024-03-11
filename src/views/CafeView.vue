@@ -1,5 +1,5 @@
 <template>
-  <main class="cafe__wrapper">
+  <main class="cafe__wrapper main-content">
     <div v-if="isLoading || !cafe" class="loader">
       <div class="cup">
         <span class="steam"></span>

@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="main-content">
     <div class="main-photo-wrap">
       <div class="main-box-img">
         <h1 class="main-heading">Top cafes Ukraine</h1>
