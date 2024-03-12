@@ -51,11 +51,3 @@ export default {
   },
 };
 </script>
-<style>
-.city-map-wrap {
-  width: 96%;
-  height: 400px;
-  margin: 2rem auto;
-  background: var(--color-main-brown);
-}
-</style>
