@@ -184,12 +184,6 @@
         line-height: 2.5rem;
         margin: 2rem;
     }
-
-    .button {
-        padding: 1rem;
-        letter-spacing: 3px;
-    }
-
     .coffee-img,
     .cafes-img {
         height: 25rem;
@@ -204,7 +198,7 @@
 
     .main-photo-wrap,
     .main-box-img {
-        height: 30rem;
+        height: 25rem;
     }
 
     .main-heading {
@@ -212,7 +206,9 @@
         letter-spacing: 3px;
         font-size: 2em;
     }
-
+    .main-sub {
+        font-size: 0.8em;
+    }
     .introduction-block {
         margin: 2rem;
         line-height: 2rem
@@ -224,7 +220,6 @@
         font-size: medium;
         line-height: 1.8rem;
     }
-
 }
 
 @media(max-width: 20rem) {
@@ -239,8 +234,8 @@
     }
 
     .main-sub {
-        font-size: medium;
         line-height: 1rem;
+        
     }
 
     .button {

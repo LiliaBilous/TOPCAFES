@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    height: 4rem;
+    height: var(--header-height);
     width: 100%;
     z-index: 50;
     background-color: var(--color-text);
@@ -110,7 +110,7 @@
 
     .header__burger {
         display: block;
-        padding: 0.5rem;
+        padding: 0.5rem 1rem;
     }
 
 }
@@ -124,4 +124,10 @@
         right: 1rem;
         width: 10rem;
     }
+    .header__logo {
+        margin-left: 0rem;
+    }
+    .header__burger {
+        padding: 0rem;
+      }
 }

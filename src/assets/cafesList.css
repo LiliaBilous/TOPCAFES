@@ -42,14 +42,14 @@
   color: var(--color-light-brown);
 }
 .article-block-cafes {
-  padding: 2rem;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
 .article-wrapper {
-  height: 50rem;
+  /* height: 50rem; */
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -134,6 +134,13 @@
   border: 1px solid var(--color-main-brown);
   color: var(--color-white);
 }
+/* google map style */
+.city-map-wrap {
+  width: 96%;
+  height: 400px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
 
 /* addaptive styles */
 @media (max-width: 48rem) {
@@ -144,7 +151,7 @@
 
   .article-wrapper {
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .article-wrapper:nth-child(4n-3),
@@ -191,24 +198,46 @@
     background-color: var(--hover-shadow-light);
     color: var(--color-main-brown);
   }
-}
-
-@media (max-width: 28rem) {
-  .article-block-cafes {
-    padding: 4rem 0 0;
+  .city-map-wrap {
+    width: 92%;
   }
-
+}
+@media (max-width: 40rem) {
+  .article-block-filter {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .dropdown {
+    margin: 0.5rem;
+  }
+}
+@media (max-width: 28rem) {
+  /* .article-block-cafes {
+    padding: 4rem 0 0;
+  } */
+  .article-block-filter {
+    margin: 5rem 1rem 0rem 1rem;
+  }
+  
+  .article-block-cafes {
+    padding: 1rem;
+  }
   .article__link-holder {
     height: 20rem;
   }
 
   .article-name {
     height: 20rem;
-    font-size: 2rem;
+    font-size: 1.5em;
     line-height: 2rem;
+    padding: 0 1rem;
   }
 
   .article-description {
-    font-size: medium;
+    font-size: 0.8em;
+    line-height: 1.5rem;
+  }
+  .dropdown-item {
+    padding: 0.5rem;
   }
 }

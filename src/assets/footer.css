@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
-    height: 6rem;
+    height: var(--footer-height);
     margin: 1rem 2rem;
 }
 .footer_copyright {

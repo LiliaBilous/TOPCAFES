@@ -1,9 +1,56 @@
 /*City Pages styles*/
 .photo-city-wrap {
     position: relative;
-    height: 40rem;
+    height: 30rem;
     width: 100%;
 }
+.city__img-holder {
+    background-color: var(--shadow-photo);
+    height: 30rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-background);
+}
+
+
+
+
+
+.city__header {
+    font-size: 3em;
+    font-weight: 700;
+    margin: 3vw 0;
+    text-align: center;
+}
+
+.city__text-wrap {
+    /* max-width: 60rem; */
+    margin: 2rem;
+    text-align: center;
+}
+
+.desctiption-text-wrap {
+    text-align: center;
+    margin: 2rem;
+}
+
+.city-info-wrap {
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.city-info-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.3%;
+    height: 5rem;
+}
+
 
 .franyk {
     background-image: url('./img/franyk/ivano-frankivsk.jpg');
@@ -39,48 +86,7 @@
     background-position: 90% 10%;
 }
 
-.city__img-holder {
-    background-color: var(--shadow-photo);
-    height: 40rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--color-background);
-}
 
-.city__header {
-    font-size: 3em;
-    font-weight: 700;
-    margin: 3vw 0;
-    text-align: center;
-}
-
-.city__text-wrap {
-    max-width: 60rem;
-    margin: 3vw;
-    text-align: center;
-}
-
-.desctiption-text-wrap {
-    text-align: center;
-    margin: 2rem;
-}
-
-.city-info-wrap {
-    margin: 0 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.city-info-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 33.3%;
-    height: 5rem;
-}
 .logo-franyk {
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -117,32 +123,34 @@
 }
 
 
+@media(max-width: 40rem) {
+    .city__img-holder {
+        height: 25rem;
+    }
+    .photo-city-wrap {
+        height: 25rem;
+    }
+
+    .city__header {
+        font-size: 2.5em;
+        margin: 5rem 0 2rem;
+    }
+
+    .city__text-wrap {
+        margin: 1.5rem;
+    }
+}
 @media(max-width: 20rem) {
     .city__header {
         font-size: 2em;
-        font-weight: 700;
-        margin: 1.5vw 0;
+        margin: 5rem 0 0;
     }
-
     .city__text-wrap {
-        max-width: 60rem;
-        margin: 2vw;
+        font-size: 0.8em;
+        margin: 1rem;
     }
-
-}
-
-@media(max-width: 40rem) {
-    .city__img-holder {
-        height: 35rem;
-
-    }
-
-    .city__header {
-        font-size: 2em;
-        margin: 2vw 0;
-    }
-
-    .city__text-wrap {
-        margin: 2rem;
+    .city-info-item {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
     }
 }
