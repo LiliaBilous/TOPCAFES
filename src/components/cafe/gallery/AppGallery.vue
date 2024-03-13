@@ -8,22 +8,28 @@
     />
   </div>
   <div v-if="isModalVisible" class="modal">
-    <span class="close cursor" @click="closeModal()">&times;</span>
     <div class="modal-content">
-      <div class="mySlides">
+      <div class="modal__info-bar">
         <div class="numbertext">{{ currentIndex + 1 }} / {{ imagesSrcArray.length }}</div>
-        <img :src="currentUrl" />
+        <button class="close" @click="closeModal()">&times;</button>
       </div>
-      <button class="prev" :disabled="currentIndex === 0" @click="changeSlide(-1)">
-        &#10094;
-      </button>
-      <button
-        class="next"
-        :disabled="currentIndex === imagesSrcArray.length - 1"
-        @click="changeSlide(1)"
-      >
-        &#10095;
-      </button>
+      <div class="mySlides">
+        <img class="mySlides__img" :src="currentUrl" />
+        <button
+          class="mySlides__navButton prev"
+          :disabled="currentIndex === 0"
+          @click="changeSlide(-1)"
+        >
+          &#10094;
+        </button>
+        <button
+          class="mySlides__navButton next"
+          :disabled="currentIndex === imagesSrcArray.length - 1"
+          @click="changeSlide(1)"
+        >
+          &#10095;
+        </button>
+      </div>
     </div>
   </div>
 </template>

@@ -29,16 +29,17 @@
 }
 
 /* LIGHTBOX STYLES */
+
 .modal {
     position: fixed;
     z-index: 55;
-    padding-top: 10px;
+    padding: 1rem;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.95);
 }
 
 .modal-content {
@@ -48,34 +49,52 @@
     width: 90%;
     max-width: 1200px;
 }
+
 .mySlides {
-    width: 70%;
-    height: 40rem;
-    margin: 0 auto;
+    width: 100%;
+    height: 88vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.mySlides img {
+.mySlides__img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     position: absolute;
-    top: 10px;
+    top: 0;
     left: 0;
 }
 
-.cursor {
-    cursor: pointer;
-}
-/* The Close Button */
-.close {
+.modal__info-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 3rem;
     color: var(--color-background);
+    z-index: 60;
+}
+
+.numbertext {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
     position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 35px;
+    top: 0;
+    left: 0;
+    z-index: 15;
+}
+
+.close {
     font-weight: bold;
+    font-size: 2rem;
+    padding: 0 1rem;
+    transition: 0.2s ease;
+    position: absolute;
+    top: 0;
+    right: 0;
     z-index: 55;
 }
 
@@ -87,8 +106,7 @@
 }
 
 /* Next & previous buttons */
-.prev,
-.next {
+.mySlides__navButton {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -105,26 +123,23 @@
     -webkit-user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
     right: 0;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
+.prev {
+    left: 0;
+}
+
+.mySlides__navButton:hover {
     background-color: var(--hover-shadow-light);
     color: var(--color-text);
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-    background: var(--color-text);
-    color: var(--color-background);
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 10px;
-    left: 10%;
-    z-index: 15;
+.mySlides__navButton:disabled {
+    opacity: 0.4;
+}
+
+@media(max-width: 48rem) {
+    
 }
