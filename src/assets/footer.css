@@ -1,11 +1,11 @@
 /* footer style */
-.footer {
+.footer__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
     height: var(--footer-height);
-    margin: 1rem 2rem;
+    margin: 0 2rem;
 }
 .footer_copyright {
     text-align: justify;
@@ -53,15 +53,19 @@ body.dark .mode-toggle {
 
 
 @media(max-width: 48rem) {
-    .footer {
+    .footer__wrapper {
         font-size: 1rem;
         line-height: 1rem;
-        align-items: center;
     }
     .footer-anchor {
         font-size: 1rem;
     }
     .footer_made-by {
         margin-top: 0.5rem;
+    }
+}
+@media(max-width: 28rem) {
+    .footer__wrapper {
+        margin: 0 1rem;
     }
 }

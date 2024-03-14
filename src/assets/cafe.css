@@ -8,12 +8,12 @@ body.dark .cafe__central-holder {
     color: var(--color-background);
 }
 
-.container .error {
-    min-height: calc(100vh - (4rem + 4rem));
+.main-content .error {
+    min-height: calc(100vh - (var(--header-height) + var(--footer-height)));
 }
 
-.container .loader {
-    min-height: calc(100vh - (4rem + 4rem));
+.main-content .loader {
+    min-height: calc(100vh - (var(--header-height) + var(--footer-height)));
 }
 
 .error {
@@ -29,86 +29,6 @@ body.dark .cafe__central-holder {
     justify-content: center;
     align-items: center;
 }
-/* loader css animation */
-.cup {
-    z-index: 50;
-    position: relative;
-    width: 6rem;
-    height: 4rem;
-    border: 3px solid var(--color-main-brown);
-    border-radius: 6px 6px 20px 20px;
-    background: url(../assets/img/coffee.png);
-    background-position: 0 130px;
-    background-repeat: repeat-x;
-    animation: filling 3s infinite;
-}
-
-.cup .cup-handle {
-    position: absolute;
-    top: 2px;
-    right: -25px;
-    width: 1.5rem;
-    height: 2rem;
-    border: 3px solid var(--color-main-brown);
-    border-radius: 10px 5px 20px 10px;
-}
-
-@keyframes filling {
-
-    0%,
-    100% {
-        background-position: 0 130px;
-    }
-
-    50% {
-        background-position: 600px -70px;
-    }
-}
-
-.cup .steam {
-    position: absolute;
-    border-radius: 10px 2px;
-    width: 6px;
-    animation: steaming 2s infinite;
-}
-
-.cup .steam:nth-child(1) {
-    top: -50px;
-    left: 20px;
-    height: 20px;
-    background: var(--color-background);
-    animation-delay: 0.2s;
-}
-
-.cup .steam:nth-child(2) {
-    top: -90px;
-    left: 45px;
-    height: 40px;
-    background: var(--color-background);
-    animation-delay: 0.6s;
-}
-
-.cup .steam:nth-child(3) {
-    top: -60px;
-    left: 70px;
-    height: 30px;
-    background: var(--color-background);
-    animation-delay: 1s;
-}
-
-@keyframes steaming {
-
-    0%,
-    100% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-        filter: blur(0.05rem);
-        transform: translateY(-10px);
-    }
-}
 
 /* cafes styles */
 .cafe__wrapper {
@@ -118,25 +38,20 @@ body.dark .cafe__central-holder {
 .cafe__container {
     display: flex;
     flex-direction: row;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .cafe__photo-wrap {
-    height: 35rem;
+    height: auto;
     width: 55%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 
-.cafe__img-shadow {
-    background-color: var(--shadow-photo);
-    height: 35rem;
-}
-
 .cafe__cide-holder {
     width: 45%;
-    padding: 2rem;
+    padding: 0 0 0 2rem;
     color: var(--color-text);
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -170,6 +85,7 @@ body.dark .cafe__central-holder {
 .cafe__contact-work-hour {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .cafe_google-info {
@@ -180,12 +96,14 @@ body.dark .cafe__central-holder {
 
 .cafe_rating {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding-bottom: 1.5rem;
 }
 
 .cafe_price {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -199,7 +117,6 @@ body.dark .cafe__central-holder {
 }
 
 .cafe__social-link {
-
     outline: none;
     padding-bottom: 5px;
     cursor: pointer;
@@ -256,22 +173,27 @@ body.dark .cafe__central-holder {
 }
 
 .nav-bar {
-    margin-top: 1rem;
+    margin-top: 2rem;
     background: var(--dark-gradient);
     display: flex;
-    justify-content: space-evenly;
 }
 
 .nav-item {
     margin: 1rem;
     background: transparent;
+    padding: 1rem;
+    letter-spacing: 2px;
+    font-size: 1rem;
 }
 
 /* ------Adaptive styles----- */
 @media(max-width: 48rem) {
-    .cafe-photo-wrap {
-        flex-direction: column;
-    }
+   .cafe__photo-wrap{
+    width: 50%;
+   }
+   .cafe__cide-holder {
+    width: 50%;
+   }
 
     .cafe__img-holder {
         width: 100%;
@@ -279,7 +201,7 @@ body.dark .cafe__central-holder {
 
     .cafe__central-holder {
         flex-direction: column;
-        margin: 2rem 0;
+        margin: 1rem 0;
     }
 
     .central-holder__comments {
@@ -289,57 +211,62 @@ body.dark .cafe__central-holder {
     .central-holder__description {
         width: 100%;
     }
+    .nav-item {
+        padding: 1rem;
+        margin: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
 }
 
 @media(max-width: 40rem) {
     .cafe__wrapper {
-        margin: 1rem 1.5rem 1rem 2rem;
+        margin: 1rem 2rem;
     }
-
-    .nav-item {
-        margin: 0.5rem;
-        font-size: 0.65em;
+    .cafe__container {
+        flex-direction: column;
     }
-
-    .button {
-        padding: 0.5rem;
-        letter-spacing: 1px;
+    .cafe__photo-wrap {
+        height: 20rem;
+        width: 100%;
+        
     }
+    .cafe__cide-holder {
+        width: 100%;
+        padding: 2rem 0;
+    }
+    .nav-bar {
+        flex-direction: column;
+    }
+    
 }
 
 @media(max-width: 28rem) {
     .cafe__wrapper {
-        margin: 1rem 1.5rem;
+        margin: 1rem;
     }
-
-    .cafe__img-holder {
-        height: 25rem;
+    .cafe__title {
+        font-size: 2rem;
+        line-height: 2rem;
     }
-
-    .cafe__main-img {
-        height: 25rem;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .cide__rating,
-    .cide__price {
-        margin: 0rem;
-        font-size: small;
-    }
-
     .description__title,
     .comments__title {
-        margin: 1rem 0;
+        margin: 0 0 1rem 0;
     }
-
-    .nav-bar {
-        flex-direction: column;
+    .gallery__title {
+        font-size: 1em;
+        padding: 1rem;
+      }
+      .cafe__cide-holder {
+        padding: 1rem 0;
+        gap: 1rem;
+      }
+      .cafe_contacts {
+        grid-gap: 1rem;
+      }
+      .nav-item {
+        padding: 0.5rem;
     }
 }
-
 @media(max-width: 20rem) {
     .cafe__wrapper {
         margin: 1rem;
@@ -360,7 +287,6 @@ body.dark .cafe__central-holder {
     }
 
     .cide__bar {
-        font-size: medium;
         margin-bottom: 1rem;
         align-items: center;
     }
@@ -368,23 +294,20 @@ body.dark .cafe__central-holder {
     .icon-holder {
         font-size: 1rem;
     }
-
-    .cafe__link {
-        font-size: medium;
-    }
-
+    
     .central-holder__comments {
         margin-right: 0;
         padding: 1rem;
-        font-size: medium;
     }
 
+    .cafe_rating {
+        padding-bottom: 1rem;
+      }
+
+    .cide__bar,
+    .cafe__link,
+    .central-holder__comments,
     .description__subtitle {
         font-size: medium;
-    }
-
-    .gallery__title {
-        font-size: 1.5rem;
-        padding: 1rem;
     }
 }

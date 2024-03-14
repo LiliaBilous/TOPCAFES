@@ -3,7 +3,7 @@ import DarkMode from "./DarkMode.vue";
 </script>
 <template>
   <footer>
-    <div class="footer">
+    <div class="footer__wrapper">
       <div class="footer_box">
         <div class="footer_copyright">
           Сreated for educational purposes from open resources

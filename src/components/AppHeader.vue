@@ -11,7 +11,7 @@ function toggleBurgerMenu() {
 </script>
 <template>
   <header>
-    <div class="wrapper-header">
+    <div class="header__wrapper">
       <div class="header__logo">
         <RouterLink class="header__home" to="/">Top cafes</RouterLink>
       </div>

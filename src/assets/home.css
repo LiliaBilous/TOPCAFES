@@ -79,9 +79,6 @@
     text-align: justify;
 }
 
-.city-description {
-    margin: 2vw 0;
-}
 
 .photo-img-block {
     width: 50%;
@@ -169,10 +166,6 @@
         padding: 2rem;
     }
 
-    .city-description,
-    .cafes-description {
-        margin: 2vw 0;
-    }
 
     .photo-img-block {
         width: 100%;
@@ -210,7 +203,7 @@
         font-size: 0.8em;
     }
     .introduction-block {
-        margin: 2rem;
+        margin: 2rem 1rem;
         line-height: 2rem
     }
 
@@ -220,6 +213,13 @@
         font-size: medium;
         line-height: 1.8rem;
     }
+    .city__text-block, .cafes__text-block {
+        padding: 1rem;
+      }
+
+      .button-wrapper {
+        margin: 1rem;
+      }
 }
 
 @media(max-width: 20rem) {
