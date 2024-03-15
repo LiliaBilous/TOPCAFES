@@ -12,6 +12,9 @@
   --shadow-photo: rgba(0, 0, 0, 0.5);
   --hover-shadow-dark: rgba(64, 29, 20, 0.35);
   --hover-shadow-light: rgba(255, 255, 255, 0.35);
+
+  --header-height: 4rem;
+  --footer-height: 9rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -20,7 +23,6 @@
 
 ::-webkit-scrollbar {
   width: 0.5rem;
-
 }
 
 ::-webkit-scrollbar-thumb {
@@ -28,23 +30,20 @@
   background-color: var(--color-main-brown);
 }
 
-.container {
-  flex: 1 1 auto;
+html, body {
+  height: 100%;
 }
 
 body {
   font-family: Raleway;
   font-size: 18px;
   line-height: 1.875rem;
-  min-height: 100vh;
+  background: var(--color-white);
+  color: var(--color-text);
+  transition: all 0.5s ease;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  flex-direction: column;
-  background: var(--color-white);
-  transition: color 0.5s, background-color 0.5s;
-  color: var(--color-text);
 }
 body.dark {
   background: var(--color-text);
@@ -52,10 +51,19 @@ body.dark {
   transition: all 0.5s ease;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  position: relative; 
+  overflow: hidden;
+}
+.main-content {
+  flex: 1 1 auto;
+}
 
 a {
   cursor: pointer;
-  text-decoration: none;
   letter-spacing: 2px;
   color: var(--color-main-brown);
   transition: 0.3s all ease-in-out;

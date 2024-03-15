@@ -176,6 +176,7 @@ body.dark .cafe__central-holder {
     margin-top: 2rem;
     background: var(--dark-gradient);
     display: flex;
+    justify-content: space-around;
 }
 
 .nav-item {

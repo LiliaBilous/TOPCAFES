@@ -142,6 +142,7 @@
 /* addaptive styles for home page */
 
 @media(max-width: 48rem) {
+
     .main-photo-wrap,
     .main-box-img {
         height: 30rem;
@@ -177,6 +178,7 @@
         line-height: 2.5rem;
         margin: 2rem;
     }
+
     .coffee-img,
     .cafes-img {
         height: 25rem;
@@ -199,9 +201,11 @@
         letter-spacing: 3px;
         font-size: 2em;
     }
+
     .main-sub {
         font-size: 0.8em;
     }
+
     .introduction-block {
         margin: 2rem 1rem;
         line-height: 2rem
@@ -213,13 +217,21 @@
         font-size: medium;
         line-height: 1.8rem;
     }
-    .city__text-block, .cafes__text-block {
-        padding: 1rem;
-      }
 
-      .button-wrapper {
+    .city__text-block,
+    .cafes__text-block {
+        padding: 1rem;
+    }
+
+    .button-wrapper {
         margin: 1rem;
-      }
+    }
+
+    .button {
+        line-height: 1.5rem;
+        padding: 1rem;
+        letter-spacing: 3px;
+    }
 }
 
 @media(max-width: 20rem) {
@@ -235,7 +247,6 @@
 
     .main-sub {
         line-height: 1rem;
-        
     }
 
     .button {
