@@ -25,9 +25,8 @@
   position: absolute;
   width: -webkit-fill-available;
   width: -moz-available;
-  background-color: var(--color-main-brown);
-  opacity: 0.85;
-  transition: 0.3s all ease-in-out;
+  background-color: var(--color-text);
+  z-index: 10;
 }
 .price {
 }

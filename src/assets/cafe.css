@@ -225,6 +225,7 @@ body.dark .cafe__central-holder {
     }
     .cafe__container {
         flex-direction: column;
+        margin-top: 4rem;
     }
     .cafe__photo-wrap {
         height: 20rem;
