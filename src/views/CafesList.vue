@@ -1,4 +1,5 @@
 <template>
+  <!-- <PageLoader :isLoading="isLoading"></PageLoader> -->
   <main class="main-content">
     <div class="article-block-filter">
       <button class="button filter" :class="{ active: !isActive }">Усі кав'ярні</button>
@@ -10,11 +11,13 @@
         >
           Ціна<span class="material-symbols-outlined"> expand_more </span>
         </button>
-        <div class="dropdown-content price" v-show="priceActive">
-          <button class="dropdown-item" @click="filterByPrice('$$$')">$$$</button>
-          <button class="dropdown-item" @click="filterByPrice('$$')">$$</button>
-          <button class="dropdown-item" @click="filterByPrice('$')">$</button>
-        </div>
+        <Transition name="fade">
+          <div class="dropdown-content price" v-show="priceActive">
+            <button class="dropdown-item" @click="filterByPrice('$$$')">$$$</button>
+            <button class="dropdown-item" @click="filterByPrice('$$')">$$</button>
+            <button class="dropdown-item" @click="filterByPrice('$')">$</button>
+          </div>
+        </Transition>
       </div>
       <div class="dropdown">
         <button
@@ -24,15 +27,19 @@
         >
           Місто<span class="material-symbols-outlined"> expand_more </span>
         </button>
-        <div class="dropdown-content city" v-show="cityActive">
-          <button class="dropdown-item" @click="filterByCity('franyk')">
-            Івано-Франківськ
-          </button>
-          <button class="dropdown-item" @click="filterByCity('kyiv')">Київ</button>
-          <button class="dropdown-item" @click="filterByCity('cherkasy')">Черкаси</button>
-          <button class="dropdown-item" @click="filterByCity('lviv')">Львів</button>
-          <button class="dropdown-item" @click="filterByCity('odesa')">Одеса</button>
-        </div>
+        <Transition name="fade">
+          <div class="dropdown-content city" v-show="cityActive">
+            <button class="dropdown-item" @click="filterByCity('franyk')">
+              Івано-Франківськ
+            </button>
+            <button class="dropdown-item" @click="filterByCity('kyiv')">Київ</button>
+            <button class="dropdown-item" @click="filterByCity('cherkasy')">
+              Черкаси
+            </button>
+            <button class="dropdown-item" @click="filterByCity('lviv')">Львів</button>
+            <button class="dropdown-item" @click="filterByCity('odesa')">Одеса</button>
+          </div>
+        </Transition>
       </div>
       <div class="dropdown">
         <button
@@ -42,17 +49,19 @@
         >
           Рейтинг<span class="material-symbols-outlined"> expand_more </span>
         </button>
-        <div class="dropdown-content rating" v-show="ratingActive">
-          <button class="dropdown-item" @click="filterByRating(5.0, 4.6)">
-            Рейтинг 5.0 - 4.6
-          </button>
-          <button class="dropdown-item" @click="filterByRating(4.5, 4.0)">
-            Рейтинг 4.5 - 4.0
-          </button>
-          <button class="dropdown-item" @click="filterByRating(4.0, 1)">
-            Рейтинг нижче 4.0
-          </button>
-        </div>
+        <Transition name="fade">
+          <div class="dropdown-content rating" v-show="ratingActive">
+            <button class="dropdown-item" @click="filterByRating(5.0, 4.6)">
+              Рейтинг 5.0 - 4.6
+            </button>
+            <button class="dropdown-item" @click="filterByRating(4.5, 4.0)">
+              Рейтинг 4.5 - 4.0
+            </button>
+            <button class="dropdown-item" @click="filterByRating(4.0, 1)">
+              Рейтинг нижче 4.0
+            </button>
+          </div>
+        </Transition>
       </div>
     </div>
     <div class="article-block-cafes">
@@ -76,7 +85,9 @@
 </template>
 <script>
 import cafes from "../content/cafes.json";
+// import PageLoader from "../components/PageLoader.vue";
 export default {
+  // components: { PageLoader },
   data() {
     return {
       cafes,
@@ -84,6 +95,7 @@ export default {
       priceActive: false,
       cityActive: false,
       ratingActive: false,
+      isLoading: true,
     };
   },
   methods: {

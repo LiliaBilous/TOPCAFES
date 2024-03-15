@@ -25,7 +25,7 @@ function toggleBurgerMenu() {
           <span class="humburger__line"></span>
           <span class="humburger__line"></span>
         </div>
-        <Transition>
+        <Transition name="fade">
           <nav v-if="isBurgerMenuVisible" class="header__nav-menu">
             <RouterLink to="/" class="nav-menu-item">Top cafes</RouterLink>
             <RouterLink to="/cafes" class="nav-menu-item">Кав'ярні</RouterLink>
@@ -36,3 +36,14 @@ function toggleBurgerMenu() {
     </div>
   </header>
 </template>
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
