@@ -79,23 +79,20 @@
   background-image: url('./img/lviv/pyets/pyetsMain.jpg');
 }
 
-.yerusalym {
-  background-image: url('./img/lviv/yerusalym/yerusalym.jpg');
+.virmenka {
+  background-image: url('./img/lviv/virmenka/virmenka.jpg');
+  background-position: 50% 50%;
 
-}
-
-.svitKavy {
-  background-image: url('./img/lviv/svitKavy/svitKavyMain.jpg');
 }
 
 .code {
-  background-image: url('./img/lviv/code/code.jpg');
+  background-image: url('./img/lviv/code/codeMain.jpg');
   background-position: 40% 60%;
 }
 
 .cheeseBakery {
-  background-image: url('./img/lviv/cheeseBakery/cheeseBakery2.jpg');
-  background-position: 50% 50%;
+  background-image: url('./img/lviv/cheeseBakery/cheeseBakeryMain.jpg');
+  background-position: 40% 60%;
 }
 
 .blackHoney {
