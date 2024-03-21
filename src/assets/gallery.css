@@ -139,7 +139,3 @@
 .mySlides__navButton:disabled {
     opacity: 0.4;
 }
-
-@media(max-width: 48rem) {
-    
-}
