@@ -30,6 +30,87 @@ body.dark .cafe__central-holder {
     align-items: center;
 }
 
+/* loader css animation */
+.cup {
+    z-index: 5;
+    position: relative;
+    width: 6rem;
+    height: 4rem;
+    border: 3px solid var(--color-main-brown);
+    border-radius: 6px 6px 20px 20px;
+    background: url(../assets/img/coffee.png);
+    background-position: 0 130px;
+    background-repeat: repeat-x;
+    animation: filling 3s infinite;
+}
+
+.cup .cup-handle {
+    position: absolute;
+    top: 2px;
+    right: -25px;
+    width: 1.5rem;
+    height: 2rem;
+    border: 3px solid var(--color-main-brown);
+    border-radius: 10px 5px 20px 10px;
+}
+
+@keyframes filling {
+
+    0%,
+    100% {
+        background-position: 0 130px;
+    }
+
+    50% {
+        background-position: 600px -70px;
+    }
+}
+
+.cup .steam {
+    position: absolute;
+    border-radius: 10px 2px;
+    width: 6px;
+    animation: steaming 2s infinite;
+}
+
+.cup .steam:nth-child(1) {
+    top: -50px;
+    left: 20px;
+    height: 20px;
+    background: var(--color-background);
+    animation-delay: 0.2s;
+}
+
+.cup .steam:nth-child(2) {
+    top: -90px;
+    left: 45px;
+    height: 40px;
+    background: var(--color-background);
+    animation-delay: 0.6s;
+}
+
+.cup .steam:nth-child(3) {
+    top: -60px;
+    left: 70px;
+    height: 30px;
+    background: var(--color-background);
+    animation-delay: 1s;
+}
+
+@keyframes steaming {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        filter: blur(0.05rem);
+        transform: translateY(-10px);
+    }
+}
+
 /* cafes styles */
 .cafe__wrapper {
     margin: 2rem;
@@ -189,12 +270,13 @@ body.dark .cafe__central-holder {
 
 /* ------Adaptive styles----- */
 @media(max-width: 48rem) {
-   .cafe__photo-wrap{
-    width: 50%;
-   }
-   .cafe__cide-holder {
-    width: 50%;
-   }
+    .cafe__photo-wrap {
+        width: 50%;
+    }
+
+    .cafe__cide-holder {
+        width: 50%;
+    }
 
     .cafe__img-holder {
         width: 100%;
@@ -212,6 +294,7 @@ body.dark .cafe__central-holder {
     .central-holder__description {
         width: 100%;
     }
+
     .nav-item {
         padding: 1rem;
         margin: 0.5rem 1rem;
@@ -223,98 +306,90 @@ body.dark .cafe__central-holder {
     .cafe__wrapper {
         margin: 1rem 2rem;
     }
+
     .cafe__container {
         flex-direction: column;
         margin-top: 4rem;
     }
+
     .cafe__photo-wrap {
         height: 20rem;
         width: 100%;
-        
+
     }
+
     .cafe__cide-holder {
         width: 100%;
         padding: 1rem 0;
     }
+
     .nav-bar {
         flex-direction: column;
     }
+
     .description__title,
-    .comments__title, 
-    .gallery__title {
+    .comments__title {
         padding: 1rem 0;
     }
-    
+
 }
 
 @media(max-width: 28rem) {
     .cafe__wrapper {
         margin: 1rem;
     }
+
     .cafe__title {
         font-size: 2rem;
         line-height: 2rem;
     }
-    .description__title,
-    .comments__title {
-        margin: 0 0 1rem 0;
-    }
-    .gallery__title {
-        font-size: 1em;
-        padding: 1rem;
-      }
-      .cafe__cide-holder {
+
+    .cafe__cide-holder {
         padding: 1rem 0;
         gap: 1rem;
-      }
-      .cafe_contacts {
+    }
+
+    .cafe_contacts {
         grid-gap: 1rem;
-      }
-      .nav-item {
+    }
+
+    .nav-item {
         padding: 0.5rem;
+        line-height: 1rem;
     }
 }
+
 @media(max-width: 20rem) {
     .cafe__wrapper {
         margin: 1rem;
+        line-height: 1.5rem;
     }
 
-    .cide__wrapper {
-        align-items: center;
+    .cafe__cide-holder {
+        padding: 0.5rem 0;
+        gap: 0.5rem;
+    }
+    .cafe_contacts {
+        grid-gap: 0.5rem;
     }
 
-    .cide__title {
-        font-size: 2rem;
-        line-height: 1rem;
-        margin: 2rem auto;
+    .cafe_rating {
+        padding-bottom: 0.5rem;
     }
-
-    .addres-holder {
-        text-align: center;
+    .cafe__central-holder {
+        margin: 0.5rem 0;
     }
-
-    .cide__bar {
-        margin-bottom: 1rem;
-        align-items: center;
-    }
-
-    .icon-holder {
-        font-size: 1rem;
-    }
-    
     .central-holder__comments {
         margin-right: 0;
         padding: 1rem;
     }
-
-    .cafe_rating {
-        padding-bottom: 1rem;
-      }
-
-    .cide__bar,
+    .description__title, .comments__title {
+        padding: 0.5rem 0;
+    }
     .cafe__link,
     .central-holder__comments,
     .description__subtitle {
-        font-size: medium;
+        font-size: 0.8em;
+        line-height: 1.5rem;
     }
 }

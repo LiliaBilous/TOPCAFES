@@ -139,3 +139,23 @@
 .mySlides__navButton:disabled {
     opacity: 0.4;
 }
+
+@media (max-width: 20rem) {
+    .gallery__title {
+        padding: 1rem;
+        line-height: 2rem;
+    }
+
+    .img-holder {
+        height: 10rem;
+    }
+
+    .gallery__holder {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+    .gallery__img-holder {
+        width: 100%;
+    }
+}

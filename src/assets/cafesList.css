@@ -216,17 +216,18 @@
   } */
   .article-block-filter {
     margin: 5rem 1rem 0rem 1rem;
+    padding: 0.5rem;
   }
   
   .article-block-cafes {
     padding: 1rem;
   }
   .article__link-holder {
-    height: 20rem;
+    height: 15rem;
   }
 
   .article-name {
-    height: 20rem;
+    height: 15rem;
     font-size: 1.5em;
     line-height: 2rem;
     padding: 0 1rem;
@@ -235,8 +236,13 @@
   .article-description {
     font-size: 0.8em;
     line-height: 1.5rem;
+    margin: 1rem 0;
   }
   .dropdown-item {
+    padding: 0.5rem;
+    font-size: medium;
+  }
+  .dropdown-btn, .filter {
     padding: 0.5rem;
   }
 }
