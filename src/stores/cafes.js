@@ -13,17 +13,22 @@ export const useCafeStore = defineStore({
   actions: {
     // simulate a server error
     async fetchCafes() {
-      if (Math.random() > 0.9) {
-        throw new Error(
-          "Simulated Server Error: Sorry, the server is not responding right now. Please try refreshing the page or come back later"
-        );
-      } else {
-        //simulate loading
+      return new Promise((resolve, reject) => {
+        console.log("fetchCafesStartRuning");
         setTimeout(async () => {
-          const response = await import("../content/cafes.json");
-          this.cafes = response.default;
-        }, 1000);
-      }
+          if (Math.random() > 0.9) {
+            reject(
+              new Error(
+                "Simulated Server Error: Sorry, the server is not responding right now. Please try refreshing the page or come back later"
+              )
+            );
+          } else {
+            const response = await import("../content/cafes.json");
+            this.cafes = response.default;
+            resolve("foo");
+          }
+        }, 3000);
+      });
     },
   },
 });

@@ -1,6 +1,6 @@
 <template>
   <main class="cafe__wrapper main-content">
-    <div v-if="isLoading || !cafe" class="loader">
+    <div v-if="isLoading" class="loader">
       <div class="cup">
         <span class="steam"></span>
         <span class="steam"></span>
@@ -8,7 +8,7 @@
         <div class="cup-handle"></div>
       </div>
     </div>
-    <div v-else-if="errorMessage" class="error">{{ errorMessage }}</div>
+    <div v-if="errorMessage" class="error">{{ errorMessage }}</div>
     <template v-else-if="cafe">
       <div class="cafe__container">
         <div
@@ -46,10 +46,18 @@
             </div>
           </div>
           <div class="cafe_social">
-            <a :href="cafe.socialLink" class="cafe__social-link" target="_blank" :class="{ 'inactive-link': !cafe.socialLink }"
+            <a
+              :href="cafe.socialLink"
+              class="cafe__social-link"
+              target="_blank"
+              :class="{ 'inactive-link': !cafe.socialLink }"
               >Instagram</a
             >
-            <a :href="cafe.linkToCafe" class="cafe__social-link" target="_blank" :class="{ 'inactive-link': !cafe.socialLink }"
+            <a
+              :href="cafe.linkToCafe"
+              class="cafe__social-link"
+              target="_blank"
+              :class="{ 'inactive-link': !cafe.socialLink }"
               >Web-cite</a
             >
           </div>
@@ -89,8 +97,8 @@ export default {
     return {
       cafeId: this.$route.params.id,
       cafeStore: useCafeStore(),
-      isLoading: true,
       errorMessage: "",
+      isLoading: true,
     };
   },
   watch: {
@@ -111,15 +119,25 @@ export default {
   },
   methods: {
     async init() {
-      this.isLoading = true;
-      try {
-        await this.cafeStore.fetchCafes();
-      } catch (error) {
-        this.errorMessage = error.message;
-        console.info(error);
-      } finally {
-        this.isLoading = false;
-      }
+      // try {
+      //   await this.cafeStore.fetchCafes();
+      // } catch (error) {
+      //   this.errorMessage = error.message;
+      // } finally {
+      //   this.isLoading = false;
+      // }
+      this.cafeStore
+        .fetchCafes()
+        .then(() => {
+          console.log("success");
+        })
+        .catch((error) => {
+          this.errorMessage = error.message;
+          console.log(error);
+        })
+        .finally(() => {
+          this.isLoading = false;
+        });
     },
   },
   created() {
