@@ -11,7 +11,7 @@ export const useCafeStore = defineStore({
     },
   },
   actions: {
-    // simulate a server error
+    // simulate a server response
     async fetchCafes() {
       return new Promise((resolve, reject) => {
         console.log("fetchCafesStartRuning");
