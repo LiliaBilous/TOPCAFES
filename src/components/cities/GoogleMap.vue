@@ -35,7 +35,7 @@ export default {
 
       // added custom cafes markers
       const coffeeFlagImg = {
-        url: "/coffee-bean-filled-roast-brew-svgrepo-com.svg",
+        url: "../coffee-bean-filled-roast-brew-svgrepo-com.svg",
         scaledSize: new window.google.maps.Size(25, 25),
       };
 
