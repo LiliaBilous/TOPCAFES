@@ -3,9 +3,9 @@
   <main class="main-content">
     <div class="article-block-filter">
       <button class="button filter" :class="{ active: !isActive }">Усі кав'ярні</button>
-      <div class="dropdown">
+      <div class="dropdown price-filter">
         <button
-          class="button price-filter dropdown-btn"
+          class="button dropdown-btn"
           :class="{ active: priceActive }"
           @click="openPriceDropdown"
         >
@@ -19,9 +19,9 @@
           </div>
         </Transition>
       </div>
-      <div class="dropdown">
+      <div class="dropdown city-filter">
         <button
-          class="button city-filter dropdown-btn"
+          class="button dropdown-btn"
           :class="{ active: cityActive }"
           @click="openCityDropdown"
         >
@@ -41,9 +41,9 @@
           </div>
         </Transition>
       </div>
-      <div class="dropdown">
+      <div class="dropdown rating-filter">
         <button
-          class="button rating-filter dropdown-btn"
+          class="button dropdown-btn"
           :class="{ active: ratingActive }"
           @click="openRatingDropdown"
         >
@@ -51,14 +51,14 @@
         </button>
         <Transition name="fade">
           <div class="dropdown-content rating" v-show="ratingActive">
-            <button class="dropdown-item" @click="filterByRating(5.0, 4.6)">
-              Рейтинг 5.0 - 4.6
+            <button class="dropdown-item" @click="filterByRating(5.0, 4.8)">
+              Рейтинг 5.0 - 4.8
             </button>
-            <button class="dropdown-item" @click="filterByRating(4.5, 4.0)">
-              Рейтинг 4.5 - 4.0
+            <button class="dropdown-item" @click="filterByRating(4.7, 4.5)">
+              Рейтинг 4.7 - 4.5
             </button>
-            <button class="dropdown-item" @click="filterByRating(4.0, 1)">
-              Рейтинг нижче 4.0
+            <button class="dropdown-item" @click="filterByRating(4.4, 1)">
+              Рейтинг нижче 4.5
             </button>
           </div>
         </Transition>
@@ -85,9 +85,7 @@
 </template>
 <script>
 import cafes from "../content/cafes.json";
-// import PageLoader from "../components/PageLoader.vue";
 export default {
-  // components: { PageLoader },
   data() {
     return {
       cafes,
