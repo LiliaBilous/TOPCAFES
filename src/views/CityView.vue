@@ -17,7 +17,7 @@
   </main>
 </template>
 <script>
-import { useCityStore } from "../stores/city";
+import { useCityStore } from "../stores/cities";
 import CityInfo from "../components/cities/CityInfo.vue";
 import GoogleMap from "../components/cities/GoogleMap.vue";
 import CafeList from "../components/cities/CafeList.vue";

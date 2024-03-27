@@ -5,21 +5,22 @@
         <h2 class="city__header">{{ city.bannerTitle }}</h2>
         <p class="city__text-wrap" v-html="city.bannerText" />
         <div class="button-wrapper">
-          <RouterLink :to="city.path" class="button"
-            >Перейти до огляду</RouterLink
-          >
+          <RouterLink :to="city.path" class="button">Перейти до огляду</RouterLink>
         </div>
       </div>
     </div>
   </main>
 </template>
 <script>
-import cities from "../content/cities.json";
+import { useCityStore } from "../stores/cities";
 export default {
   data() {
-    return { cities };
+    return { cityStore: useCityStore() };
   },
   computed: {
+    cities() {
+      return this.cityStore.getCities;
+    },
     city() {
       return this.cities.find((city) => city.name === this.$route.name);
     },
