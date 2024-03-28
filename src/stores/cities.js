@@ -97,18 +97,16 @@ export const useCityStore = defineStore({
     // simulate a server error
     async fetchCity() {
       return new Promise((resolve, reject) => {
-        setTimeout(async () => {
-          if (Math.random() > 0.9) {
-            reject(
-              new Error(
-                "Simulated Server Error: Sorry, the server is not responding right now. Please try refreshing the page or come back later"
-              )
-            );
-          } else {
-            await this.cities.default;
-            resolve("foo");
-          }
-        }, 1000);
+        if (Math.random() > 0.9) {
+          reject(
+            new Error(
+              "Simulated Server Error: Sorry, the server is not responding right now. Please try refreshing the page or come back later"
+            )
+          );
+        } else {
+          this.cities.default;
+          resolve("foo");
+        };
       });
     },
   },

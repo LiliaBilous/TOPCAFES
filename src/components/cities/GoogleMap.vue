@@ -2,34 +2,39 @@
   <div class="city-map-wrap" id="map"></div>
 </template>
 <script>
-import cities from "../../content/cities.json";
-import cafes from "../../content/cafes.json";
+import { useCityStore } from "../../stores/cities";
+import { useCafeStore } from "../../stores/cafes";
 
 export default {
   data() {
     return {
-      cities,
-      cafes,
+      cityStore: useCityStore(),
+      cafeStore: useCafeStore(),
       map: null,
+      marker: null,
     };
   },
   computed: {
+    cities() {
+      return this.cityStore.getCities;
+    },
     city() {
       return this.cities.find((city) => city.name === this.$route.name);
     },
+    cafes() {
+      return this.cafeStore.getCafes;
+    },
     cityCafes() {
+      console.log(this.cafes);
       return this.cafes.filter((cafe) => cafe.city === this.$route.name);
     },
-  },
-  mounted() {
-    this.initMap();
   },
   methods: {
     async initMap() {
       const { Map } = await window.google.maps.importLibrary("maps");
 
       this.map = new Map(document.getElementById("map"), {
-        center: { lat: Number(this.city.lat), lng: Number(this.city.lng) }, // Використовуємо координати міста
+        center: { lat: Number(this.city.lat), lng: Number(this.city.lng) },
         zoom: 13,
       });
 
@@ -48,6 +53,11 @@ export default {
         });
       });
     },
+  },
+  mounted() {
+    this.cafeStore.fetchCafes().then(() => {
+      this.initMap();
+    });
   },
 };
 </script>
