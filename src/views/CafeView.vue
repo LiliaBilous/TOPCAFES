@@ -63,7 +63,6 @@
           </div>
         </div>
       </div>
-
       <div class="cafe__central-holder" :key="cafeId" :cafeId="cafeId">
         <div class="central-holder__comments">
           <h2 class="comments__title">Особисті рекомендації</h2>
@@ -82,7 +81,7 @@
           :cafe-name="cafe.name"
         />
       </div>
-      <CafeNavButtons></CafeNavButtons>
+      <CafeNavButtons />
     </template>
   </main>
 </template>
@@ -118,30 +117,30 @@ export default {
     },
   },
   methods: {
-    async init() {
-      // try {
-      //   await this.cafeStore.fetchCafes();
-      // } catch (error) {
-      //   this.errorMessage = error.message;
-      // } finally {
-      //   this.isLoading = false;
-      // }
-      this.cafeStore
-        .fetchCafes()
-        .then(() => {
-          console.log("success");
-        })
-        .catch((error) => {
-          this.errorMessage = error.message;
-          console.log(error);
-        })
-        .finally(() => {
-          this.isLoading = false;
-        });
+    async initCafes() {
+      try {
+        await this.cafeStore.fetchCafes();
+      } catch (error) {
+        this.errorMessage = error.message;
+      } finally {
+        this.isLoading = false;
+      }
+      // this.cafeStore
+      //   .fetchCafes()
+      //   .then(() => {
+      //     console.log("success");
+      //   })
+      //   .catch((error) => {
+      //     this.errorMessage = error.message;
+      //     console.log(error);
+      //   })
+      //   .finally(() => {
+      //     this.isLoading = false;
+      //   });
     },
   },
   created() {
-    this.init();
+    this.initCafes();
   },
 };
 </script>
