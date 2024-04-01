@@ -133,13 +133,7 @@
   border: 1px solid var(--color-main-brown);
   color: var(--color-white);
 }
-/* google map style */
-.city-map-wrap {
-  width: 96%;
-  height: 400px;
-  margin: 2rem auto;
-  padding: 0 2rem;
-}
+
 
 /* addaptive styles */
 @media (max-width: 48rem) {

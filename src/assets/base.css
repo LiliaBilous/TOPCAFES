@@ -52,7 +52,7 @@ body.dark {
 .container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh - (var(--header-height)+var(--footer-height));
   position: relative; 
   overflow: hidden;
 }
