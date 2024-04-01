@@ -1,5 +1,4 @@
 <template>
-  <!-- <PageLoader :isLoading="isLoading"></PageLoader> -->
   <main class="main-content">
     <div class="article-block-filter">
       <button class="button filter" :class="{ active: !isActive }">Усі кав'ярні</button>
@@ -7,7 +6,7 @@
         <button
           class="button dropdown-btn"
           :class="{ active: priceActive }"
-          @click="openPriceDropdown"
+          @click="this.priceActive = !this.priceActive"
         >
           Ціна<span class="material-symbols-outlined"> expand_more </span>
         </button>
@@ -23,7 +22,7 @@
         <button
           class="button dropdown-btn"
           :class="{ active: cityActive }"
-          @click="openCityDropdown"
+          @click="this.cityActive = !this.cityActive"
         >
           Місто<span class="material-symbols-outlined"> expand_more </span>
         </button>
@@ -45,7 +44,7 @@
         <button
           class="button dropdown-btn"
           :class="{ active: ratingActive }"
-          @click="openRatingDropdown"
+          @click="this.ratingActive = !this.ratingActive"
         >
           Рейтинг<span class="material-symbols-outlined"> expand_more </span>
         </button>
@@ -84,43 +83,59 @@
   </main>
 </template>
 <script>
-import cafes from "../content/cafes.json";
+import { useCafeStore } from "../stores/cafes";
+
 export default {
   data() {
     return {
-      cafes,
+      cafeStore: useCafeStore(),
+      errorMessage: "",
+      isLoading: true,
       isActive: false,
       priceActive: false,
       cityActive: false,
       ratingActive: false,
-      isLoading: true,
     };
   },
+  computed: {
+    cafes() {
+      return this.cafeStore.getCafes;
+    },
+    cafe() {
+      if (!this.cafes) {
+        return null;
+      }
+      return this.cafes.find((cafe) => cafe.id === +this.cafeId);
+    },
+  },
   methods: {
-    openPriceDropdown() {
-      this.priceActive = !this.priceActive;
-    },
-    openCityDropdown() {
-      this.cityActive = !this.cityActive;
-    },
-    openRatingDropdown() {
-      this.ratingActive = !this.ratingActive;
+    async initCafes() {
+      try {
+        await this.cafeStore.fetchCafes();
+      } catch (error) {
+        this.errorMessage = error.message;
+      } finally {
+        this.isLoading = false;
+      }
     },
     filterByPrice(price) {
-      this.cafes = cafes.filter((cafe) => cafe.price === price);
+      this.cafeStore.getCafes = this.cafeStore.getCafes.filter((cafe) => cafe.price === price);
       this.ratingActive = false;
     },
     filterByCity(city) {
-      this.cafes = cafes.filter((cafe) => cafe.city === city);
+      this.cafes = this.cafes.filter((cafe) => cafe.city === city);
       this.cityActive = false;
     },
     filterByRating(maxRating, minRating) {
-      this.cafes = cafes.filter((cafe) => {
+      this.cafes = this.cafes.filter((cafe) => {
         const cafeRating = parseFloat(cafe.rating);
         return cafeRating >= minRating && cafeRating <= maxRating;
       });
       this.ratingActive = false;
     },
+  },
+  created() {
+    this.initCafes();
   },
 };
 </script>
