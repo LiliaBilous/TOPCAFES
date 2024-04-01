@@ -53,7 +53,7 @@ export default {
 
       // added custom cafes markers
       const coffeeFlagImg = {
-        url: "/coffee-bean.svg",
+        url: "/TOPCAFES/coffee-bean.svg",
         scaledSize: new window.google.maps.Size(20, 20),
       };
 
