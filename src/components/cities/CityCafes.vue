@@ -5,7 +5,7 @@
 </template>
 <script>
 import CafeItem from "../cafe/CafeItem.vue";
-import cafes from "../../content/cafes.json";
+import { useCafeStore } from "../../stores/cafes";
 
 export default {
   components: {
@@ -13,11 +13,17 @@ export default {
   },
   data() {
     return {
-      cafes,
+      cafeStore: useCafeStore(),
     };
   },
   computed: {
+    cafes() {
+      return this.cafeStore.getCafes;
+    },
     cityCafes() {
+      if (!this.cafes) {
+        return null;
+      }
       return this.cafes.filter((cafe) => cafe.city === this.$route.name);
     },
   },

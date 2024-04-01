@@ -12,7 +12,7 @@
     <template v-else-if="city">
       <CityInfo />
       <GoogleMap />
-      <CafeList />
+      <CityCafes />
     </template>
   </main>
 </template>
@@ -20,13 +20,13 @@
 import { useCityStore } from "../stores/cities";
 import CityInfo from "../components/cities/CityInfo.vue";
 import GoogleMap from "../components/cities/GoogleMap.vue";
-import CafeList from "../components/cities/CafeList.vue";
+import CityCafes from "../components/cities/CityCafes.vue";
 
 export default {
   components: {
     CityInfo,
     GoogleMap,
-    CafeList,
+    CityCafes,
   },
   data() {
     return {
