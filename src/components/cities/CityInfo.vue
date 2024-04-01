@@ -18,15 +18,18 @@
   </div>
 </template>
 <script>
-import cities from "../../content/cities.json";
+import { useCityStore } from '../../stores/cities';
 
 export default {
   data() {
     return {
-      cities,
+      cityStore: useCityStore(),
     };
   },
   computed: {
+    cities() {
+      return this.cityStore.getCities;
+    },
     city() {
       return this.cities.find((city) => city.name === this.$route.name);
     },

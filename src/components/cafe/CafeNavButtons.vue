@@ -20,17 +20,21 @@
   </div>
 </template>
 <script>
-import cafes from "../../content/cafes.json";
+import {useCafeStore} from '../../stores/cafes';
 
 export default {
   data() {
     return {
+      cafeStore: useCafeStore(),
       cafeId: this.$route.params.id,
     };
   },
   computed: {
+    cafes() {
+      return this.cafeStore.getCafes;
+    },
     cafe() {
-      return cafes.find((cafe) => cafe.id === +this.cafeId);
+      return this.cafes.find((cafe) => cafe.id === +this.cafeId);
     },
   },
   methods: {
@@ -41,14 +45,12 @@ export default {
       const previousCafeId = +this.cafeId - 1;
       this.$router.push(`/cafes/${previousCafeId}`);
       this.cafeId = previousCafeId;
-      console.log(previousCafeId);
     },
 
     goToNextCafe() {
       const nextCafeId = +this.cafeId + 1;
       this.$router.push(`/cafes/${nextCafeId}`);
       this.cafeId = nextCafeId;
-      console.log(nextCafeId);
     },
   },
 };
