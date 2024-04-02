@@ -97,7 +97,7 @@ export default {
       cafeId: this.$route.params.id,
       cafeStore: useCafeStore(),
       errorMessage: "",
-      isLoading: true,
+      isLoading: false,
     };
   },
   watch: {
@@ -118,13 +118,17 @@ export default {
   },
   methods: {
     async initCafes() {
-      try {
-        await this.cafeStore.fetchCafes();
-      } catch (error) {
-        this.errorMessage = error.message;
-      } finally {
-        this.isLoading = false;
+      if (!this.cafes) {
+        try {
+          this.isLoading = true;
+          await this.cafeStore.fetchCafes();
+        } catch (error) {
+          this.errorMessage = error.message;
+        } finally {
+          this.isLoading = false;
+        }
       }
+
       // this.cafeStore
       //   .fetchCafes()
       //   .then(() => {
