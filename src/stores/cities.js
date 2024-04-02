@@ -106,7 +106,7 @@ export const useCityStore = defineStore({
         } else {
           this.cities.default;
           resolve("foo");
-        };
+        }
       });
     },
   },

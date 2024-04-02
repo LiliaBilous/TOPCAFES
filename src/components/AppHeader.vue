@@ -20,7 +20,11 @@ function toggleBurgerMenu() {
         <RouterLink to="/cities" class="header__item cities">Міста</RouterLink>
       </div>
       <div class="header__burger">
-        <div class="burger" :class="{ visible: visible }" @click="toggleBurgerMenu">
+        <div
+          class="burger"
+          :class="{ visible: visible }"
+          @click="toggleBurgerMenu"
+        >
           <span class="humburger__line"></span>
           <span class="humburger__line"></span>
           <span class="humburger__line"></span>

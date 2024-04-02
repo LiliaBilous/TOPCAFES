@@ -20,7 +20,7 @@
   </div>
 </template>
 <script>
-import {useCafeStore} from '../../stores/cafes';
+import { useCafeStore } from "../../stores/cafes";
 
 export default {
   data() {

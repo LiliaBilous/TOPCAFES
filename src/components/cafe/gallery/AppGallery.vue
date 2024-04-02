@@ -10,7 +10,9 @@
   <div v-if="isModalVisible" class="modal">
     <div class="modal-content">
       <div class="modal__info-bar">
-        <div class="numbertext">{{ currentIndex + 1 }} / {{ imagesSrcArray.length }}</div>
+        <div class="numbertext">
+          {{ currentIndex + 1 }} / {{ imagesSrcArray.length }}
+        </div>
         <button class="close" @click="closeModal()">&times;</button>
       </div>
       <div class="mySlides">
@@ -72,7 +74,8 @@ export default {
     },
     changeSlide: function (n) {
       if (this.currentIndex === 0 && n === -1) return;
-      if (this.currentIndex === this.imagesSrcArray.length - 1 && n === 1) return;
+      if (this.currentIndex === this.imagesSrcArray.length - 1 && n === 1)
+        return;
       this.currentIndex = this.currentIndex + n;
       this.currentUrl = this.imagesSrcArray[this.currentIndex];
     },

@@ -1,7 +1,9 @@
 <template>
   <main class="main-content">
     <div class="article-block-filter">
-      <button class="button filter" :class="{ active: !isActive }">Усі кав'ярні</button>
+      <button class="button filter" :class="{ active: !isActive }">
+        Усі кав'ярні
+      </button>
       <div class="dropdown price-filter">
         <button
           class="button dropdown-btn"
@@ -12,8 +14,12 @@
         </button>
         <Transition name="fade">
           <div class="dropdown-content price" v-show="priceActive">
-            <button class="dropdown-item" @click="filterByPrice('$$$')">$$$</button>
-            <button class="dropdown-item" @click="filterByPrice('$$')">$$</button>
+            <button class="dropdown-item" @click="filterByPrice('$$$')">
+              $$$
+            </button>
+            <button class="dropdown-item" @click="filterByPrice('$$')">
+              $$
+            </button>
             <button class="dropdown-item" @click="filterByPrice('$')">$</button>
           </div>
         </Transition>
@@ -31,12 +37,18 @@
             <button class="dropdown-item" @click="filterByCity('franyk')">
               Івано-Франківськ
             </button>
-            <button class="dropdown-item" @click="filterByCity('kyiv')">Київ</button>
+            <button class="dropdown-item" @click="filterByCity('kyiv')">
+              Київ
+            </button>
             <button class="dropdown-item" @click="filterByCity('cherkasy')">
               Черкаси
             </button>
-            <button class="dropdown-item" @click="filterByCity('lviv')">Львів</button>
-            <button class="dropdown-item" @click="filterByCity('odesa')">Одеса</button>
+            <button class="dropdown-item" @click="filterByCity('lviv')">
+              Львів
+            </button>
+            <button class="dropdown-item" @click="filterByCity('odesa')">
+              Одеса
+            </button>
           </div>
         </Transition>
       </div>
@@ -109,17 +121,19 @@ export default {
     },
   },
   methods: {
-    async initCafes() {
-      try {
-        await this.cafeStore.fetchCafes();
-      } catch (error) {
-        this.errorMessage = error.message;
-      } finally {
-        this.isLoading = false;
-      }
-    },
+    // async initCafes() {
+    //   try {
+    //     await this.cafeStore.fetchCafes();
+    //   } catch (error) {
+    //     this.errorMessage = error.message;
+    //   } finally {
+    //     this.isLoading = false;
+    //   }
+    // },
     filterByPrice(price) {
-      this.cafeStore.getCafes = this.cafeStore.getCafes.filter((cafe) => cafe.price === price);
+      this.cafeStore = this.cafeStore.getCafes.filter(
+        (cafe) => cafe.price === price
+      );
       this.ratingActive = false;
     },
     filterByCity(city) {
@@ -135,7 +149,21 @@ export default {
     },
   },
   created() {
-    this.initCafes();
+    // this.initCafes();
+  },
+  mounted() {
+    this.cafeStore
+      .fetchCafes()
+      .then(() => {
+        console.log("success");
+      })
+      .catch((error) => {
+        this.errorMessage = error.message;
+        console.log(error);
+      })
+      .finally(() => {
+        this.isLoading = false;
+      });
   },
 };
 </script>

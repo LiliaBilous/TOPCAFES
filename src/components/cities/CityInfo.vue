@@ -12,13 +12,15 @@
     <p class="desctiption-text-wrap" v-html="city.descrText" />
   </div>
   <div class="city-info-wrap">
-    <div class="city-info-item">Рік заснування - {{ city.yearOfFoundation }} року</div>
+    <div class="city-info-item">
+      Рік заснування - {{ city.yearOfFoundation }} року
+    </div>
     <div class="city-info-item" :class="city.cityLogoClass"></div>
     <div class="city-info-item">Населення - {{ city.population }} осіб</div>
   </div>
 </template>
 <script>
-import { useCityStore } from '../../stores/cities';
+import { useCityStore } from "../../stores/cities";
 
 export default {
   data() {

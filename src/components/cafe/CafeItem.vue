@@ -10,7 +10,8 @@
     <div class="article-text">
       <p class="article-description">{{ cafe.text }}</p>
       <RouterLink :to="`/cafes/${cafe.id}`" class="button">
-       Відвідати заклад </RouterLink>
+        Відвідати заклад
+      </RouterLink>
     </div>
   </div>
 </template>
