@@ -38,7 +38,6 @@ export default {
       return this.cafeStore.getCafes;
     },
     cityCafes() {
-      console.log(this.cafes);
       return this.cafes.filter((cafe) => cafe.city === this.$route.name);
     },
   },
