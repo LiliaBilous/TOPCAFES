@@ -11,12 +11,12 @@
     <div v-if="errorMessage" class="error">{{ errorMessage }}</div>
     <template v-else-if="cafes">
       <div class="article-block-filter">
-        <button class="button filter" :class="{ active: !isActive }">Усі кав'ярні</button>
+        <button class="button filter" @click="allCafes" :class="{ active: !isActive }">Усі кав'ярні</button>
         <div class="dropdown price-filter">
           <button
             class="button dropdown-btn"
             :class="{ active: priceActive }"
-            @click="this.priceActive = !this.priceActive"
+            
           >
             Ціна<span class="material-symbols-outlined"> expand_more </span>
           </button>
@@ -95,6 +95,7 @@
 </template>
 <script>
 import { useCafeStore } from "../stores/cafes";
+// import CafesFilter from "../components/CafesFilter.vue";
 
 export default {
   data() {
@@ -103,6 +104,7 @@ export default {
       errorMessage: "",
       isLoading: false,
       cafeId: this.$route.params.id,
+
       isActive: false,
       priceActive: false,
       cityActive: false,
@@ -132,22 +134,15 @@ export default {
           this.isLoading = false;
         }
       }
+      this.cafesList = [...this.cafes];
     },
-    //
+    allCafes() {
+      console.log(this.cafesList)
+    },
     filterByPrice(price) {
-      this.cafeStore = this.cafeStore.getCafes.filter((cafe) => cafe.price === price);
-      this.ratingActive = false;
-    },
-    filterByCity(city) {
-      this.cafes = this.cafes.filter((cafe) => cafe.city === city);
-      this.cityActive = false;
-    },
-    filterByRating(maxRating, minRating) {
-      this.cafes = this.cafes.filter((cafe) => {
-        const cafeRating = parseFloat(cafe.rating);
-        return cafeRating >= minRating && cafeRating <= maxRating;
-      });
-      this.ratingActive = false;
+      this.cafesList = this.cafesList.filter((cafe) => cafe.price === price);
+      this.priceActive = false;
+      console.log(this.cafesList);
     },
   },
   created() {

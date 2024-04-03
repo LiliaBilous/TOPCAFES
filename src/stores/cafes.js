@@ -4,6 +4,7 @@ export const useCafeStore = defineStore({
   id: "cafe",
   state: () => ({
     cafes: null,
+    cafesList: [],
   }),
   getters: {
     getCafes(state) {
@@ -29,6 +30,9 @@ export const useCafeStore = defineStore({
           }
         }, 3000);
       });
+    },
+    setCafesList(cafesList) {
+      this.cafesList = cafesList;
     },
   },
 });
