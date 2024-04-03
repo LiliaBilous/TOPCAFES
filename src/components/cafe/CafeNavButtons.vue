@@ -2,7 +2,8 @@
   <div class="nav-bar">
     <button
       @click="goToPreviousCafe"
-      :disabled="!cafe || cafe.id === 0"
+      :disabled="cafe && cafe.id === 1"
+      :class="{ 'inactive-button': cafe && cafe.id === 1 }"
       class="button nav-item"
     >
       Попередня кав'ярня
@@ -12,7 +13,8 @@
     </button>
     <button
       @click="goToNextCafe"
-      :disabled="!cafe || cafe.id >= 50"
+      :disabled="cafe.id >= cafes.length"
+      :class="{ 'inactive-button': cafe.id >= cafes.length }"
       class="button nav-item"
     >
       Наступна кавярн'я
@@ -41,6 +43,7 @@ export default {
     goToCity() {
       this.$router.push(`/${this.cafe.city}`);
     },
+
     goToPreviousCafe() {
       const previousCafeId = +this.cafeId - 1;
       this.$router.push(`/cafes/${previousCafeId}`);
@@ -55,3 +58,9 @@ export default {
   },
 };
 </script>
+<style>
+.inactive-button {
+  cursor: not-allowed;
+  background: var(--hover-shadow-light);
+}
+</style>
