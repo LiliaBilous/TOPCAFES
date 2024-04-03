@@ -1,22 +1,12 @@
 <template>
   <main class="main-content">
-    <div v-if="isLoading" class="loader">
-      <div class="cup">
-        <span class="steam"></span>
-        <span class="steam"></span>
-        <span class="steam"></span>
-        <div class="cup-handle"></div>
-      </div>
-    </div>
-    <div v-if="errorMessage" class="error">{{ errorMessage }}</div>
-    <template v-else-if="cafes">
+    <template v-if="cafes">
       <div class="article-block-filter">
-        <button class="button filter" @click="allCafes" :class="{ active: !isActive }">Усі кав'ярні</button>
         <div class="dropdown price-filter">
           <button
             class="button dropdown-btn"
             :class="{ active: priceActive }"
-            
+            @click="this.priceActive = !this.priceActive"
           >
             Ціна<span class="material-symbols-outlined"> expand_more </span>
           </button>
@@ -94,73 +84,34 @@
   </main>
 </template>
 <script>
-import { useCafeStore } from "../stores/cafes";
-// import CafesFilter from "../components/CafesFilter.vue";
-
+import cafes from "../content/cafes.json";
 export default {
   data() {
     return {
-      cafeStore: useCafeStore(),
-      errorMessage: "",
-      isLoading: false,
-      cafeId: this.$route.params.id,
-
+      cafes,
       isActive: false,
       priceActive: false,
       cityActive: false,
       ratingActive: false,
+      isLoading: true,
     };
   },
-  computed: {
-    cafes() {
-      return this.cafeStore.getCafes;
-    },
-    cafe() {
-      if (!this.cafes) {
-        return null;
-      }
-      return this.cafes.find((cafe) => cafe.id === +this.cafeId);
-    },
-  },
   methods: {
-    async initCafes() {
-      if (!this.cafes) {
-        try {
-          this.isLoading = true;
-          await this.cafeStore.fetchCafes();
-        } catch (error) {
-          this.errorMessage = error.message;
-        } finally {
-          this.isLoading = false;
-        }
-      }
-      this.cafesList = [...this.cafes];
-    },
-    allCafes() {
-      console.log(this.cafesList)
-    },
     filterByPrice(price) {
-      this.cafesList = this.cafesList.filter((cafe) => cafe.price === price);
-      this.priceActive = false;
-      console.log(this.cafesList);
+      this.cafes = cafes.filter((cafe) => cafe.price === price);
+      this.ratingActive = false;
     },
-  },
-  created() {
-    this.initCafes();
-  },
-  mounted() {
-    // this.cafeStore
-    //   .fetchCafes()
-    //   .then(() => {
-    //     console.log("success");
-    //   })
-    //   .catch((error) => {
-    //     this.errorMessage = error.message;
-    //     console.log(error);
-    //   })
-    //   .finally(() => {
-    //     this.isLoading = false;
-    //   });
+    filterByCity(city) {
+      this.cafes = cafes.filter((cafe) => cafe.city === city);
+      this.cityActive = false;
+    },
+    filterByRating(maxRating, minRating) {
+      this.cafes = cafes.filter((cafe) => {
+        const cafeRating = parseFloat(cafe.rating);
+        return cafeRating >= minRating && cafeRating <= maxRating;
+      });
+      this.ratingActive = false;
+    },
   },
 };
 </script>
