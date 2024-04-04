@@ -136,7 +136,8 @@
 
 
 /* addaptive styles */
-@media (max-width: 48rem) {
+
+@media (max-width: 50rem) {
   .article-block-cafes {
     display: flex;
     flex-direction: column;
@@ -194,6 +195,12 @@
   .city-map-wrap {
     width: 92%;
   }
+  .article-name {
+    font-size: 2em;
+    line-height: 2rem;
+    padding: 0 1rem;
+  }
+
 }
 @media (max-width: 40rem) {
   .article-block-filter {
@@ -223,8 +230,8 @@
   .article-name {
     height: 15rem;
     font-size: 1.5em;
-    line-height: 2rem;
-    padding: 0 1rem;
+    /* line-height: 2rem;
+    padding: 0 1rem; */
   }
 
   .article-description {
