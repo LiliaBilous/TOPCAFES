@@ -97,7 +97,7 @@ export const useCityStore = defineStore({
     // simulate a server error
     async fetchCity() {
       return new Promise((resolve, reject) => {
-        if (Math.random() > 0.9) {
+        if (Math.random() > 0.99) {
           reject(
             new Error(
               "Simulated Server Error: Sorry, the server is not responding right now. Please try refreshing the page or come back later"

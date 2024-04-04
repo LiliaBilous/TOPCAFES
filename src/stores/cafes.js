@@ -17,7 +17,7 @@ export const useCafeStore = defineStore({
       return new Promise((resolve, reject) => {
         console.log("fetchCafesStartRuning");
         setTimeout(async () => {
-          if (Math.random() > 0.9) {
+          if (Math.random() > 0.99) {
             reject(
               new Error(
                 "Simulated Server Error: Sorry, the server is not responding right now. Please try refreshing the page or come back later"
