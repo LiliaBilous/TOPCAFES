@@ -47,7 +47,7 @@
     background-color: var(--color-background);
     display: block;
     margin: 5px auto;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .header__burger .visible span:nth-child(1) {

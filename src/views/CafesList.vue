@@ -105,13 +105,12 @@ export default {
       priceActive: false,
       cityActive: false,
       ratingActive: false,
-      isLoading: true,
     };
   },
   methods: {
     filterByPrice(price) {
       this.cafes = cafes.filter((cafe) => cafe.price === price);
-      this.ratingActive = false;
+      this.priceActive = false;
     },
     filterByCity(city) {
       this.cafes = cafes.filter((cafe) => cafe.city === city);
