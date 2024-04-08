@@ -32,17 +32,17 @@
             </div>
           </div>
           <div class="cafe_contacts">
+            <div class="cafe__contact-work-hour">
+              <i class="material-icons">access_time</i>Робочі години:
+              <p class="text-holder">{{ cafe.workHours }}</p>
+            </div>
             <div class="cafe_contact-telefone">
               <i class="material-icons">call</i>Контактний телефон:
               <p class="text-holder">{{ cafe.telephone }}</p>
             </div>
             <div class="cafe_contact-address">
               <span class="material-icons">location_on</span> Адреса:
-              <p class="text-holder">{{ cafe.address }}</p>
-            </div>
-            <div class="cafe__contact-work-hour">
-              <i class="material-icons">access_time</i>Робочі години:
-              <p class="text-holder">{{ cafe.workHours }}</p>
+              <a :href="cafe.addressUrl" target="_blank" class="text-holder">{{ cafe.address }}</a>
             </div>
           </div>
           <div class="cafe_social">
