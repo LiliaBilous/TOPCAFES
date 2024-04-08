@@ -40,6 +40,9 @@
 .dropdown-content button:hover {
   color: var(--color-light-brown);
 }
+.cafes__container {
+  min-height: calc(100vh - (var(--header-height) + var(--footer-height)));
+}
 .article-block-cafes {
   padding: 1rem 2rem;
   display: flex;
