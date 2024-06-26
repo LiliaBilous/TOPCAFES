@@ -1,35 +1,16 @@
 # TOPCAFES
 
-This template should help get you started developing with Vue 3 in Vite.
+## Опис:
+Це мій перший pet-проект, присвячений улюбленим кав'ярням у різних містах України. Основною метою проекту було вивчення та практика роботи з фреймворком Vue.js. У рамках проекту я створила візуальний дизайн інтерфейсу, забезпечивши привабливий та зручний користувацький досвід, 
 
-## Recommended IDE Setup
+## Stack:Vue.js, Vite, Pinia, fetch API, Google API, JavaScript, HTML, CSS
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Мій внесок:
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- Створила інтерфейс користувача з нуля, забезпечивши привабливий та зручний дизайн.
+- Розробила компонентну структуру додатку, що забезпечує легко масштабований та підтримуваний код.
+- Реалізувала функціональність для відображення інформації про кав'ярні з можливістю сортування та фільтрації.
+- Використала fetch API для симуляції отримання даних з сервера, що дозволило краще зрозуміти принципи роботи з API.
+- Інтегрувала Google Maps API для відображення карти на сторінках міста.
+- Використала Vite для оптимізації швидкості збірки та покращення продуктивності розробки.
+- Застосувала Pinia для ефективного управління станом додатку, що забезпечило гнучкість та зручність у роботі з даними.
