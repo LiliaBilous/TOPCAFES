@@ -45,6 +45,9 @@ jobs:
 
       - name: Copy to gh-pages-demo branch
         run: |
+          git fetch origin
+          git checkout gh-pages-demo
+          git pull origin gh-pages-demo
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git checkout -b gh-pages-demo || git checkout gh-pages-demo
