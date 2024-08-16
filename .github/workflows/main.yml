@@ -15,43 +15,43 @@ jobs:
   build:
     name: Build # Defines the name of the build job.
     runs-on: ubuntu-latest # Specifies the operating system for the job.
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      # Клонування репозиторію
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        # Клонування репозиторію
 
-    - uses: actions/setup-node@v4
-      with:
-        version: cache
-      # Налаштування Node.js 
+      - uses: actions/setup-node@v4
+        with:
+          version: cache
+        # Налаштування Node.js 
 
-    - name: Install Dependencies
-      run: npm install
-      # Встановлення всіх необхідних пакетів
+      - name: Install Dependencies
+        run: npm install
+        # Встановлення всіх необхідних пакетів
 
-    - name: Build
-      run: npm run build
-      env:
-        PUBLIC_API_URL: https://liliabilous.github.io/TOPCAFES/
-      # Збірка проекту, команда `npm run build` запускає скрипт, що визначений у вашому `package.json`
+      - name: Build
+        run: npm run build
+        env:
+          PUBLIC_API_URL: https://liliabilous.github.io/TOPCAFES/
+        # Збірка проекту, команда `npm run build` запускає скрипт, що визначений у вашому `package.json`
 
-    - name: Copy to gh-pages-demo branch
-      run: |
-        git fetch origin
-        git add .
-        git commit -m "Save current changes before switching branches"
-        git checkout gh-pages-demo
-        git pull origin gh-pages-demo
-        git config user.name "github-actions"
-        git config user.email "github-actions@github.com"
-        cp -r dist/* .
-        git add .
-        git commit -m "Deploy to gh-pages-demo branch" || echo "No changes to commit"
-        git push origin gh-pages-demo
-      # Налаштування Git для комітів, перемикання на гілку `gh-pages-demo`, копіювання зібраних файлів з `dist`, коміт і пуш
+      - name: Copy to gh-pages-demo branch
+        run: |
+          git fetch origin
+          git add .
+          git commit -m "Save current changes before switching branches"
+          git checkout gh-pages-demo
+          git pull origin gh-pages-demo
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          cp -r dist/* .
+          git add .
+          git commit -m "Deploy to gh-pages-demo branch" || echo "No changes to commit"
+          git push origin gh-pages-demo
+        # Налаштування Git для комітів, перемикання на гілку `gh-pages-demo`, копіювання зібраних файлів з `dist`, коміт і пуш
 
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: ./dist
-      # Розгортання файлів з папки `dist` на GitHub Pages
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./dist
+        # Розгортання файлів з папки `dist` на GitHub Pages
