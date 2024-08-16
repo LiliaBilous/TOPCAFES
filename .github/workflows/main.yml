@@ -20,10 +20,12 @@ jobs:
         uses: actions/checkout@v4
         # Клонування репозиторію
 
-      - uses: actions/setup-node@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          version: cache
-        # Налаштування Node.js 
+          node-version: '20'
+          cache: 'npm'
+        # Налаштування Node.js з кешуванням залежностей
 
       - name: Install Dependencies
         run: npm install
@@ -35,20 +37,28 @@ jobs:
           PUBLIC_API_URL: https://liliabilous.github.io/TOPCAFES/
         # Збірка проекту, команда `npm run build` запускає скрипт, що визначений у вашому `package.json`
 
-      - name: Copy to gh-pages-demo branch
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+        # Налаштування Git для комітів
+
+      - name: Save changes and switch branches
         run: |
           git fetch origin
           git add .
-          git commit -m "Save current changes before switching branches"
-          git checkout gh-pages-demo
+          git commit -m "Save current changes before switching branches" || echo "No changes to commit"
+          git checkout gh-pages-demo || git checkout -b gh-pages-demo
           git pull origin gh-pages-demo
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+        # Збереження поточних змін, переключення на гілку `gh-pages-demo`, якщо вона існує, і пул останніх змін
+
+      - name: Copy and deploy
+        run: |
           cp -r dist/* .
           git add .
           git commit -m "Deploy to gh-pages-demo branch" || echo "No changes to commit"
           git push origin gh-pages-demo
-        # Налаштування Git для комітів, перемикання на гілку `gh-pages-demo`, копіювання зібраних файлів з `dist`, коміт і пуш
+        # Копіювання зібраних файлів з `dist`, коміт і пуш на гілку `gh-pages-demo`
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
