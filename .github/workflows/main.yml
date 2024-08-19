@@ -2,13 +2,10 @@ name: Deploy to Github Pages
 run-name: TOPCAFES
 
 on:
-  # Запускає workflow при пушах в основну гілку
   push:
     branches:
       - "main"
 
-  # Дозволяє запускати цей workflow вручну через вкладку Actions в GitHub
-  workflow_dispatch:
 
 jobs:
   # Робота зі збіркою та розгортанням
