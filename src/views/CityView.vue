@@ -17,10 +17,10 @@
   </main>
 </template>
 <script>
-import { useCityStore } from "../stores/cities";
-import CityInfo from "../components/cities/CityInfo.vue";
-import GoogleMap from "../components/cities/GoogleMap.vue";
-import CityCafes from "../components/cities/CityCafes.vue";
+import { useCityStore } from "@/stores/cities";
+import CityInfo from "@/components/cities/CityInfo.vue";
+import GoogleMap from "@/components/cities/GoogleMap.vue";
+import CityCafes from "@/components/cities/CityCafes.vue";
 
 export default {
   components: {

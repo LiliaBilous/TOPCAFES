@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import CafeView from "../views/CafeView.vue";
+import HomeView from "@/views/HomeView.vue";
+import CafeView from "@/views/CafeView.vue";
 
 const router = createRouter({
   scrollBehavior() {
@@ -20,7 +20,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/CitiesList.vue"),
+      component: () => import("@/views/CitiesList.vue"),
     },
     {
       path: "/cafes",
@@ -28,7 +28,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/CafesList.vue"),
+      component: () => import("@/views/CafesList.vue"),
     },
     {
       path: "/franyk",
@@ -36,7 +36,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/CityView.vue"),
+      component: () => import("@/views/CityView.vue"),
     },
     {
       path: "/lviv",
@@ -44,7 +44,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/CityView.vue"),
+      component: () => import("@/views/CityView.vue"),
     },
     {
       path: "/kyiv",
@@ -52,7 +52,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/CityView.vue"),
+      component: () => import("@/views/CityView.vue"),
     },
     {
       path: "/cherkasy",
@@ -60,7 +60,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/CityView.vue"),
+      component: () => import("@/views/CityView.vue"),
     },
     {
       path: "/odesa",
@@ -68,7 +68,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/CityView.vue"),
+      component: () => import("@/views/CityView.vue"),
     },
     { path: "/cafes/:id", component: CafeView },
   ],

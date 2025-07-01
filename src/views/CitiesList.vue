@@ -5,16 +5,14 @@
         <h2 class="city__header">{{ city.bannerTitle }}</h2>
         <p class="city__text-wrap" v-html="city.bannerText" />
         <div class="button-wrapper">
-          <RouterLink :to="city.path" class="button"
-            >Перейти до огляду</RouterLink
-          >
+          <RouterLink :to="city.path" class="button">Перейти до огляду</RouterLink>
         </div>
       </div>
     </div>
   </main>
 </template>
 <script>
-import { useCityStore } from "../stores/cities";
+import { useCityStore } from "@/stores/cities";
 export default {
   data() {
     return { cityStore: useCityStore() };

@@ -88,9 +88,9 @@
   </main>
 </template>
 <script>
-import { useCafeStore } from "../stores/cafes";
-import AppGallery from "../components/cafe/gallery/AppGallery.vue";
-import CafeNavButtons from "../components/cafe/CafeNavButtons.vue";
+import { useCafeStore } from "@/stores/cafes";
+import AppGallery from "@/components/cafe/gallery/AppGallery.vue";
+import CafeNavButtons from "@/components/cafe/CafeNavButtons.vue";
 
 export default {
   components: { AppGallery, CafeNavButtons },

@@ -13,8 +13,8 @@
   </section>
 </template>
 <script>
-import { useCityStore } from "../../stores/cities";
-import { useCafeStore } from "../../stores/cafes";
+import { useCityStore } from "@/stores/cities";
+import { useCafeStore } from "@/stores/cafes";
 
 export default {
   data() {
@@ -87,12 +87,14 @@ export default {
 .google-map {
   max-height: 30rem;
 }
+
 .city-map-wrap {
   width: 96%;
   height: 400px;
   margin: 2rem auto;
   padding: 0 2rem;
 }
+
 /*  */
 .google-map .loader {
   min-height: 30rem;

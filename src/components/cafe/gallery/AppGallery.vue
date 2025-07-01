@@ -1,11 +1,7 @@
 <template>
   <div id="gallery" class="gallery__holder">
-    <GalleryImg
-      v-for="(imageSrc, index) in imagesSrcArray"
-      :key="imageSrc"
-      :imgSrc="imageSrc"
-      @click="openModal(imageSrc, index)"
-    />
+    <GalleryImg v-for="(imageSrc, index) in imagesSrcArray" :key="imageSrc" :imgSrc="imageSrc"
+      @click="openModal(imageSrc, index)" />
   </div>
   <div v-if="isModalVisible" class="modal">
     <div class="modal-content">
@@ -17,18 +13,11 @@
       </div>
       <div class="mySlides">
         <img class="mySlides__img" :src="currentUrl" />
-        <button
-          class="mySlides__navButton prev"
-          :disabled="currentIndex === 0"
-          @click="changeSlide(-1)"
-        >
+        <button class="mySlides__navButton prev" :disabled="currentIndex === 0" @click="changeSlide(-1)">
           &#10094;
         </button>
-        <button
-          class="mySlides__navButton next"
-          :disabled="currentIndex === imagesSrcArray.length - 1"
-          @click="changeSlide(1)"
-        >
+        <button class="mySlides__navButton next" :disabled="currentIndex === imagesSrcArray.length - 1"
+          @click="changeSlide(1)">
           &#10095;
         </button>
       </div>
@@ -36,7 +25,7 @@
   </div>
 </template>
 <script>
-import GalleryImg from "/src/components/cafe/gallery/GalleryImg.vue";
+import GalleryImg from "@/components/cafe/gallery/GalleryImg.vue";
 
 export default {
   components: { GalleryImg },
@@ -52,17 +41,25 @@ export default {
   },
   methods: {
     async init() {
-      for (const img of this.gallery) {
+      const promises = this.gallery.map(async (img) => {
         try {
-          const image = await import(
-            `../../../assets/img/${this.cityName}/${this.cafeName}/${img}.jpg`
-          );
-          this.imagesSrcArray.push(image.default);
-        } catch (error) {
-          console.error(error);
+          const jpg = await import(`@/assets/img/${this.cityName}/${this.cafeName}/${img}.jpg`);
+          return jpg.default;
+        } catch {
+          try {
+            const webp = await import(`@/assets/img/${this.cityName}/${this.cafeName}/${img}.webp`);
+            return webp.default;
+          } catch (e) {
+            console.warn(`Couldn't load image: ${img}`);
+            return null;
+          }
         }
-      }
+      });
+
+      const results = await Promise.all(promises);
+      this.imagesSrcArray = results.filter(Boolean);
     },
+
     openModal: function (url, index) {
       this.isModalVisible = true;
       this.currentUrl = url;

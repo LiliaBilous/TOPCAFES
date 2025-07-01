@@ -20,7 +20,7 @@
   </div>
 </template>
 <script>
-import { useCityStore } from "../../stores/cities";
+import { useCityStore } from "@/stores/cities";
 
 export default {
   data() {
