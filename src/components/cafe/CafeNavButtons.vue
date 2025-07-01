@@ -1,18 +1,21 @@
 <template>
-  <div class="nav-bar">
-    <button @click="goToPreviousCafe" :disabled="cafe && cafe.id === 1"
-      :class="{ 'inactive-button': cafe && cafe.id === 1 }" class="button nav-item">
+  <div class="nav-bar" v-if="cafe">
+    <button @click="goToPreviousCafe" :disabled="!previousCafe" :class="{ 'inactive-button': !previousCafe }"
+      class="button nav-item">
       Попередня кав'ярня
     </button>
+
     <button @click="goToCity" class="button nav-item">
       Повернутись на сторінку міста
     </button>
-    <button @click="goToNextCafe" :disabled="cafe.id >= cafes.length"
-      :class="{ 'inactive-button': cafe.id >= cafes.length }" class="button nav-item">
-      Наступна кавярн'я
+
+    <button @click="goToNextCafe" :disabled="!nextCafe" :class="{ 'inactive-button': !nextCafe }"
+      class="button nav-item">
+      Наступна кав'ярня
     </button>
   </div>
 </template>
+
 <script>
 import { useCafeStore } from "@/stores/cafes";
 
@@ -20,36 +23,49 @@ export default {
   data() {
     return {
       cafeStore: useCafeStore(),
-      cafeId: this.$route.params.id,
     };
   },
   computed: {
     cafes() {
       return this.cafeStore.getCafes;
     },
+    cafeRoute() {
+      return this.$route.params.cafeRoute;
+    },
     cafe() {
-      return this.cafes.find((cafe) => cafe.id === +this.cafeId);
+      return this.cafes.find((cafe) => cafe.cafeRoute === this.cafeRoute);
+    },
+    currentIndex() {
+      return this.cafes.findIndex((cafe) => cafe.cafeRoute === this.cafeRoute);
+    },
+    previousCafe() {
+      return this.cafes[this.currentIndex - 1] || null;
+    },
+    nextCafe() {
+      return this.cafes[this.currentIndex + 1] || null;
+    },
+    city() {
+      return this.cafe?.city ?? '';
     },
   },
   methods: {
     goToCity() {
-      this.$router.push(`/${this.cafe.city}`);
+      this.$router.push(`/${this.city}`);
     },
-
     goToPreviousCafe() {
-      const previousCafeId = +this.cafeId - 1;
-      this.$router.push(`/cafes/${previousCafeId}`);
-      this.cafeId = previousCafeId;
+      if (this.previousCafe) {
+        this.$router.push(`/cafes/${this.previousCafe.cafeRoute}`);
+      }
     },
-
     goToNextCafe() {
-      const nextCafeId = +this.cafeId + 1;
-      this.$router.push(`/cafes/${nextCafeId}`);
-      this.cafeId = nextCafeId;
+      if (this.nextCafe) {
+        this.$router.push(`/cafes/${this.nextCafe.cafeRoute}`);
+      }
     },
   },
 };
 </script>
+
 <style>
 .inactive-button {
   cursor: not-allowed;

@@ -11,12 +11,7 @@
     <div v-if="errorMessage" class="error">{{ errorMessage }}</div>
     <template v-else-if="cafe">
       <div class="cafe__container">
-        <div
-          class="cafe__photo-wrap"
-          :key="cafeId"
-          :cafeId="cafeId"
-          :class="cafe.imageUrlClass"
-        >
+        <div class="cafe__photo-wrap" :key="cafe.cafeRoute" :class="cafe.imageUrlClass">
           <div class="cafe__img-shadow"></div>
         </div>
         <div class="cafe__cide-holder">
@@ -44,28 +39,18 @@
               <span class="material-icons">location_on</span> Адреса:
               <a :href="cafe.addressUrl" target="_blank" class="text-holder">{{
                 cafe.address
-              }}</a>
+                }}</a>
             </div>
           </div>
           <div class="cafe_social">
-            <a
-              :href="cafe.socialLink"
-              class="cafe__social-link"
-              target="_blank"
-              :class="{ 'inactive-link': !cafe.socialLink }"
-              >Instagram</a
-            >
-            <a
-              :href="cafe.linkToCafe"
-              class="cafe__social-link"
-              target="_blank"
-              :class="{ 'inactive-link': !cafe.socialLink }"
-              >Web-cite</a
-            >
+            <a :href="cafe.socialLink" class="cafe__social-link" target="_blank"
+              :class="{ 'inactive-link': !cafe.socialLink }">Instagram</a>
+            <a :href="cafe.linkToCafe" class="cafe__social-link" target="_blank"
+              :class="{ 'inactive-link': !cafe.socialLink }">Web-cite</a>
           </div>
         </div>
       </div>
-      <div class="cafe__central-holder" :key="cafeId" :cafeId="cafeId">
+      <div class="cafe__central-holder">
         <div class="central-holder__comments">
           <h2 class="comments__title">Особисті рекомендації</h2>
           <p>{{ cafe.comments }}</p>
@@ -75,13 +60,9 @@
           <p class="description__subtitle">{{ cafe.text }}</p>
         </div>
       </div>
-      <div class="cafe__gallery" :key="cafeId" :cafeId="cafeId">
+      <div class="cafe__gallery">
         <h2 class="gallery__title">Photo Gallery</h2>
-        <AppGallery
-          :gallery="cafe.photoGallery"
-          :city-name="cafe.city"
-          :cafe-name="cafe.name"
-        />
+        <AppGallery :gallery="cafe.photoGallery" :city-name="cafe.city" :cafe-name="cafe.name" />
       </div>
       <CafeNavButtons />
     </template>
@@ -96,15 +77,15 @@ export default {
   components: { AppGallery, CafeNavButtons },
   data() {
     return {
-      cafeId: this.$route.params.id,
+      cafeRoute: this.$route.params.cafeRoute,
       cafeStore: useCafeStore(),
       errorMessage: "",
       isLoading: false,
     };
   },
   watch: {
-    "$route.params.id"(newCafeId) {
-      this.cafeId = newCafeId;
+    "$route.params.cafeRoute"(newCafeRoute) {
+      this.cafeRoute = newCafeRoute;
     },
   },
   computed: {
@@ -115,7 +96,7 @@ export default {
       if (!this.cafes) {
         return null;
       }
-      return this.cafes.find((cafe) => cafe.id === +this.cafeId);
+      return this.cafes.find((cafe) => cafe.cafeRoute === this.cafeRoute);
     },
   },
   methods: {

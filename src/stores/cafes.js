@@ -26,6 +26,7 @@ export const useCafeStore = defineStore({
           } else {
             const response = await import("@/content/cafes.json");
             this.cafes = response.default;
+            console.log(this.cafes)
             resolve("foo");
           }
         }, 3000);

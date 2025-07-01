@@ -71,12 +71,12 @@
         </div>
         <div class="article-block-cafes">
           <div v-for="cafe in cafes" :key="cafe.id" class="article-wrapper">
-            <router-link :to="`/cafes/${cafe.id}`" class="article__link-holder" :class="cafe.imageUrlClass">
+            <router-link :to="`/cafes/${cafe.cafeRoute}`" class="article__link-holder" :class="cafe.imageUrlClass">
               <h3 class="article-name">{{ cafe.title }}</h3>
             </router-link>
             <div class="article-text">
               <p class="article-description">{{ cafe.text }}</p>
-              <RouterLink :to="`/cafes/${cafe.id}`" class="button">Відвідати заклад</RouterLink>
+              <RouterLink :to="`/cafes/${cafe.cafeRoute}`" class="button">Відвідати заклад</RouterLink>
             </div>
           </div>
         </div>
