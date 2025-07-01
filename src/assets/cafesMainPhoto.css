@@ -37,18 +37,8 @@
 }
 
 .shocolad {
-  background-image: url('./img/cherkasy/shocoladu/shocoladMain.jpg');
+  background-image: url('./img/cherkasy/shocoladu/shocoladMain.webp');
 }
-
-/* .argoelf {
-    background-image: url('./img/cherkasy/argoelf/argoelfMain.jpg');
-}
-
-.morrisSpace {
-    background-image: url('./img/cherkasy/morris/morris2.jpg');
-    background-position: center center;
-} */
-
 
 /* kyiv */
 .zavertaylo {
@@ -130,5 +120,3 @@
   background-image: url('./img/odesa/makemycake/makemycake.jpg');
   background-position: 25% 75%;
 }
-
-

@@ -4,6 +4,7 @@
     height: 30rem;
     width: 100%;
 }
+
 .city__img-holder {
     background-color: var(--shadow-photo);
     height: 30rem;
@@ -42,6 +43,7 @@
     flex-direction: row;
     justify-content: space-around;
 }
+
 .city-info-item {
     display: flex;
     justify-content: center;
@@ -75,9 +77,10 @@
 .cherkasy {
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('./img/cherkasy/blue-palace.jpg');
+    background-image: url('./img/cherkasy/blue-palace.webp');
     background-position: 85% 15%;
 }
+
 .odesa {
     background-repeat: no-repeat;
     background-size: cover;
@@ -126,6 +129,7 @@
     .city__img-holder {
         height: 25rem;
     }
+
     .photo-city-wrap {
         height: 25rem;
     }
@@ -139,15 +143,18 @@
         margin: 1.5rem;
     }
 }
+
 @media(max-width: 20rem) {
     .city__header {
         font-size: 2em;
         margin: 5rem 0 0;
     }
+
     .city__text-wrap {
         font-size: 0.8em;
         margin: 1rem;
     }
+
     .city-info-item {
         font-size: 0.8rem;
         line-height: 1.5rem;
