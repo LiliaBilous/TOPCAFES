@@ -21,7 +21,11 @@ function toggleBurgerMenu() {
         <RouterLink to="/cities" class="header__item cities">Міста</RouterLink>
       </div>
       <div class="header__burger">
-        <div class="burger" :class="{ visible: visible }" @click="toggleBurgerMenu">
+        <div
+          class="burger"
+          :class="{ visible: visible }"
+          @click="toggleBurgerMenu"
+        >
           <span class="humburger__line"></span>
           <span class="humburger__line"></span>
           <span class="humburger__line"></span>
@@ -31,10 +35,16 @@ function toggleBurgerMenu() {
             <RouterLink to="/" @click="toggleBurgerMenu" class="nav-menu-item"
               >Top cafes</RouterLink
             >
-            <RouterLink to="/cafes" @click="toggleBurgerMenu" class="nav-menu-item"
+            <RouterLink
+              to="/cafes"
+              @click="toggleBurgerMenu"
+              class="nav-menu-item"
               >Кав'ярні</RouterLink
             >
-            <RouterLink to="/cities" @click="toggleBurgerMenu" class="nav-menu-item"
+            <RouterLink
+              to="/cities"
+              @click="toggleBurgerMenu"
+              class="nav-menu-item"
               >Міста</RouterLink
             >
           </nav>

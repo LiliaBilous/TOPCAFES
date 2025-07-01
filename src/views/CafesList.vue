@@ -13,9 +13,15 @@
             </button>
             <Transition name="fade">
               <div class="dropdown-content price" v-show="priceActive">
-                <button class="dropdown-item" @click="filterByPrice('$$$')">$$$</button>
-                <button class="dropdown-item" @click="filterByPrice('$$')">$$</button>
-                <button class="dropdown-item" @click="filterByPrice('$')">$</button>
+                <button class="dropdown-item" @click="filterByPrice('$$$')">
+                  $$$
+                </button>
+                <button class="dropdown-item" @click="filterByPrice('$$')">
+                  $$
+                </button>
+                <button class="dropdown-item" @click="filterByPrice('$')">
+                  $
+                </button>
               </div>
             </Transition>
           </div>
@@ -32,11 +38,15 @@
                 <button class="dropdown-item" @click="filterByCity('franyk')">
                   Івано-Франківськ
                 </button>
-                <button class="dropdown-item" @click="filterByCity('kyiv')">Київ</button>
+                <button class="dropdown-item" @click="filterByCity('kyiv')">
+                  Київ
+                </button>
                 <button class="dropdown-item" @click="filterByCity('cherkasy')">
                   Черкаси
                 </button>
-                <button class="dropdown-item" @click="filterByCity('lviv')">Львів</button>
+                <button class="dropdown-item" @click="filterByCity('lviv')">
+                  Львів
+                </button>
                 <button class="dropdown-item" @click="filterByCity('odesa')">
                   Одеса
                 </button>
@@ -49,7 +59,9 @@
               :class="{ active: ratingActive }"
               @click="this.ratingActive = !this.ratingActive"
             >
-              Рейтинг<span class="material-symbols-outlined"> expand_more </span>
+              Рейтинг<span class="material-symbols-outlined">
+                expand_more
+              </span>
             </button>
             <Transition name="fade">
               <div class="dropdown-content rating" v-show="ratingActive">

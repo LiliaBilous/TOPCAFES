@@ -42,7 +42,9 @@
             </div>
             <div class="cafe_contact-address">
               <span class="material-icons">location_on</span> Адреса:
-              <a :href="cafe.addressUrl" target="_blank" class="text-holder">{{ cafe.address }}</a>
+              <a :href="cafe.addressUrl" target="_blank" class="text-holder">{{
+                cafe.address
+              }}</a>
             </div>
           </div>
           <div class="cafe_social">
