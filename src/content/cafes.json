@@ -20,19 +20,15 @@
         "comments": "Тут один з найбільших виборів напоїв, що я зустрічала, та не малий перелік власних десертів!",
         "photoGallery": [
             "rosteria-cavy1",
-            "rosteria-cavy2",
             "rosteria-cavy3",
             "rosteria-cavy4",
             "rosteria-cavy5",
-            "rosteria-cavy6",
             "rosteria-cavy7",
             "rosteria-cavy8",
             "rosteria-cavy9",
             "rosteria-cavy10",
-            "rosteria-cavy11",
             "rosteria-cavy12",
-            "rosteria-cavy13",
-            "rosteria-cavy14"
+            "rosteria-cavy13"
         ]
     },
     {
@@ -58,8 +54,7 @@
             "delikacia",
             "delikacia1",
             "delikacia2",
-            "delikacia3",
-            "delikacia4"
+            "delikacia3"
         ]
     },
     {
@@ -83,17 +78,11 @@
         "comments": "Кафе має обмежену кількість місць та не приймаються бронювання столиків. Обслуговування відбувається за живою посадкою, що приносить певний ажіотаж саме в зимовий час. Проте влітку та в теплий період року кафе розширює свої можливості завдяки літньому майданчику, тому місць тут вистачає для всіх охочих.",
         "photoGallery": [
             "manufactura1",
-            "manufactura2",
-            "manufactura3",
-            "manufactura4",
-            "manufactura5",
-            "manufactura6",
             "manufactura7",
             "manufactura8",
             "manufactura9",
             "manufactura10",
-            "manufactura11",
-            "cup-coffee2"
+            "manufactura11"
         ]
     },     
     {
@@ -117,11 +106,9 @@
         "comments": "Єдина кавярня у Франківську, що починає працювати з 7ї ранку. Тож коли співпадає ранковий потяг і необхідність десь підкріпитись - це завжди вибір №1. Окрім того їхні смачні сніданки доступні до замовлення протягом всього дня.",
         "photoGallery": [
             "urban1",
-            "urban2",
             "urban3",
             "urban4",
             "urban5",
-            "urban6",
             "urban7",
             "urban8",
             "urban9",
@@ -153,10 +140,7 @@
             "kurzeme",
             "kurzeme2",
             "kurzeme4",
-            "kurzeme5",
-            "kurzeme6",
-            "kurzeme7",
-            "kurzeme8"
+            "kurzeme5"
         ]
     },
     {
@@ -183,8 +167,7 @@
             "milkPink1",
             "milkPink2",
             "milkPink3",
-            "milkPink4",
-            "milkPink5"
+            "milkPink4"
         ]
     },
     {
@@ -208,10 +191,7 @@
         "comments": "в планах відвідати їх заклад",
         "photoGallery": [
             "idealist",
-            "idealist1",
-            "idealist2",
             "idealist3",
-            "idealist4",
             "idealist5"
         ]
     },
@@ -329,7 +309,6 @@
         "price": "$$",
         "comments": "Моя улюблена кавярня з цієї мережі саме на набережній з розкішним видом на Дніпро, а від недавна для гостей відкрили зал на другому поверсі з панорамним видом - дуже рекомендую. Окрім того, тут неймовірна кава власного обсмаження і найсмачніші круасани.",
         "photoGallery": [
-            "fabryka",
             "fabryka1",
             "fabryka2",
             "fabryka3",
@@ -361,7 +340,6 @@
             "endorfin4",
             "endorfin2",
             "endorfin",
-            "endorfin3",
             "endorfin1"           
         ]
     },
@@ -385,10 +363,8 @@
         "price": "$$",
         "comments": "Поєднання смачної кави та шоколаду ... для мене це просто любов... Звісно, що мережа розвинута, велика і в багатьох містах України є ці майстерені, але саме ця в Черкасах найулюбленіша...",
         "photoGallery": [
-            "shocolad",
             "shocolad1",
-            "shocolad2",
-            "shocolad3"
+            "shocolad2"
         ]
     },
     {
@@ -525,7 +501,6 @@
         "comments": "в планах відвідати їх заклад",
         "photoGallery": [
             "blackHoney1",
-            "blackHoney",
             "blackHoney2"
         ]
     },
