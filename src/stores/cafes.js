@@ -15,7 +15,6 @@ export const useCafeStore = defineStore({
     // simulate a server response
     async fetchCafes() {
       return new Promise((resolve, reject) => {
-        console.log("fetchCafesStartRuning");
         setTimeout(async () => {
           if (Math.random() > 0.99) {
             reject(
