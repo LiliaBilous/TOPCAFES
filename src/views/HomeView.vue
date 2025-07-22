@@ -54,7 +54,9 @@
           інтерактивної карти.
         </p>
         <div class="button-wrapper">
-          <RouterLink to="/cafes" class="dark-button button">Кав'ярні</RouterLink>
+          <RouterLink to="/cafes" class="dark-button button"
+            >Кав'ярні</RouterLink
+          >
         </div>
       </div>
       <div class="photo-img-block">

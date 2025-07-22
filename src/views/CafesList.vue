@@ -4,8 +4,11 @@
       <div class="cafes__container">
         <div class="article-block-filter">
           <div class="dropdown price-filter">
-            <button class="button dropdown-btn" :class="{ active: priceActive }"
-              @click="this.priceActive = !this.priceActive">
+            <button
+              class="button dropdown-btn"
+              :class="{ active: priceActive }"
+              @click="this.priceActive = !this.priceActive"
+            >
               Ціна<span class="material-symbols-outlined"> expand_more </span>
             </button>
             <Transition name="fade">
@@ -23,8 +26,11 @@
             </Transition>
           </div>
           <div class="dropdown city-filter">
-            <button class="button dropdown-btn" :class="{ active: cityActive }"
-              @click="this.cityActive = !this.cityActive">
+            <button
+              class="button dropdown-btn"
+              :class="{ active: cityActive }"
+              @click="this.cityActive = !this.cityActive"
+            >
               Місто<span class="material-symbols-outlined"> expand_more </span>
             </button>
             <Transition name="fade">
@@ -48,8 +54,11 @@
             </Transition>
           </div>
           <div class="dropdown rating-filter">
-            <button class="button dropdown-btn" :class="{ active: ratingActive }"
-              @click="this.ratingActive = !this.ratingActive">
+            <button
+              class="button dropdown-btn"
+              :class="{ active: ratingActive }"
+              @click="this.ratingActive = !this.ratingActive"
+            >
               Рейтинг<span class="material-symbols-outlined">
                 expand_more
               </span>
@@ -71,12 +80,18 @@
         </div>
         <div class="article-block-cafes">
           <div v-for="cafe in cafes" :key="cafe.id" class="article-wrapper">
-            <router-link :to="`/cafes/${cafe.cafeRoute}`" class="article__link-holder" :class="cafe.imageUrlClass">
+            <router-link
+              :to="`/cafes/${cafe.cafeRoute}`"
+              class="article__link-holder"
+              :class="cafe.imageUrlClass"
+            >
               <h3 class="article-name">{{ cafe.title }}</h3>
             </router-link>
             <div class="article-text">
               <p class="article-description">{{ cafe.text }}</p>
-              <RouterLink :to="`/cafes/${cafe.cafeRoute}`" class="button">Відвідати заклад</RouterLink>
+              <RouterLink :to="`/cafes/${cafe.cafeRoute}`" class="button"
+                >Відвідати заклад</RouterLink
+              >
             </div>
           </div>
         </div>

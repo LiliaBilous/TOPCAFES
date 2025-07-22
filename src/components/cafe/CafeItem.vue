@@ -1,6 +1,10 @@
 <template>
   <div class="article-wrapper">
-    <router-link :to="`/cafes/${cafe.cafeRoute}`" class="article__link-holder" :class="cafe.imageUrlClass">
+    <router-link
+      :to="`/cafes/${cafe.cafeRoute}`"
+      class="article__link-holder"
+      :class="cafe.imageUrlClass"
+    >
       <h3 class="article-name">{{ cafe.title }}</h3>
     </router-link>
     <div class="article-text">

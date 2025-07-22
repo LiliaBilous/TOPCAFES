@@ -10,7 +10,12 @@ import DarkMode from "@/components/DarkMode.vue";
         </div>
         <div class="footer_made-by">
           Made in 2023 by
-          <a href="https://github.com/LiliaBilous" class="footer-anchor" target="_blank">Lilia Bilous</a>
+          <a
+            href="https://github.com/LiliaBilous"
+            class="footer-anchor"
+            target="_blank"
+            >Lilia Bilous</a
+          >
         </div>
       </div>
       <DarkMode></DarkMode>

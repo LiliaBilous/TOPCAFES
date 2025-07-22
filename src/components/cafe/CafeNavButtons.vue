@@ -1,7 +1,11 @@
 <template>
   <div class="nav-bar" v-if="cafe">
-    <button @click="goToPreviousCafe" :disabled="!previousCafe" :class="{ 'inactive-button': !previousCafe }"
-      class="button nav-item">
+    <button
+      @click="goToPreviousCafe"
+      :disabled="!previousCafe"
+      :class="{ 'inactive-button': !previousCafe }"
+      class="button nav-item"
+    >
       Попередня кав'ярня
     </button>
 
@@ -9,8 +13,12 @@
       Повернутись на сторінку міста
     </button>
 
-    <button @click="goToNextCafe" :disabled="!nextCafe" :class="{ 'inactive-button': !nextCafe }"
-      class="button nav-item">
+    <button
+      @click="goToNextCafe"
+      :disabled="!nextCafe"
+      :class="{ 'inactive-button': !nextCafe }"
+      class="button nav-item"
+    >
       Наступна кав'ярня
     </button>
   </div>
@@ -45,7 +53,7 @@ export default {
       return this.cafes[this.currentIndex + 1] || null;
     },
     city() {
-      return this.cafe?.city ?? '';
+      return this.cafe?.city ?? "";
     },
   },
   methods: {
